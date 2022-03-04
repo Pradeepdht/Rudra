@@ -140,11 +140,31 @@ class Streamlinevrs_Public {
 		$params['enddate'] = $todate;
 		$params['occupants'] = $guests;
 		$params['unit_id'] = $unit_id;
+		$params['include_coupon_information'] = 1;
+		$params['seperate_taxes'] = 1;
+		$params['return_new_pricing_model_and_rate_type'] = 1;
+		$params['return_payments'] = "true";
+		$params['optional_default_enabled'] = 1;
+		$params['show_package_addons'] = 1;
+		$params['pricing_model'] = 1;
 		$params['skip_units'] = $streamlinevrs_skip_units;
 		
 
-	 $propertiesResult = callStreamlineAPI('GetPropertyAvailabilityWithRatesWordPress', $params);
-	 $p_response = $propertiesResult;
+		$propertiesResult = callStreamlineAPI('GetPreReservationPrice', $params);
+		if ($propertiesResult && isset($propertiesResult->data)) {
+		    $propertiesResultdata = $propertiesResult->data;
+		    $p_price = $propertiesResultdata->price;
+		    $p_total = $propertiesResultdata->total;
+		    $p_taxes = $propertiesResultdata->taxes;
+		    print_r($p_price);
+		    print_r($p_total);
+		    print_r($p_taxes);
+		    $required_fees = $propertiesResultdata->required_fees;
+		    foreach($required_fees as $required_fee){
+		    	echo"<pre>";print_r($required_fee);echo "<pre>";
+		    }
+		}
+	$p_response = $propertiesResult;
 	wp_send_json($p_response);
 	exit();
 
@@ -437,83 +457,33 @@ class Streamlinevrs_Public {
 		print_r($_POST);
     }
 
-    public function get_all_streamline_properties() {
-		global $user_ID;
 
-		if ($_GET['name'] == "m_test") {
-			// $streamlinevrs_skip_units = get_option('streamlinevrs_skip_units');
-			// $streamlinevrs_skip_units = implode(',',$streamlinevrs_skip_units);
-			die;
-		}
-		if ($_GET['name'] == "ravi") {
+    
+
+	    public function get_all_streamline_properties() {
+			global $user_ID;
+
 			/* streamlinevrs All Owners id */
-				$params = [];
-				$all_owner_ids=[];
-				$ownerList = callStreamlineAPI('GetOwnerList', $params);	
-				$ownerListResult = json_decode($ownerList);
-				$properties = [];
-				if ($ownerListResult && isset($ownerListResult->data)) {
-					$ownerListResultdata = $ownerListResult->data;
-					if (isset($ownerListResultdata->owner)) {
-						$owners = $ownerListResultdata->owner;
-						}
-				}
-				foreach ($owners as $owner) {
-					$all_owner_ids[] = $owner->owner_id;
-				}
-
-				update_option('streamlinevrs_owner_ids',$all_owner_ids);
-		  }
-
-
-		if ($_GET['name'] == "mani") {
-			/* get all all_units (propery id) */
 			$params = [];
+			$params['owner_id'] = OWNER_ID;
 			$all_unit_ids=[];
-			$propertiesResult = callStreamlineAPI('GetPropertyList', $params);	
-			$propertiesResult = json_decode($propertiesResult);
+			$all_skip_units = [];
+			$unitList = callStreamlineAPI('GetOwnerUnits', $params);	
+			$unitListResult = json_decode($unitList);
 			$properties = [];
-			if ($propertiesResult && isset($propertiesResult->data)) {
-				$propertiesResultdata = $propertiesResult->data;
-				if (isset($propertiesResultdata->property)) {
-					$properties = $propertiesResultdata->property;
+			if ($unitListResult && isset($unitListResult->data)) {
+				$unitListResultdata = $unitListResult->data;
+				if (isset($unitListResultdata->owner->units)) {
+					$units = $unitListResultdata->owner->units->unit;
 					}
 			}
-			foreach ($properties as $data) {
-				$all_unit_ids[] = $data->id;
+			foreach ($units as $unit) {
+				$all_unit_ids[] = $unit->id;
 			}
 
-			/* get my units (propery id) */
+			//main
 			$params = [];
-			$params['owner_id'] = OWNER_ID;
-			$my_unit_ids=[];
-			$propertiesResult = callStreamlineAPI('GetPropertyList', $params);	
-			$propertiesResult = json_decode($propertiesResult);
-			$properties = [];
-			if ($propertiesResult && isset($propertiesResult->data)) {
-				$propertiesResultdata = $propertiesResult->data;
-				if (isset($propertiesResultdata->property)) {
-					$properties = $propertiesResultdata->property;
-					}
-			}
-			foreach ($properties as $data) {
-				$my_unit_ids[] = $data->id;
-			}
-
-			//Skip unit ids  
-			$all_skip_units = array_diff($all_unit_ids, $my_unit_ids);
-			$all_skip_units = array_values($all_skip_units);
-
-			/*update all unit ids in database */
-			 update_option('streamlinevrs_skip_units',$all_skip_units);
-			 update_option('streamlinevrs_all_units',$all_unit_ids);
-			 update_option('streamlinevrs_my_units',$my_unit_ids);
-
-		}
-
-		if ($_GET['name'] == "ajay") {
-			$params = [];
-			$params['owner_id'] = OWNER_ID;
+			
 			$propertiesResult = callStreamlineAPI('GetPropertyList', $params);
 			$p_response = $propertiesResult;
 
@@ -528,99 +498,101 @@ class Streamlinevrs_Public {
 			}
 
 			foreach ($properties as $data) {
-			$str_id = $data->id;
-			$str_title = $data->name;
+				$str_id = $data->id;
+				if(in_array($str_id, $all_unit_ids)){
 
-			$p_params = [];
-			$p_params['unit_id'] = $str_id;
+					$str_title = $data->name;
+					$p_params = [];
+					$p_params['unit_id'] = $str_id;
 
-			// GetPropertyInfo
-			$propertyResult = callStreamlineAPI('GetPropertyInfo', $p_params);
-			$propertyResult = json_decode($propertyResult, true);
-			$property = [];
-			if ($propertyResult && isset($propertyResult['data'])) {
-				$property = $propertyResult['data'];
-				/* if( isset($propertiesResultdata->property) ){
-				$property = $propertiesResultdata->property;
-				} */
-			}
+					// GetPropertyInfo
+					$propertyResult = callStreamlineAPI('GetPropertyInfo', $p_params);
+					$propertyResult = json_decode($propertyResult, true);
+					$property = [];
+					if ($propertyResult && isset($propertyResult['data'])) {
+						$property = $propertyResult['data'];
+						/* if( isset($propertiesResultdata->property) ){
+						$property = $propertiesResultdata->property;
+						} */
+					}
 
-			// GetPropertyGalleryImages
-			$propertyImages = callStreamlineAPI('GetPropertyGalleryImages', $p_params);
-			$propertyImages = json_decode($propertyImages, true);
-			$galleryImages = [];
-			if ($propertyImages && isset($propertyImages['data'])) {
-				$propertiesImagesdata = $propertyImages['data'];
-				if (isset($propertiesImagesdata['image'])) {
-				$galleryImages = $propertiesImagesdata['image'];
+					// GetPropertyGalleryImages
+					$propertyImages = callStreamlineAPI('GetPropertyGalleryImages', $p_params);
+					$propertyImages = json_decode($propertyImages, true);
+					$galleryImages = [];
+					if ($propertyImages && isset($propertyImages['data'])) {
+						$propertiesImagesdata = $propertyImages['data'];
+						if (isset($propertiesImagesdata['image'])) {
+						$galleryImages = $propertiesImagesdata['image'];
+						}
+					}
+
+					$propertyAmenities = callStreamlineAPI('GetPropertyAmenities', $p_params);
+					$propertyAmenities = json_decode($propertyAmenities, true);
+					$amenities = [];
+					if ($propertyAmenities && isset($propertyAmenities['data'])) {
+						$propertiesAmenitiesdata = $propertyAmenities['data'];
+						if (isset($propertiesAmenitiesdata['amenity'])) {
+						$amenities = $propertiesAmenitiesdata['amenity'];
+						}
+					}
+
+
+					$blockedavailabilities = $this->get_room_blocked_dates($unit_id);
+					$property_info = array('property' => $property, 'galleryImages' => $galleryImages, 'amenities' => $amenities, 'blocked_period' => $blockedavailabilities);
+					// Custom Post Data
+					$new_post = array(
+						'post_title' => $str_title,
+						'post_status' => 'publish',
+						'post_author' => $user_ID,
+						'post_type' => 'room',
+					);
+
+					// Check Unit Post
+					$argu_array = array(
+						'status' => 'publish',
+						'post_type' => 'room',
+						'posts_per_page' => -1,
+						'return' => 'ids',
+						'meta_query' => array(
+						array(
+							'key' => 'unit_id',
+							'value' => $str_id,
+						)
+						)
+					);
+					$post_id = 0;
+					$query = new WP_Query($argu_array);
+					if ($query->have_posts()) {
+						while ($query->have_posts()) {
+						$query->the_post();
+						$post_id = get_the_ID();
+						}
+					}
+
+					// Check Unit Post End
+					if ($post_id > 0) {
+						// Update Post
+						$new_post['ID'] = $post_id;
+						$post_id = wp_update_post($new_post);
+						if ($post_id > 0) {
+						update_post_meta($post_id, 'unit_id', $str_id);
+						update_post_meta($post_id, 'property_data', $property_info);
+						}
+					} else {
+						// Create New Post
+						$post_id = wp_insert_post($new_post);
+						if ($post_id > 0) {
+						update_post_meta($post_id, 'unit_id', $str_id);
+						update_post_meta($post_id, 'property_data', $property_info);
+						}
+					}
+				}else{
+					$all_skip_units = $str_id;
+					update_option('streamlinevrs_skip_units',$all_skip_units);
 				}
+				
 			}
 
-			$propertyAmenities = callStreamlineAPI('GetPropertyAmenities', $p_params);
-			$propertyAmenities = json_decode($propertyAmenities, true);
-			$amenities = [];
-			if ($propertyAmenities && isset($propertyAmenities['data'])) {
-				$propertiesAmenitiesdata = $propertyAmenities['data'];
-				if (isset($propertiesAmenitiesdata['amenity'])) {
-				$amenities = $propertiesAmenitiesdata['amenity'];
-				}
-			}
-
-
-			$blockedavailabilities = $this->get_room_blocked_dates($unit_id);
-			$property_info = array('property' => $property, 'galleryImages' => $galleryImages, 'amenities' => $amenities, 'blocked_period' => $blockedavailabilities);
-			// Custom Post Data
-			$new_post = array(
-				'post_title' => $str_title,
-				'post_status' => 'publish',
-				'post_author' => $user_ID,
-				'post_type' => 'room',
-			);
-
-			// Check Unit Post
-			$argu_array = array(
-				'status' => 'publish',
-				'post_type' => 'room',
-				'posts_per_page' => -1,
-				'return' => 'ids',
-				'meta_query' => array(
-				array(
-					'key' => 'unit_id',
-					'value' => $str_id,
-				)
-				)
-			);
-			$post_id = 0;
-			$query = new WP_Query($argu_array);
-			if ($query->have_posts()) {
-				while ($query->have_posts()) {
-				$query->the_post();
-				$post_id = get_the_ID();
-				}
-			}
-
-			// Check Unit Post End
-			if ($post_id > 0) {
-				// Update Post
-				$new_post['ID'] = $post_id;
-				$post_id = wp_update_post($new_post);
-				if ($post_id > 0) {
-				update_post_meta($post_id, 'unit_id', $str_id);
-				update_post_meta($post_id, 'property_data', $property_data);
-				}
-			} else {
-				// Create New Post
-				$post_id = wp_insert_post($new_post);
-				if ($post_id > 0) {
-				update_post_meta($post_id, 'unit_id', $str_id);
-				update_post_meta($post_id, 'property_data', $property_data);
-				}
-			}
-			}
-
-			die;
-		}
-
-    }
-
+	    }
 }
