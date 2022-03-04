@@ -582,7 +582,7 @@ body{
 .custom-select2{
 	display: grid;
 }
-@media screen and (max-width:992px){
+@media screen and (max-width:1200px){
 	.custom-select,
 	.custom-select2{
 	width:100%;
@@ -841,15 +841,17 @@ transform: rotate(45deg);
 .ast-separate-container #primary{
     margin:1em 0 0 0 ;
 }
-.custom-select .datepicker{
-    width:210px ;
-}.custom-select2 .checkincheckout{
+.custom-select2.checkincheckout{
     width:172px ;
 }}
 @media (min-width: 544px){
 .ast-container {
     max-width: 100%;
     padding: 0;
+}}
+@media (min-width: 1200px){
+.custom-select2 .checkincheckout{
+     width:172px ;
 }}
 #post-1324 .entry-header,
 #post-1325 .entry-header{

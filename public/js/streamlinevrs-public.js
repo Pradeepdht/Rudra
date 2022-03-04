@@ -545,9 +545,23 @@
    /**** Single propery page End *****/
 
 	// checking room Availability
+	// $(window).on("load", function(){
+	//     checkavailabledates();
+	// });
 	$(document).on("change", "#no_of_guest", function(){
 	    checkavailabledates();
 	});
+
+	 $(document).on('change','#cancel_inc',function() {
+	 	jQuery(".price_section").after(' <div class="payment-loader availivilityloading"></div>');
+        if(this.val() != 'on') {
+			var c_fees_c = jQuery(".badge-ins").attr('cancel-fee');
+			var total_c = jQuery(".price_section .room-total").attr('old-price');
+            var m_total = parseInt(c_fees_c)+parseInt(total_c);
+           jQuery(".price_section .room-total").text('USD '+ m_total);
+        }
+        jQuery(".availivilityloading").remove();
+    });
 
 	function checkavailabledates(){
 	     var checkin = jQuery("#checkindate").val();
@@ -652,14 +666,34 @@ function setCookie(cname, cvalue, exdays) {
 				}
 
 			}else{
+				// console.log(c_respone.data.required_fees);
+				var total = c_respone.data.total;
+				var required_fees = c_respone.data.required_fees;
+				if(required_fees.length > 0){
+					var require_fee = 0;
+					$.each(required_fees, function(index, val) {
+					   require_fee += parseInt(val.value);
+					});
+				}
+				if(c_respone.data.optional_fees.name == "Cancellation Insurance"){
+					var c_fees = c_respone.data.optional_fees.value;
+					c_fees = c_fees.toFixed(2);
+					jQuery(".badge-ins").text('$'+c_fees);
+					total = parseInt(c_respone.data.total)+parseInt(c_fees);
+					jQuery(".badge-ins").attr('cancel-fee', parseInt(c_fees));
+					jQuery(".price_section .room-total").attr('old-price', parseInt(c_respone.data.total));
+					console.log(total);
+				}else{
+					jQuery(".badge-ins").hide();
+				}
 				//price_section 
-				jQuery(".price_section .room-price").text('USD '+c_respone.data.available_properties.property.price);
-				jQuery(".price_section .room-fees").text('USD '+c_respone.data.available_properties.property.taxes);
-				jQuery(".price_section .room-discount").text('USD '+c_respone.data.available_properties.property.coupon_discount);
-				jQuery(".price_section .room-total").text('USD '+c_respone.data.available_properties.property.total);
+				jQuery(".price_section .room-price").text('USD '+c_respone.data.price);
+				jQuery(".price_section .room-fees").text('USD '+c_respone.data.taxes);
+				
+				jQuery(".price_section .room-total").text('USD '+total);
 
-				jQuery("#single_property_payment_div .full_payment").text('USD '+c_respone.data.available_properties.property.total);
-				jQuery("#full_amount_of_room").val(c_respone.data.available_properties.property.total);
+				jQuery("#single_property_payment_div .full_payment").text('USD '+total);
+				jQuery("#full_amount_of_room").val(c_respone.data.total);
 
 				
 				jQuery(".str-book-now").attr("disabled", false);
@@ -679,10 +713,10 @@ function setCookie(cname, cvalue, exdays) {
 					 checkout: checkout,
 					 no_of_guest:no_of_guest,
 					 unit_id:unit_id,
-					 price:c_respone.data.available_properties.property.price,
-					 taxes:c_respone.data.available_properties.property.taxes,
-					 coupon_discount:c_respone.data.available_properties.property.coupon_discount,
-					 total:c_respone.data.available_properties.property.total,
+					 price:c_respone.data.price,
+					 taxes:c_respone.data.taxes,
+					 // coupon_discount:c_respone.data.coupon_discount,
+					 total:c_respone.data.total,
 					// all_response:c_respone
 				});
 				availabeRoom = JSON.stringify(availabeRoom);

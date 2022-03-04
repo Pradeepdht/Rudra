@@ -127,7 +127,7 @@ class Streamlinevrs_Public {
 	 public function checkRoomAvailabilityAction_handler()
 	{
 		$params = [];
-		$params['owner_id'] = OWNER_ID;
+		// $params['owner_id'] = OWNER_ID;
 		$fromdate = isset($_POST['checkin']) ? sanitize_text_field($_POST['checkin']) : date("m/d/Y");
 		$todate = isset($_POST['checkout']) ? sanitize_text_field($_POST['checkout']) : date("m/d/Y");
 		$guests = isset($_POST['no_of_guest']) ? intval($_POST['no_of_guest']) : 1;
@@ -152,6 +152,7 @@ class Streamlinevrs_Public {
 
 		$propertiesResult = callStreamlineAPI('GetPreReservationPrice', $params);
 		if ($propertiesResult && isset($propertiesResult->data)) {
+			
 		    $propertiesResultdata = $propertiesResult->data;
 		    $p_price = $propertiesResultdata->price;
 		    $p_total = $propertiesResultdata->total;

@@ -384,7 +384,7 @@ else:
             </div>
             <div class="d-flex flex-wrap justify-content-between align-items-center">
                     <label class="custom-check pt-1 my-3">Cancellation Insurance
-                        <input type="checkbox" checked="checked">
+                        <input type="checkbox" id="cancel_inc" checked="checked">
                         <span class="checkmark"></span>
                     </label>
                     <div class="badge-ins my-3">$56.35</div>
