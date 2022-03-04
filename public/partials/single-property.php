@@ -37,8 +37,8 @@ else:
             <img src="<?php echo (!is_object($galleryImages[5]['image_path'])) ? $galleryImages[5]['image_path'] : "/wp-content/uploads/2022/01/toileteries-free-img.jpg"; ?>" class="img-fluid rooms-bgcover-img" alt="">
             <div class="position-absolute bottom-0 w-100">
                <div class="d-flex flex-wrap justify-content-center">
-                  <a class="btn btn-sm btn-gold-banner mb-4 fw-normal mx-1" href="#virtual_popup">Virtual Tour</a>
-                  <a class="btn btn-sm btn-gold-banner mb-4 fw-normal mx-1" href="#floor_plan_url_popup">Floor Plan</a>
+                  <a class="btn btn-sm btn-gold-banner mb-4 fw-normal mx-1" href="#virtual_popup">View Floor Plan</a>
+                  <!-- <a class="btn btn-sm btn-gold-banner mb-4 fw-normal mx-1" href="#floor_plan_url_popup">Floor Plan</a> -->
                   <a class="btn btn-sm btn-gold-banner mb-4 fw-normal mx-1 room_single_page_property_view_photos_click" href="#popup3">View Photos</a>
                </div>
             </div>
@@ -55,7 +55,7 @@ else:
                   <img src="/wp-content/uploads/2022/02/Banner-default-img1.png" class="img-fluid rooms-bgcover3-img" alt="">
                   <div class="position-absolute bottom-0 w-100">
                       <div class="d-flex flex-wrap justify-content-center">
-                          <a class="btn btn-sm btn-gold-banner mb-4 fw-normal mx-2" href="#virtual_popup">Virtual Tour</a>
+                          <a class="btn btn-sm btn-gold-banner mb-4 fw-normal mx-2" href="#virtual_popup">View Floor Plan</a>
                           <!-- <a class="btn btn-sm btn-gold-banner mb-4 fw-normal mx-2" href="#popup2">View Photos</a> -->
                       </div>
                   </div>
@@ -299,7 +299,7 @@ else:
      <!-- </div>  -->
      <div class="col-lg-60 " id="single_property_payment_error" style="display: none;">
         <a href="javascript:void(0)" class="fw-normal link-grey back_btn "><i aria-hidden="true" class="fas fa-long-arrow-alt-left pe-2"></i> BACK </a>
-        <div class="errorDiv text-center shadow my-3">
+        <div class="errorDiv text-center shadow mt-3 mb-5">
            <img src="/wp-content/uploads/2022/03/error-bg-img.png" alt="">
            <h5 class=" mb-0">We Needs your Attention Please!</h5>
            <div class="error_msg p-4 pb-5">There are some errors during the form processing, Please Try Again...</div>
@@ -428,10 +428,10 @@ else:
    <!--custom modal starts here-->
     <div id="virtual_popup" class="overlay">
        <div class="popup">
-           <h4>Virtual Tour</h4>
+           <h4>Floor Plan</h4>
            <a class="close" href="#close-me">&times;</a>
            <div class="content text-center" id="close-me">
-               <?php echo (!empty($property['virtual_tour_url'])) ?  $property['virtual_tour_url'] : "<p>No Virtual View.</p>";?>
+               <?php echo (!empty($property['virtual_tour_url'])) ?  $property['virtual_tour_url'] : "<p>No Floor Plan Available</p>";?>
            </div>
        </div>
    </div>

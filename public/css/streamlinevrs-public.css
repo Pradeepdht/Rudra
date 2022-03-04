@@ -1039,8 +1039,7 @@ transform: rotate(45deg);
 }
 /*property-info*/
 .property-banner,
-.property-info,
-.facilities{
+.property-info{
     display: flex;
     justify-content: center;
 }
