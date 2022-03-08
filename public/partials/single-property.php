@@ -378,11 +378,12 @@ else:
             <div class="custom-select2 pb-4">
                     <label for="room" class="fw-bold">Add a Promo Code</label>
                     <div class="d-flex promo-field position-relative">
-                        <input type="text">
+                        <input type="text" id="promo-code-input">
                         <button class="btn btn-gold text-uppercase" id="promo-code">Apply</button>
                     </div>
+                    <div id="promo-code-msg" style="display:none;">Promo code applied.</div>
             </div>
-            <div class="d-flex flex-wrap justify-content-between align-items-center">
+            <div class="d-flex flex-wrap justify-content-between align-items-center cancellation-fee" style="display: none;">
                     <label class="custom-check pt-1 my-3">Cancellation Insurance
                         <input type="checkbox" id="cancel_inc" checked="checked">
                         <span class="checkmark"></span>

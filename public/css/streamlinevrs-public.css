@@ -1434,3 +1434,7 @@ table#payment_receipt tbody tr:last-child td {
     .errorDiv{
     margin: auto;
 }}
+.err-msg{
+    height: 65vh;
+    display: flex;
+}

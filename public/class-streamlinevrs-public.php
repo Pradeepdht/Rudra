@@ -132,6 +132,7 @@ class Streamlinevrs_Public {
 		$todate = isset($_POST['checkout']) ? sanitize_text_field($_POST['checkout']) : date("m/d/Y");
 		$guests = isset($_POST['no_of_guest']) ? intval($_POST['no_of_guest']) : 1;
 		$unit_id = isset($_POST['unit_id']) ? sanitize_text_field($_POST['unit_id']) : '';
+		$coupon_code = isset($_POST['coupon_code']) ? sanitize_text_field($_POST['coupon_code']) : '';
 
 		$streamlinevrs_skip_units = get_option('streamlinevrs_skip_units');
 		$streamlinevrs_skip_units = implode(',',$streamlinevrs_skip_units);
@@ -148,6 +149,7 @@ class Streamlinevrs_Public {
 		$params['show_package_addons'] = 1;
 		$params['pricing_model'] = 1;
 		$params['skip_units'] = $streamlinevrs_skip_units;
+		$params['coupon_code'] = $coupon_code;
 		
 
 		$propertiesResult = callStreamlineAPI('GetPreReservationPrice', $params);
@@ -232,6 +234,41 @@ class Streamlinevrs_Public {
 		// print_r($_POST); 
 	   wp_send_json($p_response);  
 		exit();
+	}
+
+
+	public function savePaymentResponseAction_handler(){
+		global $wpdb;
+		$first_name = isset($_POST['first_name']) ? sanitize_text_field($_POST['first_name']) : '';
+		$last_name = isset($_POST['last_name']) ? sanitize_text_field($_POST['last_name']) : '';
+		$txn_amount = isset($_POST['txn_amount']) ? sanitize_text_field($_POST['txn_amount']) : '';
+		$email = isset($_POST['email']) ? sanitize_text_field($_POST['email']) : '';
+		$transaction_details = isset($_POST['transaction_details']) ? sanitize_text_field($_POST['transaction_details']) : '';
+		$status = isset($_POST['status']) ? sanitize_text_field($_POST['status']) : '';
+		$created = date("Y-m-d H:i:s");
+
+		$tablename =  $wpdb->prefix . "stream_payment_transactions"; 
+        $wpdb->insert( $tablename, array(
+			'first_name' => $first_name,
+			'last_name' => $last_name,
+			'txn_amount' => $txn_amount,
+			'email' =>$email,
+			'transaction_details' =>$transaction_details,
+			'status' =>$status,
+			'created' =>$created
+		),
+		array( '%s', '%s','%s', '%s', '%s', '%s', '%s')
+		);
+   
+		$insert_id = $wpdb->insert_id;
+		if($insert_id !=''){
+		echo "success";
+		}else{
+			echo "failed";
+  		}
+
+  		exit();
+
 	}
 
 
@@ -461,139 +498,138 @@ class Streamlinevrs_Public {
 
     
 
-	    public function get_all_streamline_properties() {
-			global $user_ID;
-
-			/* streamlinevrs All Owners id */
-			$params = [];
-			$params['owner_id'] = OWNER_ID;
-			$all_unit_ids=[];
-			$all_skip_units = [];
-			$unitList = callStreamlineAPI('GetOwnerUnits', $params);	
-			$unitListResult = json_decode($unitList);
-			$properties = [];
-			if ($unitListResult && isset($unitListResult->data)) {
-				$unitListResultdata = $unitListResult->data;
-				if (isset($unitListResultdata->owner->units)) {
-					$units = $unitListResultdata->owner->units->unit;
-					}
-			}
-			foreach ($units as $unit) {
-				$all_unit_ids[] = $unit->id;
-			}
-
-			//main
-			$params = [];
-			
-			$propertiesResult = callStreamlineAPI('GetPropertyList', $params);
-			$p_response = $propertiesResult;
-
-			$propertiesResult = json_decode($propertiesResult);
-
-			$properties = [];
-			if ($propertiesResult && isset($propertiesResult->data)) {
-			$propertiesResultdata = $propertiesResult->data;
-			if (isset($propertiesResultdata->property)) {
-				$properties = $propertiesResultdata->property;
-			}
-			}
-
-			foreach ($properties as $data) {
-				$str_id = $data->id;
-				if(in_array($str_id, $all_unit_ids)){
-
-					$str_title = $data->name;
-					$p_params = [];
-					$p_params['unit_id'] = $str_id;
-
-					// GetPropertyInfo
-					$propertyResult = callStreamlineAPI('GetPropertyInfo', $p_params);
-					$propertyResult = json_decode($propertyResult, true);
-					$property = [];
-					if ($propertyResult && isset($propertyResult['data'])) {
-						$property = $propertyResult['data'];
-						/* if( isset($propertiesResultdata->property) ){
-						$property = $propertiesResultdata->property;
-						} */
-					}
-
-					// GetPropertyGalleryImages
-					$propertyImages = callStreamlineAPI('GetPropertyGalleryImages', $p_params);
-					$propertyImages = json_decode($propertyImages, true);
-					$galleryImages = [];
-					if ($propertyImages && isset($propertyImages['data'])) {
-						$propertiesImagesdata = $propertyImages['data'];
-						if (isset($propertiesImagesdata['image'])) {
-						$galleryImages = $propertiesImagesdata['image'];
-						}
-					}
-
-					$propertyAmenities = callStreamlineAPI('GetPropertyAmenities', $p_params);
-					$propertyAmenities = json_decode($propertyAmenities, true);
-					$amenities = [];
-					if ($propertyAmenities && isset($propertyAmenities['data'])) {
-						$propertiesAmenitiesdata = $propertyAmenities['data'];
-						if (isset($propertiesAmenitiesdata['amenity'])) {
-						$amenities = $propertiesAmenitiesdata['amenity'];
-						}
-					}
-
-
-					$blockedavailabilities = $this->get_room_blocked_dates($unit_id);
-					$property_info = array('property' => $property, 'galleryImages' => $galleryImages, 'amenities' => $amenities, 'blocked_period' => $blockedavailabilities);
-					// Custom Post Data
-					$new_post = array(
-						'post_title' => $str_title,
-						'post_status' => 'publish',
-						'post_author' => $user_ID,
-						'post_type' => 'room',
-					);
-
-					// Check Unit Post
-					$argu_array = array(
-						'status' => 'publish',
-						'post_type' => 'room',
-						'posts_per_page' => -1,
-						'return' => 'ids',
-						'meta_query' => array(
-						array(
-							'key' => 'unit_id',
-							'value' => $str_id,
-						)
-						)
-					);
-					$post_id = 0;
-					$query = new WP_Query($argu_array);
-					if ($query->have_posts()) {
-						while ($query->have_posts()) {
-						$query->the_post();
-						$post_id = get_the_ID();
-						}
-					}
-
-					// Check Unit Post End
-					if ($post_id > 0) {
-						// Update Post
-						$new_post['ID'] = $post_id;
-						$post_id = wp_update_post($new_post);
-						if ($post_id > 0) {
-						update_post_meta($post_id, 'unit_id', $str_id);
-						update_post_meta($post_id, 'property_data', $property_info);
-						}
-					} else {
-						// Create New Post
-						$post_id = wp_insert_post($new_post);
-						if ($post_id > 0) {
-						update_post_meta($post_id, 'unit_id', $str_id);
-						update_post_meta($post_id, 'property_data', $property_info);
-						}
-					}
-				}else{
-					$all_skip_units = $str_id;
-					update_option('streamlinevrs_skip_units',$all_skip_units);
+    public function get_all_streamline_properties() {
+		global $user_ID;
+		/* streamlinevrs All Owners id */
+		$params = [];
+		$params['owner_id'] = OWNER_ID;
+		$all_unit_ids=[];
+		$all_skip_units = [];
+		$unitList = callStreamlineAPI('GetOwnerUnits', $params);	
+		$unitListResult = json_decode($unitList);
+		$properties = [];
+		if ($unitListResult && isset($unitListResult->data)) {
+			$unitListResultdata = $unitListResult->data;
+			if (isset($unitListResultdata->owner->units)) {
+				$units = $unitListResultdata->owner->units->unit;
 				}
-				
-			}
+		}
+		foreach ($units as $unit) {
+			$all_unit_ids[] = $unit->id;
+		}
 
-	    }
+		//main
+		$params = [];
+		
+		$propertiesResult = callStreamlineAPI('GetPropertyList', $params);
+		$p_response = $propertiesResult;
+
+		$propertiesResult = json_decode($propertiesResult);
+
+		$properties = [];
+		if ($propertiesResult && isset($propertiesResult->data)) {
+		$propertiesResultdata = $propertiesResult->data;
+		if (isset($propertiesResultdata->property)) {
+			$properties = $propertiesResultdata->property;
+		}
+		}
+
+		foreach ($properties as $data) {
+			$str_id = $data->id;
+			if(in_array($str_id, $all_unit_ids)){
+
+				$str_title = $data->name;
+				$p_params = [];
+				$p_params['unit_id'] = $str_id;
+
+				// GetPropertyInfo
+				$propertyResult = callStreamlineAPI('GetPropertyInfo', $p_params);
+				$propertyResult = json_decode($propertyResult, true);
+				$property = [];
+				if ($propertyResult && isset($propertyResult['data'])) {
+					$property = $propertyResult['data'];
+					/* if( isset($propertiesResultdata->property) ){
+					$property = $propertiesResultdata->property;
+					} */
+				}
+
+				// GetPropertyGalleryImages
+				$propertyImages = callStreamlineAPI('GetPropertyGalleryImages', $p_params);
+				$propertyImages = json_decode($propertyImages, true);
+				$galleryImages = [];
+				if ($propertyImages && isset($propertyImages['data'])) {
+					$propertiesImagesdata = $propertyImages['data'];
+					if (isset($propertiesImagesdata['image'])) {
+					$galleryImages = $propertiesImagesdata['image'];
+					}
+				}
+
+				$propertyAmenities = callStreamlineAPI('GetPropertyAmenities', $p_params);
+				$propertyAmenities = json_decode($propertyAmenities, true);
+				$amenities = [];
+				if ($propertyAmenities && isset($propertyAmenities['data'])) {
+					$propertiesAmenitiesdata = $propertyAmenities['data'];
+					if (isset($propertiesAmenitiesdata['amenity'])) {
+					$amenities = $propertiesAmenitiesdata['amenity'];
+					}
+				}
+
+
+				$blockedavailabilities = $this->get_room_blocked_dates($unit_id);
+				$property_info = array('property' => $property, 'galleryImages' => $galleryImages, 'amenities' => $amenities, 'blocked_period' => $blockedavailabilities);
+				// Custom Post Data
+				$new_post = array(
+					'post_title' => $str_title,
+					'post_status' => 'publish',
+					'post_author' => $user_ID,
+					'post_type' => 'room',
+				);
+
+				// Check Unit Post
+				$argu_array = array(
+					'status' => 'publish',
+					'post_type' => 'room',
+					'posts_per_page' => -1,
+					'return' => 'ids',
+					'meta_query' => array(
+					array(
+						'key' => 'unit_id',
+						'value' => $str_id,
+					)
+					)
+				);
+				$post_id = 0;
+				$query = new WP_Query($argu_array);
+				if ($query->have_posts()) {
+					while ($query->have_posts()) {
+					$query->the_post();
+					$post_id = get_the_ID();
+					}
+				}
+
+				// Check Unit Post End
+				if ($post_id > 0) {
+					// Update Post
+					$new_post['ID'] = $post_id;
+					$post_id = wp_update_post($new_post);
+					if ($post_id > 0) {
+					update_post_meta($post_id, 'unit_id', $str_id);
+					update_post_meta($post_id, 'property_data', $property_info);
+					}
+				} else {
+					// Create New Post
+					$post_id = wp_insert_post($new_post);
+					if ($post_id > 0) {
+					update_post_meta($post_id, 'unit_id', $str_id);
+					update_post_meta($post_id, 'property_data', $property_info);
+					}
+				}
+			}else{
+				$all_skip_units = $str_id;
+				update_option('streamlinevrs_skip_units',$all_skip_units);
+			}
+			
+		}
+
+    }
 }
