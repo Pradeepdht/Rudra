@@ -1,0 +1,1402 @@
+<!doctype html>
+<html lang="en">
+   <!--initiate::Head-->
+
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--initiate::title-->
+      <title>Group | Horizon</title>
+      <!-- /initiate::title-->
+
+      <!--initiate::stylesheets-->
+      <link href="../../assets/css/global/bootstrap.css" rel="stylesheet" type="text/css">
+      <link href="../../assets/css/custom/style.css" rel="stylesheet" type="text/css">
+      <!-- /initiate::stylesheets-->
+
+      <!--initiate::Remix icons-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+      <!-- /initiate::Remix icons-->
+
+      <!--initiate::Fonts-->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+         rel="stylesheet">
+      <!-- /initiate::Fonts-->
+   </head>
+   <!-- /initiate::Head-->
+
+   <!--initiate::Body-->
+
+   <body>
+      <!--initiate::Main-->
+      <main class="vh-md-100">
+         <!--initiate::Container-fluid-->
+         <div class="container-fluid h-md-100">
+            <!--initiate::Row-->
+            <div class="row h-md-100">
+               <div class="d-flex px-0">
+
+                  <!--initiate::Aside-->
+                  <div
+                     class="sidebar position-fixed d-flex flex-column flex-shrink-0 text-secondary bg-dark h-100 overflow-auto">
+                     <!--initiate::Logo-->
+                     <div class="bg-secondary text-center py-4">
+                        <a href="#" class="text-white text-decoration-none text-center w-100">
+                           <span class="fs-5 fw-bolder letter-spacing-2">HORIZON</span>
+                        </a>
+                     </div>
+                     <!-- /initiate::Logo-->
+
+                     <!--initiate::Aside menu-->
+                     <ul class="nav flex-column mb-auto py-3">
+                        <!--initiate::Menu Item-->
+                        <li class="nav-item mb-2 px-3">
+                           <a href="#" class="nav-link active d-flex align-items-center" aria-current="page">
+                              <i class="ri-home-6-fill fs-5 me-3"></i>
+                              Dashboard
+                           </a>
+                        </li>
+                        <!-- /initiate::Menu Item-->
+
+                        <!--initiate::Menu Item-->
+                        <li class="nav-item mb-2 px-3">
+                           <a href="#" class=" nav-link btn-toggle align-items-center rounded collapsed w-100"
+                              data-bs-toggle="collapse" data-bs-target="#apps" aria-expanded="false">
+                              <div class="d-flex align-items-center justify-content-center">
+                                 <i class="ri-grid-fill fs-5 me-3"></i> Applications
+                                 <div class="ms-auto">
+                                    <i class="ri-arrow-right-s-line fs-5"></i>
+                                 </div>
+                              </div>
+                           </a>
+
+                           <!--initiate::Dropdowns List-->
+                           <div class="collapse" id="apps">
+                              <!--initiate::Dropdowns Toggle-->
+                              <ul class="btn-toggle-nav fw-normal pb-1 small">
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                       data-bs-toggle="collapse" data-bs-target="#menu-1" aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Users
+                                       <div class="ms-auto">
+                                          <i class="ri-arrow-right-s-line fs-5"></i>
+                                       </div>
+                                    </a>
+                                    <div class="collapse" id="menu-1">
+                                       <ul class="btn-toggle-nav list-unstyled">
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> User Default
+                                                Views</a></li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Add User</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded w-100 d-flex align-items-center"
+                                       aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Profile
+                                    </a>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                       data-bs-toggle="collapse" data-bs-target="#menu-3" aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Contacts
+                                       <div class="ms-auto">
+                                          <i class="ri-arrow-right-s-line fs-5"></i>
+                                       </div>
+                                    </a>
+                                    <div class="collapse" id="menu-3">
+                                       <ul class="btn-toggle-nav list-unstyled">
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> View
+                                                Contact</a></li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Add
+                                                Contact</a></li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                       data-bs-toggle="collapse" data-bs-target="#menu-4" aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Projects
+                                       <div class="ms-auto">
+                                          <i class="ri-arrow-right-s-line fs-5"></i>
+                                       </div>
+                                    </a>
+                                    <div class="collapse" id="menu-4">
+                                       <ul class="btn-toggle-nav list-unstyled">
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Project
+                                                List</a></li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Add
+                                                Project</a></li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                       data-bs-toggle="collapse" data-bs-target="#menu-5" aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Support
+                                       <div class="ms-auto">
+                                          <i class="ri-arrow-right-s-line fs-5"></i>
+                                       </div>
+                                    </a>
+                                    <div class="collapse" id="menu-5">
+                                       <ul class="btn-toggle-nav list-unstyled">
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> FAQ</a></li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Feedback</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> License</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                       data-bs-toggle="collapse" data-bs-target="#menu-6" aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Pages
+                                       <div class="ms-auto">
+                                          <i class="ri-arrow-right-s-line fs-5"></i>
+                                       </div>
+                                    </a>
+                                    <div class="collapse" id="menu-6">
+                                       <ul class="btn-toggle-nav list-unstyled">
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Pricing</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Invoices</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                       data-bs-toggle="collapse" data-bs-target="#chat" aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Chat
+                                       <div class="ms-auto">
+                                          <i class="ri-arrow-right-s-line fs-5"></i>
+                                       </div>
+                                    </a>
+                                    <div class="collapse" id="chat">
+                                       <ul class="btn-toggle-nav list-unstyled">
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Private</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Group</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded w-100 d-flex align-items-center"
+                                       aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i></span> To Do
+                                    </a>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                              </ul>
+                              <!-- /initiate::Dropdowns Toggle-->
+                           </div>
+                           <!-- /initiate::Dropdowns List-->
+                        </li>
+                        <!-- /initiate::Menu Item-->
+
+                        <!--initiate::Menu Item-->
+                        <li class="nav-item mb-2 px-3">
+                           <a href="#" class=" nav-link btn-toggle align-items-center rounded collapsed w-100"
+                              data-bs-toggle="collapse" data-bs-target="#forms" aria-expanded="false">
+                              <div class="d-flex align-items-center justify-content-center">
+                                 <i class="ri-file-text-fill fs-5 me-3"></i> Forms
+                                 <div class="ms-auto">
+                                    <i class="ri-arrow-right-s-line fs-5"></i>
+                                 </div>
+                              </div>
+                           </a>
+                           <!--initiate::Dropdowns List-->
+                           <div class="collapse" id="forms">
+                              <!--initiate::Dropdowns Toggle-->
+                              <ul class="btn-toggle-nav fw-normal pb-1 small">
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                       data-bs-toggle="collapse" data-bs-target="#menu-1" aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Form
+                                       Controls
+                                       <div class="ms-auto">
+                                          <i class="ri-arrow-right-s-line fs-5"></i>
+                                       </div>
+                                    </a>
+                                    <div class="collapse" id="menu-1">
+                                       <ul class="btn-toggle-nav list-unstyled">
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Base
+                                                Inputs</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Input
+                                                Groups</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Radio</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Checkbox</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Switch</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Tagify</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+                              </ul>
+                              <!-- /initiate::Dropdowns Toggle-->
+                           </div>
+                           <!-- /initiate::Dropdowns List-->
+                        </li>
+                        <!-- /initiate::Menu Item-->
+
+                     </ul>
+                     <!-- /initiate::Aside menu-->
+                  </div>
+                  <!-- /initiate::Aside-->
+
+                  <!--initiate::Wrapper-->
+                  <div class="wrapper w-100">
+                     <div class="w-100">
+                        <!--initiate::Header-->
+                        <header class="bg-white px-4 py-3 border-bottom">
+                           <div class="d-flex align-items-center justify-content-between">
+
+                              <!--initiate::left side-->
+                              <div class="d-flex align-items-center">
+                                 <!--initiate::Aside collapse-->
+                                 <a href="#" class="me-4 text-decoration-none text-dark">
+                                    <i class="ri-bar-chart-horizontal-line fs-4"></i>
+                                 </a>
+                                 <!-- /initiate::Aside collapse-->
+
+                                 <!--initiate::Features dropdown-->
+                                 <div class="dropdown">
+                                    <!--initiate::Dropdown button-->
+                                    <button class="btn p-0 dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                       Features
+                                    </button>
+                                    <!-- /initiate::Dropdown button-->
+
+                                    <!--initiate::Dropdown menu-->
+                                    <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton1">
+                                       <li class="features-dropdown d-flex">
+                                          <!--initiate::Dropdown menu list-->
+                                          <ul class="list-unstyled p-4">
+                                             <li class="text-dark fw-semibold mb-2">Task Reports</li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-lock-fill text-primary me-3"></i>Latest Tasks</a></li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-timer-2-line text-primary me-3"></i>Pending Tasks</a>
+                                             </li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-alarm-warning-fill text-primary me-3"></i>Urgent
+                                                   Tasks</a>
+                                             </li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-checkbox-circle-fill text-primary me-3"></i>Completed
+                                                   Tasks</a></li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-delete-back-2-fill text-primary me-3"></i>Failed
+                                                   Tasks</a>
+                                             </li>
+                                          </ul>
+                                          <!-- /initiate::Dropdown menu list-->
+
+                                          <!--initiate::Dropdown menu list-->
+                                          <ul class="list-unstyled p-4 border-start">
+                                             <li class="text-dark fw-semibold mb-2">Staff Management</li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-user-star-fill text-primary me-3"></i>Top Management</a>
+                                             </li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-lock-password-fill  text-primary me-3"></i>Project
+                                                   Management</a></li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-file-settings-fill  text-primary me-3"></i>Development
+                                                   Staff</a></li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-customer-service-fill text-primary me-3"></i>Customer
+                                                   Service</a></li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-stack-fill text-primary me-3"></i>Sales & Marketing</a>
+                                             </li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-hand-coin-fill text-primary me-3"></i>Executives</a>
+                                             </li>
+                                          </ul>
+                                          <!-- /initiate::Dropdown menu list-->
+                                       </li>
+                                    </ul>
+                                    <!-- /initiate::Dropdown menu-->
+                                 </div>
+                                 <!-- /initiate::Features dropdown-->
+                              </div>
+                              <!-- /initiate::left side-->
+
+                              <!--initiate::right side-->
+                              <div class="d-flex align-items-center">
+                                 <!--initiate::search bar-->
+                                 <a class="text-decoration-none me-4 text-dark fs-5" href="#">
+                                    <i class="ri-search-line fs-4"></i>
+                                 </a>
+                                 <!-- /initiate::search bar-->
+
+                                 <!--initiate::notification-->
+                                 <div class="dropdown me-4">
+                                    <!--initiate::Dropdown button-->
+                                    <button class="btn p-0 dropdown-toggle" type="button" id="dropdownMenuButton2"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                       <i class="ri-notification-3-line fs-4"></i>
+                                    </button>
+                                    <!-- /initiate::Dropdown button-->
+
+                                    <!--initiate::Dropdown menu-->
+                                    <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton2">
+                                       <li><a class="dropdown-item py-2" href="#">Notification Content</a></li>
+                                       <li><a class="dropdown-item py-2" href="#">Notification Content</a></li>
+                                    </ul>
+                                    <!-- /initiate::Dropdown menu-->
+                                 </div>
+                                 <!-- /initiate::notification-->
+
+                                 <!--initiate::My Profile-->
+                                 <div class="ms-auto">
+                                    <!--initiate::My Profile dropdown-->
+                                    <div class="dropdown">
+                                       <!--initiate::Dropdown button-->
+                                       <a class="btn dropdown-toggle p-0 border-0" href="#" role="button"
+                                          id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                          <img src="../../assets/media/avatars/150-1.jpg" alt="user" width="40"
+                                             height="40" class="rounded">
+                                       </a>
+                                       <!-- /initiate::Dropdown button-->
+
+                                       <!--initiate::Dropdown menu-->
+                                       <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuLink">
+                                          <li><a class="dropdown-item py-2 text-capitalize d-flex align-items-center"
+                                                href="../../account/profile.html"><i class="ri-user-fill me-2"></i>my
+                                                profile</a></li>
+                                          <li><a class="dropdown-item py-2 text-capitalize d-flex align-items-center"
+                                                href="#"><i class="ri-settings-3-fill me-2"></i>settings & privacy</a>
+                                          </li>
+                                          <li>
+                                             <hr class="dropdown-divider">
+                                          </li>
+                                          <li><a class="dropdown-item py-2 text-capitalize d-flex align-items-center"
+                                                href="#"><i class="ri-logout-box-r-fill me-2"></i>logout</a></li>
+                                       </ul>
+                                       <!-- /initiate::Dropdown menu-->
+                                    </div>
+                                    <!-- /initiate::My Profile dropdown-->
+                                 </div>
+                                 <!-- /initiate::My Profile-->
+                              </div>
+                              <!-- /initiate::right side-->
+                           </div>
+                        </header>
+                        <!-- /initiate::Header-->
+
+                        <!--initiate::Breadcrumbs-->
+                        <div class="px-4 py-3">
+                           <nav aria-label="breadcrumb">
+                              <ul class="breadcrumb m-0">
+                                 <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Applications</a>
+                                 </li>
+                                 <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Chat</a></li>
+                                 <li class="breadcrumb-item active" aria-current="page">Group</li>
+                              </ul>
+                           </nav>
+                        </div>
+                        <!-- /initiate::Breadcrumbs-->
+
+                     </div>
+
+                     <!--initiate::Container-->
+                     <div class="container p-4 chat-container">
+                        <!--initiate::Row-->
+                        <div class="row h-md-100">
+                           <!--initiate::Column-->
+                           <div class="col-md-4 col-12 pe-md-2 h-md-100">
+                              <!--initiate::Card-->
+                              <div class="card shadow-sm border-0 bg-white h-md-100">
+                                 <!--initiate::Card body-->
+                                 <div class="card-body p-0 h-md-100">
+                                    <!--initiate::Search-->
+                                    <div class="search-group position-relative">
+                                       <i
+                                          class="ri-search-line position-absolute fs-5 start-10 top-50 translate-middle-y text-secondary"></i>
+                                       <input type="text" class="form-control bg-light ps-5 py-3 border-0"
+                                          placeholder="Search by E-mail">
+                                    </div>
+                                    <!-- /initiate::Search-->
+
+                                    <!--initiate::Tabs-->
+                                    <div class="w-100 chat-tabs">
+                                       <h5 class="fw-semibold p-4 m-0 text-secondary">Group</h5>
+                                       <!--initiate::Tabs list-->
+                                       <div class="d-flex align-items-start chat-list">
+                                          <div class="nav flex-column nav-pills flex-grow-1" id="v-pills-tab"
+                                             role="tablist" aria-orientation="vertical">
+
+                                             <!--initiate::Group-->
+                                             <a href="#"
+                                                class="nav-link active text-start bg-white text-dark border-top border-bottom py-3 rounded-0"
+                                                id="first-group-chat" data-bs-toggle="pill" data-bs-target="#first-chat"
+                                                role="tab" aria-selected="true">
+                                                <div class="d-flex align-items-center">
+                                                   <div class="user-status position-relative active">
+                                                      <img src="../../assets/media/miscellaneous/development.png"
+                                                         alt="group" width="50" height="50" class="rounded-circle">
+                                                   </div>
+                                                   <div class="ms-3 flex-grow-1">
+                                                      <h6 class="mb-0 fw-semibold">Development Department</h6>
+                                                      <p class="text-muted m-0">Head of Development</p>
+                                                   </div>
+                                                   <div class="msg-notify text-end">
+                                                      <span class="badge bg-info fw-normal">1</span>
+                                                      <small class="d-inline-block w-100 text-muted">4 Mins</small>
+                                                   </div>
+                                                </div>
+                                             </a>
+                                             <!-- /initiate::Group-->
+
+                                             <!--initiate::Group-->
+                                             <a href="#"
+                                                class="nav-link text-start bg-white text-dark border-top border-bottom py-3 rounded-0"
+                                                id="sec-group-chat" data-bs-toggle="pill" data-bs-target="#sec-chat"
+                                                role="tab" aria-selected="false">
+                                                <div class="d-flex align-items-center">
+                                                   <div class="user-status position-relative">
+                                                      <img src="../../assets/media/miscellaneous/design.png" alt="group"
+                                                         width="50" height="50" class="rounded-circle">
+                                                   </div>
+                                                   <div class="ms-3 flex-grow-1">
+                                                      <h6 class="mb-0 fw-semibold">Designing Team</h6>
+                                                      <p class="text-muted m-0">Head of Development</p>
+                                                   </div>
+                                                   <div class="msg-notify text-end">
+                                                      <span class="badge bg-info fw-normal">3</span>
+                                                      <small class="d-inline-block w-100 text-muted">25 Mins</small>
+                                                   </div>
+                                                </div>
+                                             </a>
+                                             <!-- /initiate::Group-->
+
+                                             <!--initiate::Group-->
+                                             <a href="#"
+                                                class="nav-link text-start bg-white text-dark border-top border-bottom py-3 rounded-0"
+                                                id="third-group-chat" data-bs-toggle="pill" data-bs-target="#third-chat"
+                                                role="tab" aria-selected="false">
+                                                <div class="d-flex align-items-center">
+                                                   <div class="user-status position-relative">
+                                                      <img src="../../assets/media/miscellaneous/apps.png" alt="group"
+                                                         width="50" height="50" class="rounded-circle">
+                                                   </div>
+                                                   <div class="ms-3 flex-grow-1">
+                                                      <h6 class="mb-0 fw-semibold">Mobile Apps</h6>
+                                                      <p class="text-muted m-0">Head of Development</p>
+                                                   </div>
+                                                   <div class="msg-notify text-end">
+                                                      <!-- <span class="badge bg-info fw-normal">4</span> -->
+                                                      <small class="d-inline-block w-100 text-muted">1 Hr</small>
+                                                   </div>
+                                                </div>
+                                             </a>
+                                             <!-- /initiate::Group-->
+
+                                             <!--initiate::Group-->
+                                             <a href="#"
+                                                class="nav-link text-start bg-white text-dark border-top border-bottom py-3 rounded-0"
+                                                id="forth-group-chat" data-bs-toggle="pill" data-bs-target="#forth-chat"
+                                                role="tab" aria-selected="false">
+                                                <div class="d-flex align-items-center">
+                                                   <div class="user-status position-relative">
+                                                      <img src="../../assets/media/miscellaneous/recruitment.png"
+                                                         alt="group" width="50" height="50" class="rounded-circle">
+                                                   </div>
+                                                   <div class="ms-3 flex-grow-1">
+                                                      <h6 class="mb-0 fw-semibold">Recruitment Group</h6>
+                                                      <p class="text-muted m-0">Head of Development</p>
+                                                   </div>
+                                                   <div class="msg-notify text-end">
+                                                      <!-- <span class="badge bg-info fw-normal">4</span> -->
+                                                      <small class="d-inline-block w-100 text-muted">2 Days</small>
+                                                   </div>
+                                                </div>
+                                             </a>
+                                             <!-- /initiate::Group-->
+
+                                             <!--initiate::Group-->
+                                             <a href="#"
+                                                class="nav-link text-start bg-white text-dark border-top border-bottom py-3 rounded-0"
+                                                id="fifth-group-chat" data-bs-toggle="pill" data-bs-target="#fifth-chat"
+                                                role="tab" aria-selected="false">
+                                                <div class="d-flex align-items-center">
+                                                   <div class="user-status position-relative">
+                                                      <img src="../../assets/media/miscellaneous/finance.png"
+                                                         alt="group" width="50" height="50" class="rounded-circle">
+                                                   </div>
+                                                   <div class="ms-3 flex-grow-1">
+                                                      <h6 class="mb-0 fw-semibold">Finance Department</h6>
+                                                      <p class="text-muted m-0">Head of Development</p>
+                                                   </div>
+                                                   <div class="msg-notify text-end">
+                                                      <!-- <span class="badge bg-info fw-normal">4</span> -->
+                                                      <small class="d-inline-block w-100 text-muted">3 Days</small>
+                                                   </div>
+                                                </div>
+                                             </a>
+                                             <!-- /initiate::Group-->
+
+                                             <!--initiate::Group-->
+                                             <a href="#"
+                                                class="nav-link text-start bg-white text-dark border-top border-bottom py-3 rounded-0"
+                                                id="sixth-group-chat" data-bs-toggle="pill" data-bs-target="#sixth-chat"
+                                                role="tab" aria-selected="false">
+                                                <div class="d-flex align-items-center">
+                                                   <div class="user-status position-relative">
+                                                      <img src="../../assets/media/miscellaneous/website.png"
+                                                         alt="group" width="50" height="50" class="rounded-circle">
+                                                   </div>
+                                                   <div class="ms-3 flex-grow-1">
+                                                      <h6 class="mb-0 fw-semibold">Website Development</h6>
+                                                      <p class="text-muted m-0">Head of Development</p>
+                                                   </div>
+                                                   <div class="msg-notify text-end">
+                                                      <!-- <span class="badge bg-info fw-normal">4</span> -->
+                                                      <small class="d-inline-block w-100 text-muted">5 Days</small>
+                                                   </div>
+                                                </div>
+                                             </a>
+                                             <!-- /initiate::Group-->
+
+                                             <!--initiate::Group-->
+                                             <a href="#"
+                                                class="nav-link text-start bg-white text-dark border-top border-bottom py-3 rounded-0"
+                                                id="seventh-group-chat" data-bs-toggle="pill"
+                                                data-bs-target="#seventh-chat" role="tab" aria-selected="false">
+                                                <div class="d-flex align-items-center">
+                                                   <div class="user-status position-relative">
+                                                      <img src="../../assets/media/miscellaneous/team-lead.png"
+                                                         alt="group" width="50" height="50" class="rounded-circle">
+                                                   </div>
+                                                   <div class="ms-3 flex-grow-1">
+                                                      <h6 class="mb-0 fw-semibold">Team Leads Group</h6>
+                                                      <p class="text-muted m-0">Head of Development</p>
+                                                   </div>
+                                                   <div class="msg-notify text-end">
+                                                      <!-- <span class="badge bg-info fw-normal">4</span> -->
+                                                      <small class="d-inline-block w-100 text-muted">7 Days</small>
+                                                   </div>
+                                                </div>
+                                             </a>
+                                             <!-- /initiate::Group-->
+
+                                          </div>
+                                       </div>
+                                       <!-- /initiate::Tabs list-->
+                                    </div>
+                                    <!-- /initiate::Tabs-->
+                                 </div>
+                                 <!-- /initiate::Card body-->
+                              </div>
+                              <!-- /initiate::Card-->
+                           </div>
+                           <!-- /initiate::Column-->
+
+                           <!--initiate::Column-->
+                           <div class="col-md-8 col-12 ps-md-2 h-md-100">
+                              <!--initiate::Card-->
+                              <div class="card shadow-sm border-0 h-md-100">
+                                 <!--initiate::Card body-->
+                                 <div class="card-body p-0 pb-8 h-md-100">
+                                    <!--initiate::Tab content-->
+                                    <div class="tab-content h-md-100" id="v-pills-chat">
+                                       <!--initiate::Group-->
+                                       <div class="tab-pane fade show active h-md-100" id="first-chat" role="tabpanel"
+                                          aria-labelledby="first-group-chat">
+
+                                          <!--initiate::Group info-->
+                                          <div class="border-bottom p-3">
+                                             <!--initiate::Row-->
+                                             <div class="row">
+                                                <!--initiate::Column-->
+                                                <div class="col-12 px-md-4 px-3">
+                                                   <div class="d-flex align-items-center justify-content-between">
+                                                      <!--initiate::Image-->
+                                                      <div class="user-status position-relative active scale-80">
+                                                         <img src="../../assets/media/miscellaneous/development.png"
+                                                            alt="user" width="50" height="50" class="rounded-circle">
+                                                      </div>
+                                                      <!-- /initiate::Image-->
+
+                                                      <!--initiate::Name-->
+                                                      <div class="ms-3 flex-grow-1">
+                                                         <h5 class="mb-0 fw-semibold">Development Department</h5>
+                                                      </div>
+                                                      <!-- /initiate::Name-->
+
+                                                      <!--initiate::Members-->
+                                                      <div class="members d-flex align-items-center me-3">
+                                                         <h6 class="text-muted mb-0 me-2">Members</h6>
+                                                         <ul
+                                                            class="list-unstyled list-inline mb-0 d-flex align-items-center justify-content-center">
+                                                            <li class="list-inline-item m-0">
+                                                               <img src="../../assets/media/avatars/150-3.jpg" alt="img"
+                                                                  width="30" height="30" class="rounded-circle">
+                                                            </li>
+                                                            <li class="list-inline-item m-0">
+                                                               <img src="../../assets/media/avatars/150-4.jpg" alt="img"
+                                                                  width="30" height="30" class="rounded-circle">
+                                                            </li>
+                                                            <li class="list-inline-item m-0">
+                                                               <img src="../../assets/media/avatars/150-5.jpg" alt="img"
+                                                                  width="30" height="30" class="rounded-circle">
+                                                            </li>
+                                                         </ul>
+                                                      </div>
+                                                      <!-- /initiate::Members-->
+
+                                                      <!--initiate::Dropdown-->
+                                                      <div class="dropdown">
+                                                         <button class="btn bg-transparent dropdown-toggle"
+                                                            type="button" id="user-chat-actions"
+                                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="ri-more-2-fill"></i>
+                                                         </button>
+                                                         <ul class="dropdown-menu p-0"
+                                                            aria-labelledby="user-chat-actions">
+                                                            <li><a class="dropdown-item py-2 d-flex align-items-center"
+                                                                  href="#"><i
+                                                                     class="ri-volume-mute-line text-secondary me-2"></i>Mute
+                                                                  Notifications</a></li>
+                                                            <li><a class="dropdown-item py-2 d-flex align-items-center"
+                                                                  href="#"><i
+                                                                     class="ri-phone-line text-secondary me-2"></i>Voice
+                                                                  Call</a></li>
+                                                         </ul>
+                                                      </div>
+                                                      <!-- /initiate::Dropdown-->
+
+                                                   </div>
+                                                </div>
+                                                <!-- /initiate::Column-->
+                                             </div>
+                                             <!-- /initiate::Row-->
+                                          </div>
+                                          <!-- /initiate::Group info-->
+
+                                          <!--initiate::Conversation-->
+                                          <div class="w-100 px-md-4 px-3 pt-3 conversation">
+                                             <!--initiate::Row-->
+                                             <div class="row">
+                                                <!--initiate::Column-->
+                                                <div class="col-12">
+                                                   <div class="today-line text-center">
+                                                      <p class="text-secondary bg-white py-2 px-3 d-inline-block">Today
+                                                      </p>
+                                                   </div>
+                                                </div>
+                                                <!-- /initiate::Column-->
+                                             </div>
+                                             <!-- /initiate::Row-->
+
+                                             <!--initiate::Row-->
+                                             <div class="row mb-4">
+                                                <!--initiate::Column-->
+                                                <div class="col-md-9 col-12">
+                                                   <div class="d-flex align-items-start">
+                                                      <div class="user-status position-relative active">
+                                                         <img src="../../assets/media/avatars/150-2.jpg" alt="user"
+                                                            width="50" height="50" class="rounded-circle">
+                                                      </div>
+                                                      <div class="ms-3 mt-3">
+                                                         <h6 class="fw-semibold">Ava Charlotte</h6>
+                                                         <p
+                                                            class="bg-light p-3 my-2 rounded-top-right-1 rounded-bottom-left-1 rounded-bottom-right-1">
+                                                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                                                            odit aut fugit qui ratione voluptatem.
+                                                         </p>
+                                                         <small class="text-muted">3:25 PM</small>
+                                                      </div>
+
+                                                   </div>
+                                                </div>
+                                                <!-- /initiate::Column-->
+
+                                                <!--initiate::Column-->
+                                                <div class="col-md-3 col-12"></div>
+                                                <!-- /initiate::Column-->
+                                             </div>
+                                             <!-- received msg ends -->
+
+                                             <!--initiate::Row-->
+                                             <div class="row mb-4">
+                                                <!--initiate::Column-->
+                                                <div class="col-md-3 col-12"></div>
+                                                <!-- /initiate::Column-->
+
+                                                <!--initiate::Column-->
+                                                <div class="col-md-9 col-12 d-flex justify-content-end">
+                                                   <div class="d-flex align-items-start">
+                                                      <div class="me-3 mt-3 text-end">
+                                                         <h6 class="fw-semibold">You</h6>
+                                                         <p
+                                                            class="bg-primary p-3 my-2 rounded-top-left-1 rounded-bottom-left-1 rounded-bottom-right-1 text-white text-start">
+                                                            Duis aute irure dolor in reprehenderit in voluptate velit
+                                                            esse.
+                                                         </p>
+                                                         <small class="text-muted">3:30 PM</small>
+                                                      </div>
+
+                                                      <div class="user-status position-relative">
+                                                         <img src="../../assets/media/avatars/150-1.jpg" alt="user"
+                                                            width="50" height="50" class="rounded-circle">
+                                                      </div>
+
+                                                   </div>
+                                                </div>
+                                                <!-- /initiate::Column-->
+                                             </div>
+                                             <!-- /initiate::Row-->
+
+                                             <!--initiate::Row-->
+                                             <div class="row mb-4">
+                                                <!--initiate::Column-->
+                                                <div class="col-md-9 col-12">
+                                                   <div class="d-flex align-items-start">
+                                                      <div class="user-status position-relative active">
+                                                         <img src="../../assets/media/avatars/150-5.jpg" alt="user"
+                                                            width="50" height="50" class="rounded-circle">
+                                                      </div>
+                                                      <div class="ms-3 mt-3">
+                                                         <h6 class="fw-semibold">Lucy Robert</h6>
+                                                         <p
+                                                            class="bg-light p-3 my-2 rounded-top-right-1 rounded-bottom-left-1 rounded-bottom-right-1">
+                                                            Ut enim ad minima veniam quis nostrum exercitationem ullam.
+                                                         </p>
+                                                         <small class="text-muted">3:37 PM</small>
+                                                      </div>
+
+                                                   </div>
+                                                </div>
+                                                <!-- /initiate::Column-->
+
+                                                <!--initiate::Column-->
+                                                <div class="col-md-3 col-12"></div>
+                                                <!-- /initiate::Column-->
+                                             </div>
+                                             <!-- /initiate::Row-->
+
+                                             <!--initiate::Row-->
+                                             <div class="row mb-4">
+                                                <!--initiate::Column-->
+                                                <div class="col-md-3 col-12"></div>
+                                                <!-- /initiate::Column-->
+
+                                                <!--initiate::Column-->
+                                                <div class="col-md-9 col-12 d-md-flex justify-content-end">
+                                                   <div class="d-flex align-items-start">
+                                                      <div class="me-3 mt-3 text-end">
+                                                         <h6 class="fw-semibold">You</h6>
+                                                         <p
+                                                            class="bg-primary p-3 my-2 rounded-top-left-1 rounded-bottom-left-1 rounded-bottom-right-1 text-white text-start">
+                                                            Et harum quidem rerum facilis est et expedita distinctio.
+                                                         </p>
+                                                         <small class="text-muted">3:52 PM</small>
+                                                      </div>
+
+                                                      <div class="user-status position-relative">
+                                                         <img src="../../assets/media/avatars/150-1.jpg" alt="user"
+                                                            width="50" height="50" class="rounded-circle">
+                                                      </div>
+
+                                                   </div>
+                                                </div>
+                                                <!-- /initiate::Column-->
+                                             </div>
+                                             <!-- /initiate::Row-->
+
+                                             <!--initiate::Row-->
+                                             <div class="row">
+                                                <!--initiate::Column-->
+                                                <div class="col-md-3 col-12"></div>
+                                                <!-- /initiate::Column-->
+
+                                                <!--initiate::Column-->
+                                                <div class="col-md-9 col-12 d-md-flex justify-content-end">
+                                                   <div class="d-flex align-items-start">
+                                                      <div class="me-3 mt-3 text-end">
+                                                         <h6 class="fw-semibold">You</h6>
+                                                         <p
+                                                            class="bg-primary p-3 my-2 rounded-top-left-1 rounded-bottom-left-1 rounded-bottom-right-1 text-white text-start">
+                                                            Temporibus autem quibusdam et aut officiis debitis aut rerum
+                                                            necessitatibus.
+                                                         </p>
+                                                         <small class="text-muted">4:02 PM</small>
+                                                      </div>
+
+                                                      <div class="user-status position-relative">
+                                                         <img src="../../assets/media/avatars/150-1.jpg" alt="user"
+                                                            width="50" height="50" class="rounded-circle">
+                                                      </div>
+
+                                                   </div>
+                                                </div>
+                                                <!-- /initiate::Column-->
+                                             </div>
+                                             <!-- /initiate::Row-->
+
+                                          </div>
+                                          <!-- /initiate::Conversation-->
+
+                                       </div>
+                                       <!-- /initiate::Group-->
+
+                                       <!--initiate::Group-->
+                                       <div class="tab-pane fade" id="sec-chat" role="tabpanel"
+                                          aria-labelledby="sec-group-chat">
+                                          <!--initiate::Group info-->
+                                          <div class="border-bottom p-3">
+                                             <!--initiate::Row-->
+                                             <div class="row">
+                                                <!--initiate::Column-->
+                                                <div class="col-12 px-md-4 px-3">
+                                                   <div class="d-flex align-items-center justify-content-between">
+                                                      <!--initiate::Image-->
+                                                      <div class="user-status position-relative active scale-80">
+                                                         <img src="../../assets/media/miscellaneous/design.png"
+                                                            alt="user" width="50" height="50" class="rounded-circle">
+                                                      </div>
+                                                      <!-- /initiate::Image-->
+
+                                                      <!--initiate::Name-->
+                                                      <div class="ms-3 flex-grow-1">
+                                                         <h5 class="mb-0 fw-semibold">Designing Team</h5>
+                                                      </div>
+                                                      <!-- /initiate::Name-->
+
+                                                      <!--initiate::Members-->
+                                                      <div class="members d-flex align-items-center me-3">
+                                                         <h6 class="text-muted mb-0 me-2">Members</h6>
+                                                         <ul
+                                                            class="list-unstyled list-inline mb-0 d-flex align-items-center justify-content-center">
+                                                            <li class="list-inline-item m-0">
+                                                               <img src="../../assets/media/avatars/150-7.jpg" alt="img"
+                                                                  width="30" height="30" class="rounded-circle">
+                                                            </li>
+                                                            <li class="list-inline-item m-0">
+                                                               <img src="../../assets/media/avatars/150-6.jpg" alt="img"
+                                                                  width="30" height="30" class="rounded-circle">
+                                                            </li>
+                                                            <li class="list-inline-item m-0">
+                                                               <img src="../../assets/media/avatars/150-3.jpg" alt="img"
+                                                                  width="30" height="30" class="rounded-circle">
+                                                            </li>
+                                                         </ul>
+                                                      </div>
+                                                      <!-- /initiate::Members-->
+
+                                                      <!--initiate::Dropdown-->
+                                                      <div class="dropdown">
+                                                         <button class="btn bg-transparent dropdown-toggle"
+                                                            type="button" id="user-chat-actions-2"
+                                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="ri-more-2-fill"></i>
+                                                         </button>
+                                                         <ul class="dropdown-menu p-0"
+                                                            aria-labelledby="user-chat-actions-2">
+                                                            <li><a class="dropdown-item py-2 d-flex align-items-center"
+                                                                  href="#"><i
+                                                                     class="ri-volume-mute-line text-secondary me-2"></i>Mute
+                                                                  Notifications</a></li>
+                                                            <li><a class="dropdown-item py-2 d-flex align-items-center"
+                                                                  href="#"><i
+                                                                     class="ri-phone-line text-secondary me-2"></i>Voice
+                                                                  Call</a></li>
+                                                         </ul>
+                                                      </div>
+                                                      <!-- /initiate::Dropdown-->
+
+                                                   </div>
+                                                </div>
+                                                <!-- /initiate::Column-->
+                                             </div>
+                                             <!-- /initiate::Row-->
+                                          </div>
+                                          <!-- /initiate::Group info-->
+                                       </div>
+                                       <!-- /initiate::Group-->
+
+                                       <!--initiate::Group-->
+                                       <div class="tab-pane fade" id="third-chat" role="tabpanel"
+                                          aria-labelledby="third-group-chat">
+                                          <!--initiate::Group info-->
+                                          <div class="border-bottom p-3">
+                                             <!--initiate::Row-->
+                                             <div class="row">
+                                                <!--initiate::Column-->
+                                                <div class="col-12 px-md-4 px-3">
+                                                   <div class="d-flex align-items-center justify-content-between">
+                                                      <!--initiate::Image-->
+                                                      <div class="user-status position-relative active scale-80">
+                                                         <img src="../../assets/media/miscellaneous/apps.png" alt="user"
+                                                            width="50" height="50" class="rounded-circle">
+                                                      </div>
+                                                      <!-- /initiate::Image-->
+
+                                                      <!--initiate::Name-->
+                                                      <div class="ms-3 flex-grow-1">
+                                                         <h5 class="mb-0 fw-semibold">Mobile Apps</h5>
+                                                      </div>
+                                                      <!-- /initiate::Name-->
+
+                                                      <!--initiate::Members-->
+                                                      <div class="members d-flex align-items-center me-3">
+                                                         <h6 class="text-muted mb-0 me-2">Members</h6>
+                                                         <ul
+                                                            class="list-unstyled list-inline mb-0 d-flex align-items-center justify-content-center">
+                                                            <li class="list-inline-item m-0">
+                                                               <img src="../../assets/media/avatars/150-2.jpg" alt="img"
+                                                                  width="30" height="30" class="rounded-circle">
+                                                            </li>
+                                                            <li class="list-inline-item m-0">
+                                                               <img src="../../assets/media/avatars/150-6.jpg" alt="img"
+                                                                  width="30" height="30" class="rounded-circle">
+                                                            </li>
+                                                            <li class="list-inline-item m-0">
+                                                               <img src="../../assets/media/avatars/150-5.jpg" alt="img"
+                                                                  width="30" height="30" class="rounded-circle">
+                                                            </li>
+                                                         </ul>
+                                                      </div>
+                                                      <!-- /initiate::Members-->
+
+                                                      <!--initiate::Dropdown-->
+                                                      <div class="dropdown">
+                                                         <button class="btn bg-transparent dropdown-toggle"
+                                                            type="button" id="user-chat-actions-3"
+                                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="ri-more-2-fill"></i>
+                                                         </button>
+                                                         <ul class="dropdown-menu p-0"
+                                                            aria-labelledby="user-chat-actions-3">
+                                                            <li><a class="dropdown-item py-2 d-flex align-items-center"
+                                                                  href="#"><i
+                                                                     class="ri-volume-mute-line text-secondary me-2"></i>Mute
+                                                                  Notifications</a></li>
+                                                            <li><a class="dropdown-item py-2 d-flex align-items-center"
+                                                                  href="#"><i
+                                                                     class="ri-phone-line text-secondary me-2"></i>Voice
+                                                                  Call</a></li>
+                                                         </ul>
+                                                      </div>
+                                                      <!-- /initiate::Dropdown-->
+
+                                                   </div>
+                                                </div>
+                                                <!-- /initiate::Column-->
+                                             </div>
+                                             <!-- /initiate::Row-->
+                                          </div>
+                                          <!-- /initiate::Group info-->
+                                       </div>
+                                       <!-- /initiate::Group-->
+
+                                       <!--initiate::Group-->
+                                       <div class="tab-pane fade" id="forth-chat" role="tabpanel"
+                                          aria-labelledby="forth-group-chat">
+                                          <!--initiate::Group info-->
+                                          <div class="border-bottom p-3">
+                                             <!--initiate::Row-->
+                                             <div class="row">
+                                                <!--initiate::Column-->
+                                                <div class="col-12 px-md-4 px-3">
+                                                   <div class="d-flex align-items-center justify-content-between">
+                                                      <!--initiate::Image-->
+                                                      <div class="user-status position-relative active scale-80">
+                                                         <img src="../../assets/media/miscellaneous/recruitment.png"
+                                                            alt="user" width="50" height="50" class="rounded-circle">
+                                                      </div>
+                                                      <!-- /initiate::Image-->
+
+                                                      <!--initiate::Name-->
+                                                      <div class="ms-3 flex-grow-1">
+                                                         <h5 class="mb-0 fw-semibold">Recruitment Group</h5>
+                                                      </div>
+                                                      <!-- /initiate::Name-->
+
+                                                      <!--initiate::Members-->
+                                                      <div class="members d-flex align-items-center me-3">
+                                                         <h6 class="text-muted mb-0 me-2">Members</h6>
+                                                         <ul
+                                                            class="list-unstyled list-inline mb-0 d-flex align-items-center justify-content-center">
+                                                            <li class="list-inline-item m-0">
+                                                               <img src="../../assets/media/avatars/150-4.jpg" alt="img"
+                                                                  width="30" height="30" class="rounded-circle">
+                                                            </li>
+                                                            <li class="list-inline-item m-0">
+                                                               <img src="../../assets/media/avatars/150-7.jpg" alt="img"
+                                                                  width="30" height="30" class="rounded-circle">
+                                                            </li>
+                                                            <li class="list-inline-item m-0">
+                                                               <img src="../../assets/media/avatars/150-9.jpg" alt="img"
+                                                                  width="30" height="30" class="rounded-circle">
+                                                            </li>
+                                                         </ul>
+                                                      </div>
+                                                      <!-- /initiate::Members-->
+
+                                                      <!--initiate::Dropdown-->
+                                                      <div class="dropdown">
+                                                         <button class="btn bg-transparent dropdown-toggle"
+                                                            type="button" id="user-chat-actions-4"
+                                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="ri-more-2-fill"></i>
+                                                         </button>
+                                                         <ul class="dropdown-menu p-0"
+                                                            aria-labelledby="user-chat-actions-4">
+                                                            <li><a class="dropdown-item py-2 d-flex align-items-center"
+                                                                  href="#"><i
+                                                                     class="ri-volume-mute-line text-secondary me-2"></i>Mute
+                                                                  Notifications</a></li>
+                                                            <li><a class="dropdown-item py-2 d-flex align-items-center"
+                                                                  href="#"><i
+                                                                     class="ri-phone-line text-secondary me-2"></i>Voice
+                                                                  Call</a></li>
+                                                         </ul>
+                                                      </div>
+                                                      <!-- /initiate::Dropdown-->
+
+                                                   </div>
+                                                </div>
+                                                <!-- /initiate::Column-->
+                                             </div>
+                                             <!-- /initiate::Row-->
+                                          </div>
+                                          <!-- /initiate::Group info-->
+                                       </div>
+                                       <!-- /initiate::Group-->
+
+                                       <!--initiate::Group-->
+                                       <div class="tab-pane fade" id="fifth-chat" role="tabpanel"
+                                          aria-labelledby="fifth-group-chat">
+                                          <!--initiate::Group info-->
+                                          <div class="border-bottom p-3">
+                                             <!--initiate::Row-->
+                                             <div class="row">
+                                                <!--initiate::Column-->
+                                                <div class="col-12 px-md-4 px-3">
+                                                   <div class="d-flex align-items-center justify-content-between">
+                                                      <!--initiate::Image-->
+                                                      <div class="user-status position-relative active scale-80">
+                                                         <img src="../../assets/media/miscellaneous/finance.png"
+                                                            alt="user" width="50" height="50" class="rounded-circle">
+                                                      </div>
+                                                      <!-- /initiate::Image-->
+
+                                                      <!--initiate::Name-->
+                                                      <div class="ms-3 flex-grow-1">
+                                                         <h5 class="mb-0 fw-semibold">Finance Department</h5>
+                                                      </div>
+                                                      <!-- /initiate::Name-->
+
+                                                      <!--initiate::Members-->
+                                                      <div class="members d-flex align-items-center me-3">
+                                                         <h6 class="text-muted mb-0 me-2">Members</h6>
+                                                         <ul
+                                                            class="list-unstyled list-inline mb-0 d-flex align-items-center justify-content-center">
+                                                            <li class="list-inline-item m-0">
+                                                               <img src="../../assets/media/avatars/150-8.jpg" alt="img"
+                                                                  width="30" height="30" class="rounded-circle">
+                                                            </li>
+                                                            <li class="list-inline-item m-0">
+                                                               <img src="../../assets/media/avatars/150-6.jpg" alt="img"
+                                                                  width="30" height="30" class="rounded-circle">
+                                                            </li>
+                                                            <li class="list-inline-item m-0">
+                                                               <img src="../../assets/media/avatars/150-4.jpg" alt="img"
+                                                                  width="30" height="30" class="rounded-circle">
+                                                            </li>
+                                                         </ul>
+                                                      </div>
+                                                      <!-- /initiate::Members-->
+
+                                                      <!--initiate::Dropdown-->
+                                                      <div class="dropdown">
+                                                         <button class="btn bg-transparent dropdown-toggle"
+                                                            type="button" id="user-chat-actions-5"
+                                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="ri-more-2-fill"></i>
+                                                         </button>
+                                                         <ul class="dropdown-menu p-0"
+                                                            aria-labelledby="user-chat-actions-5">
+                                                            <li><a class="dropdown-item py-2 d-flex align-items-center"
+                                                                  href="#"><i
+                                                                     class="ri-volume-mute-line text-secondary me-2"></i>Mute
+                                                                  Notifications</a></li>
+                                                            <li><a class="dropdown-item py-2 d-flex align-items-center"
+                                                                  href="#"><i
+                                                                     class="ri-phone-line text-secondary me-2"></i>Voice
+                                                                  Call</a></li>
+                                                         </ul>
+                                                      </div>
+                                                      <!-- /initiate::Dropdown-->
+
+                                                   </div>
+                                                </div>
+                                                <!-- /initiate::Column-->
+                                             </div>
+                                             <!-- /initiate::Row-->
+                                          </div>
+                                          <!-- /initiate::Group info-->
+                                       </div>
+                                       <!-- /initiate::Group-->
+
+                                       <!--initiate::Group-->
+                                       <div class="tab-pane fade" id="sixth-chat" role="tabpanel"
+                                          aria-labelledby="sixth-group-chat">
+                                          <!--initiate::Group info-->
+                                          <div class="border-bottom p-3">
+                                             <!--initiate::Row-->
+                                             <div class="row">
+                                                <!--initiate::Column-->
+                                                <div class="col-12 px-md-4 px-3">
+                                                   <div class="d-flex align-items-center justify-content-between">
+                                                      <!--initiate::Image-->
+                                                      <div class="user-status position-relative active scale-80">
+                                                         <img src="../../assets/media/miscellaneous/website.png"
+                                                            alt="user" width="50" height="50" class="rounded-circle">
+                                                      </div>
+                                                      <!-- /initiate::Image-->
+
+                                                      <!--initiate::Name-->
+                                                      <div class="ms-3 flex-grow-1">
+                                                         <h5 class="mb-0 fw-semibold">Website Development</h5>
+                                                      </div>
+                                                      <!-- /initiate::Name-->
+
+                                                      <!--initiate::Members-->
+                                                      <div class="members d-flex align-items-center me-3">
+                                                         <h6 class="text-muted mb-0 me-2">Members</h6>
+                                                         <ul
+                                                            class="list-unstyled list-inline mb-0 d-flex align-items-center justify-content-center">
+                                                            <li class="list-inline-item m-0">
+                                                               <img src="../../assets/media/avatars/150-3.jpg" alt="img"
+                                                                  width="30" height="30" class="rounded-circle">
+                                                            </li>
+                                                            <li class="list-inline-item m-0">
+                                                               <img src="../../assets/media/avatars/150-5.jpg" alt="img"
+                                                                  width="30" height="30" class="rounded-circle">
+                                                            </li>
+                                                            <li class="list-inline-item m-0">
+                                                               <img src="../../assets/media/avatars/150-7.jpg" alt="img"
+                                                                  width="30" height="30" class="rounded-circle">
+                                                            </li>
+                                                         </ul>
+                                                      </div>
+                                                      <!-- /initiate::Members-->
+
+                                                      <!--initiate::Dropdown-->
+                                                      <div class="dropdown">
+                                                         <button class="btn bg-transparent dropdown-toggle"
+                                                            type="button" id="user-chat-actions-6"
+                                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="ri-more-2-fill"></i>
+                                                         </button>
+                                                         <ul class="dropdown-menu p-0"
+                                                            aria-labelledby="user-chat-actions-6">
+                                                            <li><a class="dropdown-item py-2 d-flex align-items-center"
+                                                                  href="#"><i
+                                                                     class="ri-volume-mute-line text-secondary me-2"></i>Mute
+                                                                  Notifications</a></li>
+                                                            <li><a class="dropdown-item py-2 d-flex align-items-center"
+                                                                  href="#"><i
+                                                                     class="ri-phone-line text-secondary me-2"></i>Voice
+                                                                  Call</a></li>
+                                                         </ul>
+                                                      </div>
+                                                      <!-- /initiate::Dropdown-->
+
+                                                   </div>
+                                                </div>
+                                                <!-- /initiate::Column-->
+                                             </div>
+                                             <!-- /initiate::Row-->
+                                          </div>
+                                          <!-- /initiate::Group info-->
+                                       </div>
+                                       <!-- /initiate::Group-->
+
+                                       <!--initiate::Group-->
+                                       <div class="tab-pane fade" id="seventh-chat" role="tabpanel"
+                                          aria-labelledby="seventh-group-chat">
+                                          <!--initiate::Group info-->
+                                          <div class="border-bottom p-3">
+                                             <!--initiate::Row-->
+                                             <div class="row">
+                                                <!--initiate::Column-->
+                                                <div class="col-12 px-md-4 px-3">
+                                                   <div class="d-flex align-items-center justify-content-between">
+                                                      <!--initiate::Image-->
+                                                      <div class="user-status position-relative active scale-80">
+                                                         <img src="../../assets/media/miscellaneous/team-lead.png"
+                                                            alt="user" width="50" height="50" class="rounded-circle">
+                                                      </div>
+                                                      <!-- /initiate::Image-->
+
+                                                      <!--initiate::Name-->
+                                                      <div class="ms-3 flex-grow-1">
+                                                         <h5 class="mb-0 fw-semibold">Team Leads Group</h5>
+                                                      </div>
+                                                      <!-- /initiate::Name-->
+
+                                                      <!--initiate::Members-->
+                                                      <div class="members d-flex align-items-center me-3">
+                                                         <h6 class="text-muted mb-0 me-2">Members</h6>
+                                                         <ul
+                                                            class="list-unstyled list-inline mb-0 d-flex align-items-center justify-content-center">
+                                                            <li class="list-inline-item m-0">
+                                                               <img src="../../assets/media/avatars/150-4.jpg" alt="img"
+                                                                  width="30" height="30" class="rounded-circle">
+                                                            </li>
+                                                            <li class="list-inline-item m-0">
+                                                               <img src="../../assets/media/avatars/150-5.jpg" alt="img"
+                                                                  width="30" height="30" class="rounded-circle">
+                                                            </li>
+                                                            <li class="list-inline-item m-0">
+                                                               <img src="../../assets/media/avatars/150-6.jpg" alt="img"
+                                                                  width="30" height="30" class="rounded-circle">
+                                                            </li>
+                                                         </ul>
+                                                      </div>
+                                                      <!-- /initiate::Members-->
+
+                                                      <!--initiate::Dropdown-->
+                                                      <div class="dropdown">
+                                                         <button class="btn bg-transparent dropdown-toggle"
+                                                            type="button" id="user-chat-actions-7"
+                                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="ri-more-2-fill"></i>
+                                                         </button>
+                                                         <ul class="dropdown-menu p-0"
+                                                            aria-labelledby="user-chat-actions-7">
+                                                            <li><a class="dropdown-item py-2 d-flex align-items-center"
+                                                                  href="#"><i
+                                                                     class="ri-volume-mute-line text-secondary me-2"></i>Mute
+                                                                  Notifications</a></li>
+                                                            <li><a class="dropdown-item py-2 d-flex align-items-center"
+                                                                  href="#"><i
+                                                                     class="ri-phone-line text-secondary me-2"></i>Voice
+                                                                  Call</a></li>
+                                                         </ul>
+                                                      </div>
+                                                      <!-- /initiate::Dropdown-->
+
+                                                   </div>
+                                                </div>
+                                                <!-- /initiate::Column-->
+                                             </div>
+                                             <!-- /initiate::Row-->
+                                          </div>
+                                          <!-- /initiate::Group info-->
+                                       </div>
+                                       <!-- /initiate::Group-->
+
+                                    </div>
+                                    <!-- /initiate::Tab content-->
+
+                                    <!--initiate::Input-->
+                                    <div class="input-group bg-light position-absolute bottom-0">
+                                       <button class="btn bg-transparent px-3" type="button" id="button-addon2"><i
+                                             class="ri-attachment-2 fs-5"></i></button>
+
+                                       <input type="text" class="form-control border-0 bg-light py-4 pe-7"
+                                          placeholder="Type a message">
+                                       <a class="btn btn-primary position-absolute end-10 top-50 translate-middle-y rounded-circle z-index-9 h-30px w-30px d-flex align-items-center justify-content-center"
+                                          href="#"><i class="ri-send-plane-2-line"></i></a>
+
+                                    </div>
+                                    <!-- /initiate::Input-->
+
+                                 </div>
+                                 <!-- /initiate::Card body-->
+                              </div>
+                              <!-- /initiate::Card-->
+                           </div>
+                           <!-- /initiate::Column-->
+
+                        </div>
+                        <!-- /initiate::Row-->
+                     </div>
+                     <!-- /initiate::Container-->
+                  </div>
+                  <!-- /initiate::Wrapper-->
+               </div>
+            </div>
+            <!-- /initiate::Row-->
+         </div>
+         <!-- /initiate::Container-fluid-->
+      </main>
+      <!-- /initiate::Main-->
+
+      <!--initiate::Javascript-->
+      <script src="../../assets/js/global/bootstrap.bundle.js"></script>
+      <!-- /initiate::Javascript-->
+
+   </body>
+   <!-- /initiate::Body-->
+
+</html>

@@ -1,0 +1,1064 @@
+<!doctype html>
+<html lang="en">
+   <!--initiate::Head-->
+
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--initiate::title-->
+      <title>Input Groups</title>
+      <!-- /initiate::title-->
+
+      <!--initiate::stylesheets-->
+      <link href="../../assets/css/global/bootstrap.css" rel="stylesheet" type="text/css">
+      <link href="../../assets/css/custom/style.css" rel="stylesheet" type="text/css">
+      <!-- /initiate::stylesheets-->
+
+      <!--initiate::Remix icons-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+      <!-- /initiate::Remix icons-->
+
+      <!--initiate::Fonts-->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+         rel="stylesheet">
+      <!-- /initiate::Fonts-->
+   </head>
+   <!-- /initiate::Head-->
+
+   <!--initiate::Body-->
+
+   <body>
+      <!--initiate::Main-->
+      <main class="vh-md-100">
+         <!--initiate::Container-fluid-->
+         <div class="container-fluid h-md-100">
+            <!--initiate::Row-->
+            <div class="row h-md-100">
+               <div class="d-flex px-0">
+                 <!--initiate::Aside-->
+                 <div
+                 class="sidebar position-fixed d-flex flex-column flex-shrink-0 text-secondary bg-dark h-100 overflow-auto">
+                 <!--initiate::Logo-->
+                 <div class="bg-secondary text-center py-4">
+                    <a href="#" class="text-white text-decoration-none text-center w-100">
+                       <span class="fs-5 fw-bolder letter-spacing-2">HORIZON</span>
+                    </a>
+                 </div>
+                 <!-- /initiate::Logo-->
+
+                 <!--initiate::Aside menu-->
+                 <ul class="nav flex-column mb-auto py-3">
+                    <!--initiate::Menu Item-->
+                    <li class="nav-item mb-2 px-3">
+                       <a href="#" class="nav-link active d-flex align-items-center" aria-current="page">
+                          <i class="ri-home-6-fill fs-5 me-3"></i>
+                          Dashboard
+                       </a>
+                    </li>
+                    <!-- /initiate::Menu Item-->
+
+                    <!--initiate::Menu Item-->
+                    <li class="nav-item mb-2 px-3">
+                       <a href="#" class=" nav-link btn-toggle align-items-center rounded collapsed w-100"
+                          data-bs-toggle="collapse" data-bs-target="#apps" aria-expanded="false">
+                          <div class="d-flex align-items-center justify-content-center">
+                             <i class="ri-grid-fill fs-5 me-3"></i> Applications
+                             <div class="ms-auto">
+                                <i class="ri-arrow-right-s-line fs-5"></i>
+                             </div>
+                          </div>
+                       </a>
+
+                       <!--initiate::Dropdowns List-->
+                       <div class="collapse" id="apps">
+                          <!--initiate::Dropdowns Toggle-->
+                          <ul class="btn-toggle-nav fw-normal pb-1 small">
+                             <!--initiate::Nested Menu Item-->
+                             <li>
+                                <a href="#"
+                                   class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                   data-bs-toggle="collapse" data-bs-target="#menu-1" aria-expanded="false">
+                                   <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Users
+                                   <div class="ms-auto">
+                                      <i class="ri-arrow-right-s-line fs-5"></i>
+                                   </div>
+                                </a>
+                                <div class="collapse" id="menu-1">
+                                   <ul class="btn-toggle-nav list-unstyled">
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> User Default
+                                            Views</a></li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Add User</a>
+                                      </li>
+                                   </ul>
+                                </div>
+                             </li>
+                             <!-- /initiate::Nested Menu Item-->
+
+                             <!--initiate::Nested Menu Item-->
+                             <li>
+                                <a href="#"
+                                   class="nav-link btn-toggle align-items-center rounded w-100 d-flex align-items-center"
+                                   aria-expanded="false">
+                                   <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Profile
+                                </a>
+                             </li>
+                             <!-- /initiate::Nested Menu Item-->
+
+                             <!--initiate::Nested Menu Item-->
+                             <li>
+                                <a href="#"
+                                   class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                   data-bs-toggle="collapse" data-bs-target="#menu-3" aria-expanded="false">
+                                   <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Contacts
+                                   <div class="ms-auto">
+                                      <i class="ri-arrow-right-s-line fs-5"></i>
+                                   </div>
+                                </a>
+                                <div class="collapse" id="menu-3">
+                                   <ul class="btn-toggle-nav list-unstyled">
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> View
+                                            Contact</a></li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Add
+                                            Contact</a></li>
+                                   </ul>
+                                </div>
+                             </li>
+                             <!-- /initiate::Nested Menu Item-->
+
+                             <!--initiate::Nested Menu Item-->
+                             <li>
+                                <a href="#"
+                                   class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                   data-bs-toggle="collapse" data-bs-target="#menu-4" aria-expanded="false">
+                                   <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Projects
+                                   <div class="ms-auto">
+                                      <i class="ri-arrow-right-s-line fs-5"></i>
+                                   </div>
+                                </a>
+                                <div class="collapse" id="menu-4">
+                                   <ul class="btn-toggle-nav list-unstyled">
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Project
+                                            List</a></li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Add
+                                            Project</a></li>
+                                   </ul>
+                                </div>
+                             </li>
+                             <!-- /initiate::Nested Menu Item-->
+
+                             <!--initiate::Nested Menu Item-->
+                             <li>
+                                <a href="#"
+                                   class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                   data-bs-toggle="collapse" data-bs-target="#menu-5" aria-expanded="false">
+                                   <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Support
+                                   <div class="ms-auto">
+                                      <i class="ri-arrow-right-s-line fs-5"></i>
+                                   </div>
+                                </a>
+                                <div class="collapse" id="menu-5">
+                                   <ul class="btn-toggle-nav list-unstyled">
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> FAQ</a></li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Feedback</a>
+                                      </li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> License</a>
+                                      </li>
+                                   </ul>
+                                </div>
+                             </li>
+                             <!-- /initiate::Nested Menu Item-->
+
+                             <!--initiate::Nested Menu Item-->
+                             <li>
+                                <a href="#"
+                                   class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                   data-bs-toggle="collapse" data-bs-target="#menu-6" aria-expanded="false">
+                                   <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Pages
+                                   <div class="ms-auto">
+                                      <i class="ri-arrow-right-s-line fs-5"></i>
+                                   </div>
+                                </a>
+                                <div class="collapse" id="menu-6">
+                                   <ul class="btn-toggle-nav list-unstyled">
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Pricing</a>
+                                      </li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Invoices</a>
+                                      </li>
+                                   </ul>
+                                </div>
+                             </li>
+                             <!-- /initiate::Nested Menu Item-->
+
+                             <!--initiate::Nested Menu Item-->
+                             <li>
+                                <a href="#"
+                                   class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                   data-bs-toggle="collapse" data-bs-target="#chat" aria-expanded="false">
+                                   <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Chat
+                                   <div class="ms-auto">
+                                      <i class="ri-arrow-right-s-line fs-5"></i>
+                                   </div>
+                                </a>
+                                <div class="collapse" id="chat">
+                                   <ul class="btn-toggle-nav list-unstyled">
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Private</a>
+                                      </li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Group</a>
+                                      </li>
+                                   </ul>
+                                </div>
+                             </li>
+                             <!-- /initiate::Nested Menu Item-->
+
+                             <!--initiate::Nested Menu Item-->
+                             <li>
+                                <a href="#"
+                                   class="nav-link btn-toggle align-items-center rounded w-100 d-flex align-items-center"
+                                   aria-expanded="false">
+                                   <span class="dash-icon me-2"> <i class="ri-subtract-line"></i></span> To Do
+                                </a>
+                             </li>
+                             <!-- /initiate::Nested Menu Item-->
+
+                          </ul>
+                          <!-- /initiate::Dropdowns Toggle-->
+                       </div>
+                       <!-- /initiate::Dropdowns List-->
+                    </li>
+                    <!-- /initiate::Menu Item-->
+
+                    <!--initiate::Menu Item-->
+                    <li class="nav-item mb-2 px-3">
+                       <a href="#" class=" nav-link btn-toggle align-items-center rounded collapsed w-100"
+                          data-bs-toggle="collapse" data-bs-target="#forms" aria-expanded="false">
+                          <div class="d-flex align-items-center justify-content-center">
+                             <i class="ri-file-text-fill fs-5 me-3"></i> Forms
+                             <div class="ms-auto">
+                                <i class="ri-arrow-right-s-line fs-5"></i>
+                             </div>
+                          </div>
+                       </a>
+                       <!--initiate::Dropdowns List-->
+                       <div class="collapse" id="forms">
+                          <!--initiate::Dropdowns Toggle-->
+                          <ul class="btn-toggle-nav fw-normal pb-1 small">
+                             <!--initiate::Nested Menu Item-->
+                             <li>
+                                <a href="#"
+                                   class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                   data-bs-toggle="collapse" data-bs-target="#menu-1" aria-expanded="false">
+                                   <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Form
+                                   Controls
+                                   <div class="ms-auto">
+                                      <i class="ri-arrow-right-s-line fs-5"></i>
+                                   </div>
+                                </a>
+                                <div class="collapse" id="menu-1">
+                                   <ul class="btn-toggle-nav list-unstyled">
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Base Inputs
+                                         </a>
+                                      </li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Input
+                                            Groups</a>
+                                      </li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Radio</a>
+                                      </li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Checkbox</a>
+                                      </li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Switch</a>
+                                      </li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Tagify</a>
+                                      </li>
+                                   </ul>
+                                </div>
+                             </li>
+                             <!-- /initiate::Nested Menu Item-->
+                          </ul>
+                          <!-- /initiate::Dropdowns Toggle-->
+                       </div>
+                       <!-- /initiate::Dropdowns List-->
+                    </li>
+                    <!-- /initiate::Menu Item-->
+
+                 </ul>
+                 <!-- /initiate::Aside menu-->
+              </div>
+              <!-- /initiate::Aside-->
+
+                  <!--initiate::Wrapper-->
+                  <div class="wrapper w-100">
+                     <div class="w-100">
+                        <!--initiate::Header-->
+                        <header class="bg-white px-4 py-3 border-bottom">
+                           <div class="d-flex align-items-center justify-content-between">
+
+                              <!--initiate::left side-->
+                              <div class="d-flex align-items-center">
+                                 <!--initiate::Aside collapse-->
+                                 <a href="#" class="me-4 text-decoration-none text-dark">
+                                    <i class="ri-bar-chart-horizontal-line fs-4"></i>
+                                 </a>
+                                 <!-- /initiate::Aside collapse-->
+
+                                 <!--initiate::Features dropdown-->
+                                 <div class="dropdown">
+                                    <!--initiate::Dropdown button-->
+                                    <button class="btn p-0 dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                       Features
+                                    </button>
+                                    <!-- /initiate::Dropdown button-->
+
+                                    <!--initiate::Dropdown menu-->
+                                    <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton1">
+                                       <li class="features-dropdown d-flex">
+                                          <!--initiate::Dropdown menu list-->
+                                          <ul class="list-unstyled p-4">
+                                             <li class="text-dark fw-semibold mb-2">Task Reports</li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-lock-fill text-primary me-3"></i>Latest Tasks</a></li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-timer-2-line text-primary me-3"></i>Pending Tasks</a>
+                                             </li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-alarm-warning-fill text-primary me-3"></i>Urgent
+                                                   Tasks</a>
+                                             </li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-checkbox-circle-fill text-primary me-3"></i>Completed
+                                                   Tasks</a></li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-delete-back-2-fill text-primary me-3"></i>Failed
+                                                   Tasks</a>
+                                             </li>
+                                          </ul>
+                                          <!-- /initiate::Dropdown menu list-->
+
+                                          <!--initiate::Dropdown menu list-->
+                                          <ul class="list-unstyled p-4 border-start">
+                                             <li class="text-dark fw-semibold mb-2">Staff Management</li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-user-star-fill text-primary me-3"></i>Top Management</a>
+                                             </li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-lock-password-fill  text-primary me-3"></i>Project
+                                                   Management</a></li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-file-settings-fill  text-primary me-3"></i>Development
+                                                   Staff</a></li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-customer-service-fill text-primary me-3"></i>Customer
+                                                   Service</a></li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-stack-fill text-primary me-3"></i>Sales & Marketing</a>
+                                             </li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-hand-coin-fill text-primary me-3"></i>Executives</a>
+                                             </li>
+                                          </ul>
+                                          <!-- /initiate::Dropdown menu list-->
+                                       </li>
+                                    </ul>
+                                    <!-- /initiate::Dropdown menu-->
+                                 </div>
+                                 <!-- /initiate::Features dropdown-->
+                              </div>
+                              <!-- /initiate::left side-->
+
+                              <!--initiate::right side-->
+                              <div class="d-flex align-items-center">
+                                 <!--initiate::search bar-->
+                                 <a class="text-decoration-none me-4 text-dark fs-5" href="#">
+                                    <i class="ri-search-line fs-4"></i>
+                                 </a>
+                                 <!-- /initiate::search bar-->
+
+                                 <!--initiate::notification-->
+                                 <div class="dropdown me-4">
+                                    <!--initiate::Dropdown button-->
+                                    <button class="btn p-0 dropdown-toggle" type="button" id="dropdownMenuButton2"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                       <i class="ri-notification-3-line fs-4"></i>
+                                    </button>
+                                    <!-- /initiate::Dropdown button-->
+
+                                    <!--initiate::Dropdown menu-->
+                                    <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton2">
+                                       <li><a class="dropdown-item py-2" href="#">Notification Content</a></li>
+                                       <li><a class="dropdown-item py-2" href="#">Notification Content</a></li>
+                                    </ul>
+                                    <!-- /initiate::Dropdown menu-->
+                                 </div>
+                                 <!-- /initiate::notification-->
+
+                                 <!--initiate::My Profile-->
+                                 <div class="ms-auto">
+                                    <!--initiate::My Profile dropdown-->
+                                    <div class="dropdown">
+                                       <!--initiate::Dropdown button-->
+                                       <a class="btn dropdown-toggle p-0 border-0" href="#" role="button"
+                                          id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                          <img src="../../assets/media/avatars/150-1.jpg" alt="user" width="40"
+                                             height="40" class="rounded">
+                                       </a>
+                                       <!-- /initiate::Dropdown button-->
+
+                                       <!--initiate::Dropdown menu-->
+                                       <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuLink">
+                                          <li><a class="dropdown-item py-2 text-capitalize d-flex align-items-center"
+                                                href="../../account/profile.html"><i class="ri-user-fill me-2"></i>my
+                                                profile</a></li>
+                                          <li><a class="dropdown-item py-2 text-capitalize d-flex align-items-center"
+                                                href="#"><i class="ri-settings-3-fill me-2"></i>settings & privacy</a>
+                                          </li>
+                                          <li>
+                                             <hr class="dropdown-divider">
+                                          </li>
+                                          <li><a class="dropdown-item py-2 text-capitalize d-flex align-items-center"
+                                                href="#"><i class="ri-logout-box-r-fill me-2"></i>logout</a></li>
+                                       </ul>
+                                       <!-- /initiate::Dropdown menu-->
+                                    </div>
+                                    <!-- /initiate::My Profile dropdown-->
+                                 </div>
+                                 <!-- /initiate::My Profile-->
+                              </div>
+                              <!-- /initiate::right side-->
+                           </div>
+                        </header>
+                        <!-- /initiate::Header-->
+
+                        <!--initiate::Breadcrumbs-->
+                        <div class="px-4 py-3">
+                           <nav aria-label="breadcrumb">
+                              <ul class="breadcrumb m-0">
+                                 <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Forms</a>
+                                 </li>
+                                 <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Form Controls</a>
+                                 </li>
+                                 <li class="breadcrumb-item active" aria-current="page">Input Groups</li>
+                              </ul>
+                           </nav>
+                        </div>
+                        <!-- /initiate::Breadcrumbs-->
+
+                     </div>
+
+                     <!--initiate::Container-->
+                     <div class="container p-4">
+                        
+                        <!--initiate::Row-->
+                        <div class="row">
+                           <!--initiate::Column-->
+                           <div class="col-md-6 col-12 mb-4">
+                              <!--initiate::Card-->
+                              <div class="card shadow-sm border-0 bg-white h-md-100">
+
+                                 <!--initiate::Card body-->
+                                 <div class="card-body">
+                                    <!--initiate::Heading-->
+                                    <h5 class="fw-semibold mb-3">Basic</h5>
+                                    <!-- /initiate::Heading-->
+
+                                      <!--initiate::Field-->
+                                    <div class="w-100 mb-3 mt-4">
+                                       <label class="form-label mb-2">Left Addon</label>
+                                         <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1">@</span>
+                                          <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                         </div>
+                                    </div>
+                                    <!-- /initiate::Heading-->
+                                  
+                                    
+                                    <!--initiate::Heading-->
+                                    <div class="w-100 mb-3 mt-4">
+                                       <label class="form-label mb-2">Password</label>
+                                       <div class="input-group mb-3">
+                                          <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2">
+                                          <span class="input-group-text" id="basic-addon2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash" viewBox="0 0 16 16">
+                                             <path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z"/>
+                                             <path d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z"/>
+                                             <path d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z"/>
+                                           </svg></span>
+                                        </div>
+                                    </div>
+                                    <!-- /initiate::Field-->
+                                    
+                                    <!--initiate::Heading-->
+                                    <div class="w-100 mb-3 mt-4">
+                                       <label class="form-label mb-2">Right Addon</label>
+                                       <div class="input-group mb-3">
+                                          <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                          <span class="input-group-text" id="basic-addon2">@example.com</span>
+                                        </div>
+                                    </div>
+                                    <!-- /initiate::Field-->
+                                   
+                                    <!--initiate::Heading-->
+                                    <div class="w-100 mb-3 mt-4">
+                                       <label class="form-label mb-2">URL</label>
+                                       <div class="input-group mb-3">
+                                       <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                                       <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="URL">
+                                       </div>
+                                    </div>
+                                    <!-- /initiate::Field-->
+                                    
+                                    <!--initiate::Heading-->
+                                    <div class="w-100 mb-3 mt-4">
+                                       <label class="form-label mb-2">Left & Right Addons</label>
+                                       <div class="input-group mb-3">
+                                          <span class="input-group-text">$</span>
+                                          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Amount">
+                                          <span class="input-group-text" >.00</span>
+                                        </div>
+                                    </div> 
+                                    <!-- /initiate::Field-->
+
+                                 </div>
+                                 <!-- /initiate::Card body-->
+                              </div>
+                              <!-- /initiate::Card-->
+                           </div>
+                           <!-- /initiate::Column-->
+
+                           <!--initiate::Column-->
+                           <div class="col-md-6 col-12 mb-4">
+                              <!--initiate::Card-->
+                              <div class="card shadow-sm border-0 bg-white h-md-100">
+
+                                 <!--initiate::Card body-->
+                                 <div class="card-body">
+                                    <!--initiate::Heading-->
+                                    <h5 class="fw-semibold mb-3">Merged</h5>
+                                    <!-- /initiate::Heading-->
+
+                                      <!--initiate::Field-->
+                                    <div class="w-100 mb-3 mt-4">
+                                       <label class="form-label mb-2">Left Addon</label>
+                                         <div class="input-group mb-3">
+                                          <span class="input-group-text bg-white" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search w-75" viewBox="0 0 16 16">
+                                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                           </svg></span>
+                                          <input type="text" class="form-control border-start-0" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                         </div>
+                                    </div>
+                                    <!-- /initiate::Heading-->
+                                  
+                                    
+                                    <!--initiate::Heading-->
+                                    <div class="w-100 mb-3 mt-4">
+                                       <label class="form-label mb-2">Password</label>
+                                       <div class="input-group mb-3">
+                                          <input type="password" class="form-control border-end-0" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2">
+                                          <span class="input-group-text bg-white" id="basic-addon2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash" viewBox="0 0 16 16">
+                                             <path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z"/>
+                                             <path d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z"/>
+                                             <path d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z"/>
+                                           </svg></span>
+                                        </div>
+                                    </div>
+                                    <!-- /initiate::Field-->
+                                    
+                                    <!--initiate::Heading-->
+                                    <div class="w-100 mb-3 mt-4">
+                                       <label class="form-label mb-2">Right Addon</label>
+                                       <div class="input-group mb-3">
+                                          <input type="text" class="form-control border-end-0" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                          <span class="input-group-text bg-white" id="basic-addon2">@example.com</span>
+                                        </div>
+                                    </div>
+                                    <!-- /initiate::Field-->
+                                   
+                                    <!--initiate::Heading-->
+                                    <div class="w-100 mb-3 mt-4">
+                                       <label class="form-label mb-2">URL</label>
+                                       <div class="input-group mb-3">
+                                       <span class="input-group-text bg-white" id="basic-addon3">https://example.com/users/</span>
+                                       <input type="text" class="form-control border-start-0" id="basic-url" aria-describedby="basic-addon3" placeholder="URL">
+                                       </div>
+                                    </div>
+                                    <!-- /initiate::Field-->
+                                    
+                                    <!--initiate::Heading-->
+                                    <div class="w-100 mb-3 mt-4">
+                                       <label class="form-label mb-2">Left & Right Addons</label>
+                                       <div class="input-group mb-3">
+                                          <span class="input-group-text bg-white">$</span>
+                                          <input type="text" class="form-control border-start-0 border-end-0" aria-label="Amount (to the nearest dollar)" placeholder="Amount">
+                                          <span class="input-group-text bg-white">.00</span>
+                                        </div>
+                                    </div> 
+                                    <!-- /initiate::Field-->
+
+                                 </div>
+                                 <!-- /initiate::Card body-->
+                              </div>
+                              <!-- /initiate::Card-->
+                           </div>
+                           <!-- /initiate::Column-->
+
+                        </div>
+                        <!-- /initiate::Row-->
+                        
+                        <!--initiate::Row-->
+                        <div class="row">
+                           <!--initiate::Column-->
+                           <div class="col-md-6 col-12 mb-4">
+                              <!--initiate::Card-->
+                              <div class="card shadow-sm border-0 bg-white h-md-100">
+
+                                 <!--initiate::Card body-->
+                                 <div class="card-body">
+                                    <!--initiate::Heading-->
+                                    <h5 class="fw-semibold mb-3">Sizing</h5>
+                                    <!-- /initiate::Heading-->
+
+                                    <!--initiate::Field-->
+                                  <div class="w-100 mb-3 mt-4">
+                                     <label class="form-label mb-2">Left Input Group</label>
+                                     <div class="input-group input-group-lg">
+                                        <span class="input-group-text" id="inputGroup-sizing-lg">@</span>
+                                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Username">
+                                      </div>
+                                  </div>
+                                  <!-- /initiate::Heading-->
+                                    <!--initiate::Field-->
+                                  <div class="w-100 mb-3 mt-4">
+                                     <label class="form-label mb-2">Default Input Group</label>
+                                     <div class="input-group mb-3">
+                                       <span class="input-group-text" id="inputGroup-sizing-default">@</span>
+                                       <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Username">
+                                     </div>
+                                  </div>
+                                  <!-- /initiate::Heading-->
+                                    <!--initiate::Field-->
+                                  <div class="w-100 mb-3 mt-4">
+                                     <label class="form-label mb-2">Small Input Group</label>
+                                     <div class="input-group input-group-sm mb-3">
+                                       <span class="input-group-text" id="inputGroup-sizing-sm">@</span>
+                                       <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Username">
+                                     </div>
+                                  </div>
+                                  <!-- /initiate::Heading-->
+                                    
+                                    
+                                    
+
+                                 </div>
+                                 <!-- /initiate::Card body-->
+                              </div>
+                              <!-- /initiate::Card-->
+                           </div>
+                           <!-- /initiate::Column-->
+
+                           <!--initiate::Column-->
+                           <div class="col-md-6 col-12 mb-4">
+                              <!--initiate::Card-->
+                              <div class="card shadow-sm border-0 bg-white h-md-100">
+
+                                 <!--initiate::Card body-->
+                                 <div class="card-body">
+                                    <!--initiate::Heading-->
+                                    <h5 class="fw-semibold mb-3">Multiple inputs & addon</h5>
+                                    <!-- /initiate::Heading-->
+
+                                 <!--initiate::Field-->
+                                  <div class="w-100 mb-3 mt-4">
+                                     <label class="form-label mb-2">Multiple Inputs</label>
+                                     <div class="input-group">
+                                       <input type="text" aria-label="First Name" placeholder="First Name" class="form-control">
+                                       <input type="text" aria-label="Middle Name" placeholder="Middle Name" class="form-control">
+                                       <input type="text" aria-label="Last Name" placeholder="Last Name" class="form-control">
+                                     </div>
+                                  </div>
+                                  <!-- /initiate::Heading-->
+                                 
+                                  <!--initiate::Field-->
+                                  <div class="w-100 mb-3 mt-4">
+                                     <label class="form-label mb-2">Multiple Addons</label>
+                                     <div class="input-group mb-3">
+                                       <span class="input-group-text">$</span>
+                                       <span class="input-group-text">0.00</span>
+                                       <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+                                     </div>
+                                  </div>
+                                  <!-- /initiate::Heading-->
+                                  
+                                  <!--initiate::Heading-->
+                                  <div class="w-100 mb-3 mt-4">
+                                    <label class="form-label mb-2">Multiple Addons</label>
+                                    <div class="input-group mb-3">
+                                       <span class="input-group-text">$</span>
+                                       <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Amount">
+                                       <span class="input-group-text" >.00</span>
+                                     </div>
+                                 </div> 
+                                 <!-- /initiate::Field-->
+
+                                 </div>
+                                 <!-- /initiate::Card body-->
+                              </div>
+                              <!-- /initiate::Card-->
+                           </div>
+                           <!-- /initiate::Column-->
+
+                        </div>
+                        <!-- /initiate::Row-->
+                       
+                        <!--initiate::Row-->
+                        <div class="row">
+                           <!--initiate::Column-->
+                           <div class="col-md-6 col-12 mb-4">
+                              <!--initiate::Card-->
+                              <div class="card shadow-sm border-0 bg-white h-md-100">
+
+                                 <!--initiate::Card body-->
+                                 <div class="card-body">
+                                    <!--initiate::Heading-->
+                                    <h5 class="fw-semibold mb-3">Buttons With Dropdowns</h5>
+                                    <!-- /initiate::Heading-->
+
+   
+                                   <!--initiate::Field-->
+                                   <div class="w-100 mb-3 mt-4">
+                                    <label class="form-label mb-2">Left Addon Dropdown</label>
+                                    <div class="input-group mb-3">
+                                      <button class="input-group-text dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+                                      <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                      </ul>
+                                      <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                    </div>
+                                 </div>
+                                 <!-- /initiate::Field-->
+                                   
+                                 <!--initiate::Field-->
+                                   <div class="w-100 mb-3 mt-4">
+                                    <label class="form-label mb-2">Right Addon Dropdown</label>
+                                    <div class="input-group mb-3">
+                                       <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                       <button class="input-group-text dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+                                       <ul class="dropdown-menu dropdown-menu-end">
+                                         <li><a class="dropdown-item" href="#">Action</a></li>
+                                         <li><a class="dropdown-item" href="#">Another action</a></li>
+                                         <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                         <li><hr class="dropdown-divider"></li>
+                                         <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                       </ul>
+                                     </div>
+                                 </div>
+                                 <!-- /initiate::Field-->
+                                 
+                                 <!--initiate::Field-->
+                                   <div class="w-100 mb-3 mt-4">
+                                    <label class="form-label mb-2">Left & Right Addon Dropdown</label>
+                                    <div class="input-group">
+                                       <button class="input-group-text dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+                                       <ul class="dropdown-menu">
+                                         <li><a class="dropdown-item" href="#">Action before</a></li>
+                                         <li><a class="dropdown-item" href="#">Another action before</a></li>
+                                         <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                         <li><hr class="dropdown-divider"></li>
+                                         <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                       </ul>
+                                       <input type="text" class="form-control" aria-label="Text input with 2 dropdown buttons">
+                                       <button class="input-group-text dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+                                       <ul class="dropdown-menu dropdown-menu-end">
+                                         <li><a class="dropdown-item" href="#">Action</a></li>
+                                         <li><a class="dropdown-item" href="#">Another action</a></li>
+                                         <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                         <li><hr class="dropdown-divider"></li>
+                                         <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                       </ul>
+                                     </div>
+                                 </div>
+                                 <!-- /initiate::Field-->
+                                   
+                                 </div>
+                                 <!-- /initiate::Card body-->
+                              </div>
+                              <!-- /initiate::Card-->
+                           </div>
+                           <!-- /initiate::Column-->
+
+                           <!--initiate::Column-->
+                           <div class="col-md-6 col-12 mb-4">
+                              <!--initiate::Card-->
+                              <div class="card shadow-sm border-0 bg-white h-md-100">
+
+                                 <!--initiate::Card body-->
+                                 <div class="card-body">
+                                    <!--initiate::Heading-->
+                                    <h5 class="fw-semibold mb-3">Button Addons</h5>
+                                    <!-- /initiate::Heading-->
+
+                                 <!--initiate::Field-->
+                                  <div class="w-100 mb-3 mt-4">
+                                     <label class="form-label mb-2">Left Addon Button</label>
+                                     <div class="input-group mb-3">
+                                       <button class="btn btn-primary" type="button" id="button-addon1">Button</button>
+                                       <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                     </div>
+                                  </div>
+                                  <!-- /initiate::Heading-->
+                                 <!--initiate::Field-->
+                                  <div class="w-100 mb-3 mt-4">
+                                     <label class="form-label mb-2">Right Addon Button</label>
+                                     <div class="input-group mb-3">
+                                       <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                       <button class="btn btn-primary" type="button" id="button-addon2">Button</button>
+                                     </div>
+                                  </div>
+                                  <!-- /initiate::Heading-->
+                                 <!--initiate::Field-->
+                                     <div class="w-100 mb-3 mt-4">
+                                       <label class="form-label mb-2">Left & Right Addon Button</label>
+                                       <div class="input-group">
+                                          <button class="btn btn-primary" type="button" id="button-addon2">Button</button>
+                                          <input type="text" class="form-control" aria-label="Text input with 2 dropdown buttons">
+                                          <button class="btn btn-primary" type="button" id="button-addon2">Button</button>
+                                        </div>
+                                    </div>
+                                  <!-- /initiate::Heading-->
+
+                                 </div>
+                                 <!-- /initiate::Card body-->
+                              </div>
+                              <!-- /initiate::Card-->
+                           </div>
+                           <!-- /initiate::Column-->
+
+                        </div>
+                        <!-- /initiate::Row-->
+                        
+                        <!--initiate::Row-->
+                        <div class="row">
+
+                           <!--initiate::Column-->
+                           <div class="col-md-12 col-12 mb-4">
+                              <!--initiate::Card-->
+                              <div class="card shadow-sm border-0 bg-white h-md-100">
+
+                                 <!--initiate::Card body-->
+                                 <div class="card-body">
+                                    <!--initiate::Heading-->
+                                    <h5 class="fw-semibold mb-3">Custom file input</h5>
+                                    <!-- /initiate::Heading-->
+
+                                 <!--initiate::Field-->
+                                  <div class="w-100 mb-3 mt-4">
+                                     <label class="form-label mb-2">Left Upload Button</label>
+                                     <div class="input-group mb-3">
+                                       <label class="input-group-text" for="inputGroupFile01">Upload</label>
+                                       <input type="file" class="form-control" id="inputGroupFile01">
+                                     </div>
+                                  </div>
+                                  <!-- /initiate::Heading-->
+                                 
+                                  <!--initiate::Field-->
+                                  <div class="w-100 mb-3 mt-4">
+                                     <label class="form-label mb-2">Right Upload Button</label>
+                                     <div class="input-group mb-3">
+                                       <input type="file" class="form-control" id="inputGroupFile02">
+                                       <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                                     </div>
+                                  </div>
+                                  <!-- /initiate::Heading-->
+                                 </div>
+                                 <!-- /initiate::Card body-->
+                              </div>
+                              <!-- /initiate::Card-->
+                           </div>
+                           <!-- /initiate::Column-->
+
+                        </div>
+                        <!-- /initiate::Row-->
+
+                        <!--initiate::Row-->
+                        <div class="row">
+                           <!--initiate::Column-->
+                           <div class="col-md-6 col-12 mb-4">
+                              <!--initiate::Card-->
+                              <div class="card shadow-sm border-0 bg-white h-md-100">
+
+                                 <!--initiate::Card body-->
+                                 <div class="card-body">
+                                    <!--initiate::Heading-->
+                                    <h5 class="fw-semibold mb-3">Input Icons</h5>
+                                    <!-- /initiate::Heading-->
+
+   
+                                   <!--initiate::Field-->
+                                   <div class="w-100 mb-3 mt-4">
+                                    <label class="form-label mb-2">Left Icon Input</label>
+                                    <div class="input-group mb-3">
+                                       <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search w-75" viewBox="0 0 16 16">
+                                          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                        </svg></span>
+                                       <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                     </div>
+                                 </div>
+                                 <!-- /initiate::Field-->
+                                   
+                                 <!--initiate::Field-->
+                                   <div class="w-100 mb-3 mt-4">
+                                    <label class="form-label mb-2">Right Icon Input</label>
+                                    <div class="input-group mb-3">
+                                       <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                       <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise w-75" viewBox="0 0 16 16">
+                                          <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                                          <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                                        </svg></span>
+                                     </div>
+                                 </div>
+                                 <!-- /initiate::Field-->
+                                   
+                                 <!--initiate::Field-->
+                                   <div class="w-100 mb-3 mt-4">
+                                    <label class="form-label mb-2">Left Icon Input</label>
+                                    <div class="input-group mb-3">
+                                       <span class="input-group-text bg-white" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search w-75" viewBox="0 0 16 16">
+                                          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                        </svg></span>
+                                       <input type="text" class="form-control border-start-0" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                     </div>
+                                 </div>
+                                 <!-- /initiate::Field-->
+                                   
+                                 <!--initiate::Field-->
+                                   <div class="w-100 mb-3 mt-4">
+                                    <label class="form-label mb-2">Right Icon Input</label>
+                                    <div class="input-group mb-3">
+                                       <input type="text" class="form-control border-end-0" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                       <span class="input-group-text bg-white" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise w-75" viewBox="0 0 16 16">
+                                          <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                                          <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                                        </svg></span>
+                                     </div>
+                                 </div>
+                                 <!-- /initiate::Field-->
+                                   
+                                   
+                                 </div>
+                                 <!-- /initiate::Card body-->
+                              </div>
+                              <!-- /initiate::Card-->
+                           </div>
+                           <!-- /initiate::Column-->
+
+                           <!--initiate::Column-->
+                           <div class="col-md-6 col-12 mb-4">
+                              <!--initiate::Card-->
+                              <div class="card shadow-sm border-0 bg-white h-md-100">
+
+                                 <!--initiate::Card body-->
+                                 <div class="card-body">
+                                    <!--initiate::Heading-->
+                                    <h5 class="fw-semibold mb-3">Checkboxes and Radio Addons</h5>
+                                    <!-- /initiate::Heading-->
+
+                                 <!--initiate::Field-->
+                                  <div class="w-100 mb-3 mt-4">
+                                     <label class="form-label mb-2">Left Checkbox Addon</label>
+                                     <div class="input-group mb-3">
+                                       <div class="input-group-text">
+                                         <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input" checked>
+                                       </div>
+                                       <input type="text" class="form-control" aria-label="Text input with checkbox " >
+                                     </div>
+                                  </div>
+                                  <!-- /initiate::Heading-->
+                                 
+                                  <!--initiate::Field-->
+                                  <div class="w-100 mb-3 mt-4">
+                                     <label class="form-label mb-2">Right Checkbox Addon</label>
+                                     <div class="input-group mb-3">
+                                       <input type="text" class="form-control" aria-label="Text input with checkbox " >
+                                       <div class="input-group-text">
+                                         <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input" checked>
+                                       </div>
+                                     </div>
+                                  </div>
+                                  <!-- /initiate::Heading-->
+                                
+                                  <!--initiate::Field-->
+                                  <div class="w-100 mb-3 mt-4">
+                                     <label class="form-label mb-2">Left Radio Addon</label>
+                                     <div class="input-group">
+                                       <div class="input-group-text">
+                                         <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
+                                       </div>
+                                       <input type="text" class="form-control" aria-label="Text input with radio button">
+                                     </div>
+                                  </div>
+                                  <!-- /initiate::Heading-->
+                                 
+                                  <!--initiate::Field-->
+                                  <div class="w-100 mb-3 mt-4">
+                                     <label class="form-label mb-2">Right Radio Addon</label>
+                                     <div class="input-group">
+                                       <input type="text" class="form-control" aria-label="Text input with radio button">
+                                       <div class="input-group-text">
+                                         <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
+                                       </div>
+                                     </div>
+                                  </div>
+                                  <!-- /initiate::Heading-->
+                                
+
+                                 </div>
+                                 <!-- /initiate::Card body-->
+                              </div>
+                              <!-- /initiate::Card-->
+                           </div>
+                           <!-- /initiate::Column-->
+
+                        </div>
+                        <!-- /initiate::Row-->
+
+                     </div>
+                     <!-- /initiate::Container-->
+                  </div>
+                  <!-- /initiate::Wrapper-->
+
+               </div>
+            </div>
+            <!-- /initiate::Row-->
+         </div>
+         <!-- /initiate::Container-fluid-->
+      </main>
+      <!-- /initiate::Main-->
+
+      <!--initiate::Javascript-->
+      <script src="../../assets/js/global/bootstrap.bundle.js"></script>
+      <!-- /initiate::Javascript-->
+
+   </body>
+   <!-- /initiate::Body-->
+
+</html>

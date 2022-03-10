@@ -1,0 +1,912 @@
+<!doctype html>
+<html lang="en">
+   <!--initiate::Head-->
+
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--initiate::title-->
+      <title>View User</title>
+      <!-- /initiate::title-->
+
+      <!--initiate::stylesheets-->
+      <link href="../../assets/css/global/bootstrap.css" rel="stylesheet" type="text/css">
+      <link href="../../assets/css/custom/style.css" rel="stylesheet" type="text/css">
+      <!-- /initiate::stylesheets-->
+
+      <!--initiate::Remix icons-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+      <!-- /initiate::Remix icons-->
+
+      <!--initiate::Fonts-->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+         rel="stylesheet">
+      <!-- /initiate::Fonts-->
+   </head>
+   <!-- /initiate::Head-->
+
+   <!--initiate::Body-->
+
+   <body>
+      <!--initiate::Main-->
+      <main class="vh-md-100">
+         <!--initiate::Container-fluid-->
+         <div class="container-fluid h-md-100">
+            <!--initiate::Row-->
+            <div class="row h-md-100">
+               <div class="d-flex px-0">
+                  <!--initiate::Aside-->
+                  <div
+                     class="sidebar position-fixed d-flex flex-column flex-shrink-0 text-secondary bg-dark h-100 overflow-auto">
+                     <!--initiate::Logo-->
+                     <div class="bg-secondary text-center py-4">
+                        <a href="#" class="text-white text-decoration-none text-center w-100">
+                           <span class="fs-5 fw-bolder letter-spacing-2">HORIZON</span>
+                        </a>
+                     </div>
+                     <!-- /initiate::Logo-->
+
+                     <!--initiate::Aside menu-->
+                     <ul class="nav flex-column mb-auto py-3">
+                        <!--initiate::Menu Item-->
+                        <li class="nav-item mb-2 px-3">
+                           <a href="#" class="nav-link active d-flex align-items-center" aria-current="page">
+                              <i class="ri-home-6-fill fs-5 me-3"></i>
+                              Dashboard
+                           </a>
+                        </li>
+                        <!-- /initiate::Menu Item-->
+
+                        <!--initiate::Menu Item-->
+                        <li class="nav-item mb-2 px-3">
+                           <a href="#" class=" nav-link btn-toggle align-items-center rounded collapsed w-100"
+                              data-bs-toggle="collapse" data-bs-target="#apps" aria-expanded="false">
+                              <div class="d-flex align-items-center justify-content-center">
+                                 <i class="ri-grid-fill fs-5 me-3"></i> Applications
+                                 <div class="ms-auto">
+                                    <i class="ri-arrow-right-s-line fs-5"></i>
+                                 </div>
+                              </div>
+                           </a>
+
+                           <!--initiate::Dropdowns List-->
+                           <div class="collapse" id="apps">
+                              <!--initiate::Dropdowns Toggle-->
+                              <ul class="btn-toggle-nav fw-normal pb-1 small">
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                       data-bs-toggle="collapse" data-bs-target="#menu-1" aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Users
+                                       <div class="ms-auto">
+                                          <i class="ri-arrow-right-s-line fs-5"></i>
+                                       </div>
+                                    </a>
+                                    <div class="collapse" id="menu-1">
+                                       <ul class="btn-toggle-nav list-unstyled">
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> User Default
+                                                Views</a></li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Add User</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded w-100 d-flex align-items-center"
+                                       aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Profile
+                                    </a>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                       data-bs-toggle="collapse" data-bs-target="#menu-3" aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Contacts
+                                       <div class="ms-auto">
+                                          <i class="ri-arrow-right-s-line fs-5"></i>
+                                       </div>
+                                    </a>
+                                    <div class="collapse" id="menu-3">
+                                       <ul class="btn-toggle-nav list-unstyled">
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> View
+                                                Contact</a></li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Add
+                                                Contact</a></li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                       data-bs-toggle="collapse" data-bs-target="#menu-4" aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Projects
+                                       <div class="ms-auto">
+                                          <i class="ri-arrow-right-s-line fs-5"></i>
+                                       </div>
+                                    </a>
+                                    <div class="collapse" id="menu-4">
+                                       <ul class="btn-toggle-nav list-unstyled">
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Project
+                                                List</a></li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Add
+                                                Project</a></li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                       data-bs-toggle="collapse" data-bs-target="#menu-5" aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Support
+                                       <div class="ms-auto">
+                                          <i class="ri-arrow-right-s-line fs-5"></i>
+                                       </div>
+                                    </a>
+                                    <div class="collapse" id="menu-5">
+                                       <ul class="btn-toggle-nav list-unstyled">
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> FAQ</a></li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Feedback</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> License</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                       data-bs-toggle="collapse" data-bs-target="#menu-6" aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Pages
+                                       <div class="ms-auto">
+                                          <i class="ri-arrow-right-s-line fs-5"></i>
+                                       </div>
+                                    </a>
+                                    <div class="collapse" id="menu-6">
+                                       <ul class="btn-toggle-nav list-unstyled">
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Pricing</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Invoices</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                       data-bs-toggle="collapse" data-bs-target="#chat" aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Chat
+                                       <div class="ms-auto">
+                                          <i class="ri-arrow-right-s-line fs-5"></i>
+                                       </div>
+                                    </a>
+                                    <div class="collapse" id="chat">
+                                       <ul class="btn-toggle-nav list-unstyled">
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Private</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Group</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded w-100 d-flex align-items-center"
+                                       aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i></span> To Do
+                                    </a>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                              </ul>
+                              <!-- /initiate::Dropdowns Toggle-->
+                           </div>
+                           <!-- /initiate::Dropdowns List-->
+                        </li>
+                        <!-- /initiate::Menu Item-->
+
+                        <!--initiate::Menu Item-->
+                        <li class="nav-item mb-2 px-3">
+                           <a href="#" class=" nav-link btn-toggle align-items-center rounded collapsed w-100"
+                              data-bs-toggle="collapse" data-bs-target="#forms" aria-expanded="false">
+                              <div class="d-flex align-items-center justify-content-center">
+                                 <i class="ri-file-text-fill fs-5 me-3"></i> Forms
+                                 <div class="ms-auto">
+                                    <i class="ri-arrow-right-s-line fs-5"></i>
+                                 </div>
+                              </div>
+                           </a>
+                           <!--initiate::Dropdowns List-->
+                           <div class="collapse" id="forms">
+                              <!--initiate::Dropdowns Toggle-->
+                              <ul class="btn-toggle-nav fw-normal pb-1 small">
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                       data-bs-toggle="collapse" data-bs-target="#menu-1" aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Form
+                                       Controls
+                                       <div class="ms-auto">
+                                          <i class="ri-arrow-right-s-line fs-5"></i>
+                                       </div>
+                                    </a>
+                                    <div class="collapse" id="menu-1">
+                                       <ul class="btn-toggle-nav list-unstyled">
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Base
+                                                Inputs</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Input
+                                                Groups</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Radio</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Checkbox</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Switch</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Tagify</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+                              </ul>
+                              <!-- /initiate::Dropdowns Toggle-->
+                           </div>
+                           <!-- /initiate::Dropdowns List-->
+                        </li>
+                        <!-- /initiate::Menu Item-->
+
+                     </ul>
+                     <!-- /initiate::Aside menu-->
+                  </div>
+                  <!-- /initiate::Aside-->
+
+                  <!--initiate::Wrapper-->
+                  <div class="wrapper w-100">
+                     <div class="w-100">
+                        <!--initiate::Header-->
+                        <header class="bg-white px-4 py-3 border-bottom">
+                           <div class="d-flex align-items-center justify-content-between">
+
+                              <!--initiate::left side-->
+                              <div class="d-flex align-items-center">
+                                 <!--initiate::Aside collapse-->
+                                 <a href="#" class="me-4 text-decoration-none text-dark">
+                                    <i class="ri-bar-chart-horizontal-line fs-4"></i>
+                                 </a>
+                                 <!-- /initiate::Aside collapse-->
+
+                                 <!--initiate::Features dropdown-->
+                                 <div class="dropdown">
+                                    <!--initiate::Dropdown button-->
+                                    <button class="btn p-0 dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                       Features
+                                    </button>
+                                    <!-- /initiate::Dropdown button-->
+
+                                    <!--initiate::Dropdown menu-->
+                                    <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton1">
+                                       <li class="features-dropdown d-flex">
+                                          <!--initiate::Dropdown menu list-->
+                                          <ul class="list-unstyled p-4">
+                                             <li class="text-dark fw-semibold mb-2">Task Reports</li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-lock-fill text-primary me-3"></i>Latest Tasks</a></li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-timer-2-line text-primary me-3"></i>Pending Tasks</a>
+                                             </li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-alarm-warning-fill text-primary me-3"></i>Urgent
+                                                   Tasks</a>
+                                             </li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-checkbox-circle-fill text-primary me-3"></i>Completed
+                                                   Tasks</a></li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-delete-back-2-fill text-primary me-3"></i>Failed
+                                                   Tasks</a>
+                                             </li>
+                                          </ul>
+                                          <!-- /initiate::Dropdown menu list-->
+
+                                          <!--initiate::Dropdown menu list-->
+                                          <ul class="list-unstyled p-4 border-start">
+                                             <li class="text-dark fw-semibold mb-2">Staff Management</li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-user-star-fill text-primary me-3"></i>Top Management</a>
+                                             </li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-lock-password-fill  text-primary me-3"></i>Project
+                                                   Management</a></li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-file-settings-fill  text-primary me-3"></i>Development
+                                                   Staff</a></li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-customer-service-fill text-primary me-3"></i>Customer
+                                                   Service</a></li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-stack-fill text-primary me-3"></i>Sales & Marketing</a>
+                                             </li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-hand-coin-fill text-primary me-3"></i>Executives</a>
+                                             </li>
+                                          </ul>
+                                          <!-- /initiate::Dropdown menu list-->
+                                       </li>
+                                    </ul>
+                                    <!-- /initiate::Dropdown menu-->
+                                 </div>
+                                 <!-- /initiate::Features dropdown-->
+                              </div>
+                              <!-- /initiate::left side-->
+
+                              <!--initiate::right side-->
+                              <div class="d-flex align-items-center">
+                                 <!--initiate::search bar-->
+                                 <a class="text-decoration-none me-4 text-dark fs-5" href="#">
+                                    <i class="ri-search-line fs-4"></i>
+                                 </a>
+                                 <!-- /initiate::search bar-->
+
+                                 <!--initiate::notification-->
+                                 <div class="dropdown me-4">
+                                    <!--initiate::Dropdown button-->
+                                    <button class="btn p-0 dropdown-toggle" type="button" id="dropdownMenuButton2"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                       <i class="ri-notification-3-line fs-4"></i>
+                                    </button>
+                                    <!-- /initiate::Dropdown button-->
+
+                                    <!--initiate::Dropdown menu-->
+                                    <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton2">
+                                       <li><a class="dropdown-item py-2" href="#">Notification Content</a></li>
+                                       <li><a class="dropdown-item py-2" href="#">Notification Content</a></li>
+                                    </ul>
+                                    <!-- /initiate::Dropdown menu-->
+                                 </div>
+                                 <!-- /initiate::notification-->
+
+                                 <!--initiate::My Profile-->
+                                 <div class="ms-auto">
+                                    <!--initiate::My Profile dropdown-->
+                                    <div class="dropdown">
+                                       <!--initiate::Dropdown button-->
+                                       <a class="btn dropdown-toggle p-0 border-0" href="#" role="button"
+                                          id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                          <img src="../../assets/media/avatars/150-1.jpg" alt="user" width="40"
+                                             height="40" class="rounded">
+                                       </a>
+                                       <!-- /initiate::Dropdown button-->
+
+                                       <!--initiate::Dropdown menu-->
+                                       <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuLink">
+                                          <li><a class="dropdown-item py-2 text-capitalize d-flex align-items-center"
+                                                href="../../account/profile.html"><i class="ri-user-fill me-2"></i>my
+                                                profile</a></li>
+                                          <li><a class="dropdown-item py-2 text-capitalize d-flex align-items-center"
+                                                href="#"><i class="ri-settings-3-fill me-2"></i>settings & privacy</a>
+                                          </li>
+                                          <li>
+                                             <hr class="dropdown-divider">
+                                          </li>
+                                          <li><a class="dropdown-item py-2 text-capitalize d-flex align-items-center"
+                                                href="#"><i class="ri-logout-box-r-fill me-2"></i>logout</a></li>
+                                       </ul>
+                                       <!-- /initiate::Dropdown menu-->
+                                    </div>
+                                    <!-- /initiate::My Profile dropdown-->
+                                 </div>
+                                 <!-- /initiate::My Profile-->
+                              </div>
+                              <!-- /initiate::right side-->
+                           </div>
+                        </header>
+                        <!-- /initiate::Header-->
+
+                        <!--initiate::Breadcrumbs-->
+                        <div class="px-4 py-3">
+                           <nav aria-label="breadcrumb">
+                              <ul class="breadcrumb m-0">
+                                 <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Applications</a>
+                                 </li>
+                                 <li class="breadcrumb-item"><a href="view.html" class="text-decoration-none">Users</a>
+                                 </li>
+                                 <li class="breadcrumb-item active" aria-current="page">View</li>
+                              </ul>
+                           </nav>
+                        </div>
+                        <!-- /initiate::Breadcrumbs-->
+
+                     </div>
+
+                     <!--initiate::Container-->
+                     <div class="container p-4">
+                        <!--initiate::Row-->
+                        <div class="row">
+                           <!--initiate::Column-->
+                           <div class="col-md-12 col-12">
+                              <!--initiate::Card-->
+                              <div class="card shadow-sm border-0 bg-white">
+                                 <!--initiate::Card header-->
+                                 <div class="card-header">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                       <h5 class="fw-semibold m-0">Users List</h5>
+                                       <div class="add-users-right d-flex align-items-center">
+                                          <p class="flex-grow-1 me-1 w-100 text-nowrap mb-0">Showing 1-10 of 150</p>
+                                          <select class="form-select mx-3" aria-label="Default select example">
+                                             <option selected>10</option>
+                                             <option value="1">15</option>
+                                             <option value="2">20</option>
+                                             <option value="3">25</option>
+                                          </select>
+                                          <a class="btn btn-primary text-nowrap" href="add.html">Add Users</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- /initiate::Card header-->
+
+                                 <!--initiate::Card body-->
+                                 <div class="card-body p-0">
+                                    <!--initiate::Table-->
+                                    <div class="table-responsive mt-3">
+                                       <table class="table table-striped">
+                                          <thead>
+                                             <tr>
+                                                <th
+                                                   class="py-3 border-bottom-0 text-secondary text-uppercase fw-semibold align-middle">
+                                                   Contact</th>
+                                                <th
+                                                   class="py-3 border-bottom-0 text-secondary text-uppercase fw-semibold align-middle">
+                                                   Country</th>
+                                                <th
+                                                   class="py-3 border-bottom-0 text-secondary text-uppercase fw-semibold align-middle">
+                                                   Email</th>
+                                                <th
+                                                   class="py-3 border-bottom-0 text-secondary text-uppercase fw-semibold align-middle">
+                                                   Role</th>
+                                                <th
+                                                   class="py-3 border-bottom-0 text-secondary text-uppercase fw-semibold align-middle">
+                                                   Task Progress</th>
+                                                <th
+                                                   class="py-3 border-bottom-0 text-secondary text-uppercase fw-semibold align-middle">
+                                                   Action</th>
+                                             </tr>
+                                          </thead>
+                                          <tbody>
+                                             <tr>
+                                                <td class="align-middle border-bottom-0">
+                                                   <div class="d-flex align-items-center">
+                                                      <img src="../../assets/media/avatars/150-7.jpg" alt="user"
+                                                         width="40" height="40" class="rounded">
+                                                      <div class="ms-3">
+                                                         <h6 class="mb-0 fw-semibold">Ava Charlotte</h6>
+                                                      </div>
+                                                   </div>
+                                                </td>
+
+                                                <td class="py-3 align-middle border-bottom-0 fw-semibold">Pennsylvania
+                                                </td>
+                                                <td class="py-3 align-middle border-bottom-0 text-secondary">
+                                                   avachar@yahoo.com</td>
+                                                <td class="py-3 align-middle border-bottom-0 text-secondary">Designer
+                                                </td>
+                                                <td class="py-3 align-middle border-bottom-0">
+                                                   <div class="progress-wrapper d-flex align-items-center">
+                                                      <div class="progress flex-grow-1 me-2 rounded-pill">
+                                                         <div class="progress-bar rounded-pill bg-warning"
+                                                            role="progressbar" style="width: 50%" aria-valuenow="50"
+                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                      </div>
+                                                      <small class="fw-medium">50%</small>
+                                                   </div>
+                                                </td>
+                                                <td class="py-3 align-middle border-bottom-0">
+                                                   <ul class="list-unstyled list-inline m-0">
+                                                      <li class="list-inline-item mx-3"><a href="edit.html"
+                                                            class="text-decoration-none text-info fs-4"><i
+                                                               class="ri-edit-line"></i></a></li>
+                                                      <li class="list-inline-item"><a href="#"
+                                                            class="text-decoration-none text-danger fs-4"
+                                                            data-bs-toggle="modal" data-bs-target="#delete-popup"><i
+                                                               class="ri-delete-bin-2-line"></i></a></li>
+                                                   </ul>
+                                                </td>
+                                             </tr>
+
+                                             <tr>
+                                                <td class="align-middle border-bottom-0">
+                                                   <div class="d-flex align-items-center">
+                                                      <img src="../../assets/media/avatars/150-8.jpg" alt="user"
+                                                         width="40" height="40" class="rounded">
+                                                      <div class="ms-3">
+                                                         <h6 class="mb-0 fw-semibold">Charlie Stone</h6>
+                                                      </div>
+                                                   </div>
+                                                </td>
+                                                <td class="py-3 align-middle border-bottom-0 fw-semibold">New York</td>
+                                                <td class="py-3 align-middle border-bottom-0 text-secondary">
+                                                   charlie@gmail.com</td>
+                                                <td class="py-3 align-middle border-bottom-0 text-secondary">Designer
+                                                </td>
+                                                <td class="py-3 align-middle border-bottom-0">
+                                                   <div class="progress-wrapper d-flex align-items-center">
+                                                      <div class="progress flex-grow-1 me-2 rounded-pill">
+                                                         <div class="progress-bar rounded-pill bg-danger"
+                                                            role="progressbar" style="width: 38%" aria-valuenow="38"
+                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                      </div>
+                                                      <small class="fw-medium">38%</small>
+                                                   </div>
+                                                </td>
+                                                <td class="py-3 align-middle border-bottom-0">
+                                                   <ul class="list-unstyled list-inline m-0">
+                                                      <li class="list-inline-item mx-3"><a href="edit.html"
+                                                            class="text-decoration-none text-secondary fs-4"><i
+                                                               class="ri-edit-line"></i></a></li>
+                                                      <li class="list-inline-item"><a href="#"
+                                                            class="text-decoration-none text-secondary fs-4"><i
+                                                               class="ri-delete-bin-2-line"></i></a></li>
+                                                   </ul>
+                                                </td>
+                                             </tr>
+
+                                             <tr>
+                                                <td class="align-middle border-bottom-0">
+                                                   <div class="d-flex align-items-center">
+                                                      <img src="../../assets/media/avatars/150-9.jpg" alt="user"
+                                                         width="40" height="40" class="rounded">
+                                                      <div class="ms-3">
+                                                         <h6 class="mb-0 fw-semibold">Naah Lucas</h6>
+                                                      </div>
+                                                   </div>
+                                                </td>
+
+                                                <td class="py-3 align-middle border-bottom-0 fw-semibold">Barcelona</td>
+                                                <td class="py-3 align-middle border-bottom-0 text-secondary">
+                                                   naahluc@gmail.com</td>
+                                                <td class="py-3 align-middle border-bottom-0 text-secondary">Web
+                                                   Developer</td>
+                                                <td class="py-3 align-middle border-bottom-0">
+                                                   <div class="progress-wrapper d-flex align-items-center">
+                                                      <div class="progress flex-grow-1 me-2 rounded-pill">
+                                                         <div class="progress-bar rounded-pill bg-info"
+                                                            role="progressbar" style="width: 87%" aria-valuenow="87"
+                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                      </div>
+                                                      <small class="fw-medium">87%</small>
+                                                   </div>
+                                                </td>
+                                                <td class="py-3 align-middle border-bottom-0">
+                                                   <ul class="list-unstyled list-inline m-0">
+                                                      <li class="list-inline-item mx-3"><a href="edit.html"
+                                                            class="text-decoration-none text-secondary fs-4"><i
+                                                               class="ri-edit-line"></i></a></li>
+                                                      <li class="list-inline-item"><a href="#"
+                                                            class="text-decoration-none text-secondary fs-4"><i
+                                                               class="ri-delete-bin-2-line"></i></a></li>
+                                                   </ul>
+                                                </td>
+                                             </tr>
+
+                                             <tr>
+                                                <td class="align-middle border-bottom-0">
+                                                   <div class="d-flex align-items-center">
+                                                      <img src="../../assets/media/avatars/150-4.jpg" alt="logo"
+                                                         width="40" height="40" class="rounded">
+                                                      <div class="ms-3">
+                                                         <h6 class="mb-0 fw-semibold">Liam Benjamin</h6>
+                                                      </div>
+                                                   </div>
+                                                </td>
+
+                                                <td class="py-3 align-middle border-bottom-0 fw-semibold">California
+                                                </td>
+                                                <td class="py-3 align-middle border-bottom-0 text-secondary">
+                                                   liamben@yahoo.com</td>
+                                                <td class="py-3 align-middle border-bottom-0 text-secondary">Marketing
+                                                </td>
+                                                <td class="py-3 align-middle border-bottom-0">
+                                                   <div class="progress-wrapper d-flex align-items-center">
+                                                      <div class="progress flex-grow-1 me-2 rounded-pill">
+                                                         <div class="progress-bar rounded-pill bg-danger"
+                                                            role="progressbar" style="width: 25%" aria-valuenow="25"
+                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                      </div>
+                                                      <small class="fw-medium">25%</small>
+                                                   </div>
+                                                </td>
+                                                <td class="py-3 align-middle border-bottom-0">
+                                                   <ul class="list-unstyled list-inline m-0">
+                                                      <li class="list-inline-item mx-3"><a href="edit.html"
+                                                            class="text-decoration-none text-secondary fs-4"><i
+                                                               class="ri-edit-line"></i></a></li>
+                                                      <li class="list-inline-item"><a href="#"
+                                                            class="text-decoration-none text-secondary fs-4"><i
+                                                               class="ri-delete-bin-2-line"></i></a></li>
+                                                   </ul>
+                                                </td>
+                                             </tr>
+
+                                             <tr>
+                                                <td class="align-middle border-bottom-0">
+                                                   <div class="d-flex align-items-center">
+                                                      <img src="../../assets/media/avatars/150-2.jpg" alt="user"
+                                                         width="40" height="40" class="rounded">
+                                                      <div class="ms-3">
+                                                         <h6 class="mb-0 fw-semibold">Amelia Harper</h6>
+                                                      </div>
+                                                   </div>
+                                                </td>
+
+                                                <td class="py-3 align-middle border-bottom-0 fw-semibold">Barcelona</td>
+                                                <td class="py-3 align-middle border-bottom-0 text-secondary">
+                                                   ameliahar@yahoo.com</td>
+                                                <td class="py-3 align-middle border-bottom-0 text-secondary">Sales
+                                                   Department</td>
+                                                <td class="py-3 align-middle border-bottom-0">
+                                                   <div class="progress-wrapper d-flex align-items-center">
+                                                      <div class="progress flex-grow-1 me-2 rounded-pill">
+                                                         <div class="progress-bar rounded-pill bg-warning"
+                                                            role="progressbar" style="width: 66%" aria-valuenow="66"
+                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                      </div>
+                                                      <small class="fw-medium">66%</small>
+                                                   </div>
+                                                </td>
+                                                <td class="py-3 align-middle border-bottom-0">
+                                                   <ul class="list-unstyled list-inline m-0">
+                                                      <li class="list-inline-item mx-3"><a href="edit.html"
+                                                            class="text-decoration-none text-secondary fs-4"><i
+                                                               class="ri-edit-line"></i></a></li>
+                                                      <li class="list-inline-item"><a href="#"
+                                                            class="text-decoration-none text-secondary fs-4"><i
+                                                               class="ri-delete-bin-2-line"></i></a></li>
+                                                   </ul>
+                                                </td>
+                                             </tr>
+
+                                             <tr>
+                                                <td class="align-middle border-bottom-0">
+                                                   <div class="d-flex align-items-center">
+                                                      <img src="../../assets/media/avatars/150-5.jpg" alt="user"
+                                                         width="40" height="40" class="rounded">
+                                                      <div class="ms-3">
+                                                         <h6 class="mb-0 fw-semibold">Sophia Isabella</h6>
+                                                      </div>
+                                                   </div>
+                                                </td>
+
+                                                <td class="py-3 align-middle border-bottom-0 fw-semibold">New York</td>
+                                                <td class="py-3 align-middle border-bottom-0 text-secondary">
+                                                   sophia@gmail.com</td>
+                                                <td class="py-3 align-middle border-bottom-0 text-secondary">PHP
+                                                   Developer</td>
+                                                <td class="py-3 align-middle border-bottom-0">
+                                                   <div class="progress-wrapper d-flex align-items-center">
+                                                      <div class="progress flex-grow-1 me-2 rounded-pill">
+                                                         <div class="progress-bar rounded-pill bg-info"
+                                                            role="progressbar" style="width: 90%" aria-valuenow="90"
+                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                      </div>
+                                                      <small class="fw-medium">90%</small>
+                                                   </div>
+                                                </td>
+                                                <td class="py-3 align-middle border-bottom-0">
+                                                   <ul class="list-unstyled list-inline m-0">
+                                                      <li class="list-inline-item mx-3"><a href="edit.html"
+                                                            class="text-decoration-none text-secondary fs-4"><i
+                                                               class="ri-edit-line"></i></a></li>
+                                                      <li class="list-inline-item"><a href="#"
+                                                            class="text-decoration-none text-secondary fs-4"><i
+                                                               class="ri-delete-bin-2-line"></i></a></li>
+                                                   </ul>
+                                                </td>
+                                             </tr>
+
+                                             <tr>
+                                                <td class="align-middle border-bottom-0">
+                                                   <div class="d-flex align-items-center">
+                                                      <img src="../../assets/media/avatars/150-3.jpg" alt="logo"
+                                                         width="40" height="40" class="rounded">
+                                                      <div class="ms-3">
+                                                         <h6 class="mb-0 fw-semibold">Jas Gouldeby</h6>
+                                                      </div>
+                                                   </div>
+                                                </td>
+
+                                                <td class="py-3 align-middle border-bottom-0 fw-semibold">United States
+                                                </td>
+                                                <td class="py-3 align-middle border-bottom-0 text-secondary">
+                                                   jasgould@gmail.com</td>
+                                                <td class="py-3 align-middle border-bottom-0 text-secondary">Angular
+                                                   Developer</td>
+                                                <td class="py-3 align-middle border-bottom-0">
+                                                   <div class="progress-wrapper d-flex align-items-center">
+                                                      <div class="progress flex-grow-1 me-2 rounded-pill">
+                                                         <div class="progress-bar rounded-pill bg-danger"
+                                                            role="progressbar" style="width: 17%" aria-valuenow="17"
+                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                      </div>
+                                                      <small class="fw-medium">17%</small>
+                                                   </div>
+                                                </td>
+                                                <td class="py-3 align-middle border-bottom-0">
+                                                   <ul class="list-unstyled list-inline m-0">
+                                                      <li class="list-inline-item mx-3"><a href="edit.html"
+                                                            class="text-decoration-none text-secondary fs-4"><i
+                                                               class="ri-edit-line"></i></a></li>
+                                                      <li class="list-inline-item"><a href="#"
+                                                            class="text-decoration-none text-secondary fs-4"><i
+                                                               class="ri-delete-bin-2-line"></i></a></li>
+                                                   </ul>
+                                                </td>
+                                             </tr>
+
+                                             <tr>
+                                                <td class="align-middle border-bottom-0">
+                                                   <div class="d-flex align-items-center">
+                                                      <img src="../../assets/media/avatars/150-8.jpg" alt="user"
+                                                         width="40" height="40" class="rounded">
+                                                      <div class="ms-3">
+                                                         <h6 class="mb-0 fw-semibold">Edsel Sprigging</h6>
+                                                      </div>
+                                                   </div>
+                                                </td>
+
+                                                <td class="py-3 align-middle border-bottom-0 fw-semibold">France</td>
+                                                <td class="py-3 align-middle border-bottom-0 text-secondary">
+                                                   edsel@yahoo.com</td>
+                                                <td class="py-3 align-middle border-bottom-0 text-secondary">PR Manager
+                                                </td>
+                                                <td class="py-3 align-middle border-bottom-0">
+                                                   <div class="progress-wrapper d-flex align-items-center">
+                                                      <div class="progress flex-grow-1 me-2 rounded-pill">
+                                                         <div class="progress-bar rounded-pill bg-warning"
+                                                            role="progressbar" style="width: 75%" aria-valuenow="75"
+                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                      </div>
+                                                      <small class="fw-medium">75%</small>
+                                                   </div>
+                                                </td>
+                                                <td class="py-3 align-middle border-bottom-0">
+                                                   <ul class="list-unstyled list-inline m-0">
+                                                      <li class="list-inline-item mx-3"><a href="edit.html"
+                                                            class="text-decoration-none text-secondary fs-4"><i
+                                                               class="ri-edit-line"></i></a></li>
+                                                      <li class="list-inline-item"><a href="#"
+                                                            class="text-decoration-none text-secondary fs-4"><i
+                                                               class="ri-delete-bin-2-line"></i></a></li>
+                                                   </ul>
+                                                </td>
+                                             </tr>
+
+                                          </tbody>
+                                       </table>
+                                    </div>
+                                    <!-- /initiate::Table-->
+
+                                    <!--initiate::Pagination-->
+                                    <div class="mt-4">
+                                       <nav aria-label="Page navigation example">
+                                          <ul class="pagination justify-content-center">
+                                             <li class="page-item disabled">
+                                                <a class="page-link">Previous</a>
+                                             </li>
+                                             <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                             <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                             <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                             <li class="page-item">
+                                                <a class="page-link" href="#">Next</a>
+                                             </li>
+                                          </ul>
+                                       </nav>
+                                    </div>
+                                    <!-- /initiate::Pagination-->
+
+                                 </div>
+                                 <!--initiate::Card body-->
+                              </div>
+                              <!-- /initiate::Card-->
+                           </div>
+                           <!-- /initiate::Column-->
+                        </div>
+                        <!-- /initiate::Row-->
+                     </div>
+                     <!-- /initiate::Container-->
+                  </div>
+                  <!-- /initiate::Wrapper-->
+               </div>
+            </div>
+            <!-- /initiate::Row-->
+         </div>
+         <!-- /initiate::Container-fluid-->
+      </main>
+      <!-- /initiate::Main-->
+
+      <!--initiate::Delete popup-->
+      <div class="modal fade" id="delete-popup" tabindex="-1" aria-labelledby="delete-popup" aria-hidden="true">
+         <!--initiate::Modal dialog-->
+         <div class="modal-dialog">
+            <!--initiate::Modal content-->
+            <div class="modal-content">
+               <!--initiate::Modal header-->
+               <div class="modal-header p-4 border-0">
+                  <!-- <h5 class="modal-title fw-bold" id="delete-popupLabel">Add task</h5> -->
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <!-- /initiate::Modal header-->
+
+               <!--initiate::Modal body-->
+               <div class="modal-body p-4">
+                  <p class="text-center mb-5">
+                     <i class="ri-delete-bin-line p-4 rounded-circle bg-light fs-4"></i>
+                  </p>
+                  <h4 class="fw-semibold text-center">Do you want to delete this project?</h4>
+               </div>
+               <!-- /initiate::Modal body-->
+
+               <!--initiate::Modal footer-->
+               <div class="modal-footer p-4 pt-0 border-top-0 justify-content-center">
+                  <a href="#" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancel</a>
+                  <a href="#" class="btn btn-primary me-0">Delete</a>
+               </div>
+               <!-- /initiate::Modal footer-->
+            </div>
+            <!-- /initiate::Modal content-->
+         </div>
+         <!-- /initiate::Modal dialog-->
+      </div>
+      <!-- /initiate::Delete popup-->
+
+      <!--initiate::Javascript-->
+      <script src="../../assets/js/global/bootstrap.bundle.js"></script>
+      <!-- /initiate::Javascript-->
+
+   </body>
+   <!-- /initiate::Body-->
+
+</html>

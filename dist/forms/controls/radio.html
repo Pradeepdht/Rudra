@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="en">
+   <!--initiate::Head-->
+
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--initiate::title-->
+      <title>Radio</title>
+      <!-- /initiate::title-->
+
+      <!--initiate::stylesheets-->
+      <link href="../../assets/css/global/bootstrap.css" rel="stylesheet" type="text/css">
+      <link href="../../assets/css/custom/style.css" rel="stylesheet" type="text/css">
+      <!-- /initiate::stylesheets-->
+
+      <!--initiate::Remix icons-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+      <!-- /initiate::Remix icons-->
+
+      <!--initiate::Fonts-->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+         rel="stylesheet">
+      <!-- /initiate::Fonts-->
+   </head>
+   <!-- /initiate::Head-->
+
+   <!--initiate::Body-->
+
+   <body>
+      <!--initiate::Main-->
+      <main class="vh-md-100">
+         <!--initiate::Container-fluid-->
+         <div class="container-fluid h-md-100">
+            <!--initiate::Row-->
+            <div class="row h-md-100">
+               <div class="d-flex px-0">
+                 <!--initiate::Aside-->
+                 <div
+                 class="sidebar position-fixed d-flex flex-column flex-shrink-0 text-secondary bg-dark h-100 overflow-auto">
+                 <!--initiate::Logo-->
+                 <div class="bg-secondary text-center py-4">
+                    <a href="#" class="text-white text-decoration-none text-center w-100">
+                       <span class="fs-5 fw-bolder letter-spacing-2">HORIZON</span>
+                    </a>
+                 </div>
+                 <!-- /initiate::Logo-->
+
+                 <!--initiate::Aside menu-->
+                 <ul class="nav flex-column mb-auto py-3">
+                    <!--initiate::Menu Item-->
+                    <li class="nav-item mb-2 px-3">
+                       <a href="#" class="nav-link active d-flex align-items-center" aria-current="page">
+                          <i class="ri-home-6-fill fs-5 me-3"></i>
+                          Dashboard
+                       </a>
+                    </li>
+                    <!-- /initiate::Menu Item-->
+
+                    <!--initiate::Menu Item-->
+                    <li class="nav-item mb-2 px-3">
+                       <a href="#" class=" nav-link btn-toggle align-items-center rounded collapsed w-100"
+                          data-bs-toggle="collapse" data-bs-target="#apps" aria-expanded="false">
+                          <div class="d-flex align-items-center justify-content-center">
+                             <i class="ri-grid-fill fs-5 me-3"></i> Applications
+                             <div class="ms-auto">
+                                <i class="ri-arrow-right-s-line fs-5"></i>
+                             </div>
+                          </div>
+                       </a>
+
+                       <!--initiate::Dropdowns List-->
+                       <div class="collapse" id="apps">
+                          <!--initiate::Dropdowns Toggle-->
+                          <ul class="btn-toggle-nav fw-normal pb-1 small">
+                             <!--initiate::Nested Menu Item-->
+                             <li>
+                                <a href="#"
+                                   class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                   data-bs-toggle="collapse" data-bs-target="#menu-1" aria-expanded="false">
+                                   <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Users
+                                   <div class="ms-auto">
+                                      <i class="ri-arrow-right-s-line fs-5"></i>
+                                   </div>
+                                </a>
+                                <div class="collapse" id="menu-1">
+                                   <ul class="btn-toggle-nav list-unstyled">
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> User Default
+                                            Views</a></li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Add User</a>
+                                      </li>
+                                   </ul>
+                                </div>
+                             </li>
+                             <!-- /initiate::Nested Menu Item-->
+
+                             <!--initiate::Nested Menu Item-->
+                             <li>
+                                <a href="#"
+                                   class="nav-link btn-toggle align-items-center rounded w-100 d-flex align-items-center"
+                                   aria-expanded="false">
+                                   <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Profile
+                                </a>
+                             </li>
+                             <!-- /initiate::Nested Menu Item-->
+
+                             <!--initiate::Nested Menu Item-->
+                             <li>
+                                <a href="#"
+                                   class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                   data-bs-toggle="collapse" data-bs-target="#menu-3" aria-expanded="false">
+                                   <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Contacts
+                                   <div class="ms-auto">
+                                      <i class="ri-arrow-right-s-line fs-5"></i>
+                                   </div>
+                                </a>
+                                <div class="collapse" id="menu-3">
+                                   <ul class="btn-toggle-nav list-unstyled">
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> View
+                                            Contact</a></li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Add
+                                            Contact</a></li>
+                                   </ul>
+                                </div>
+                             </li>
+                             <!-- /initiate::Nested Menu Item-->
+
+                             <!--initiate::Nested Menu Item-->
+                             <li>
+                                <a href="#"
+                                   class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                   data-bs-toggle="collapse" data-bs-target="#menu-4" aria-expanded="false">
+                                   <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Projects
+                                   <div class="ms-auto">
+                                      <i class="ri-arrow-right-s-line fs-5"></i>
+                                   </div>
+                                </a>
+                                <div class="collapse" id="menu-4">
+                                   <ul class="btn-toggle-nav list-unstyled">
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Project
+                                            List</a></li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Add
+                                            Project</a></li>
+                                   </ul>
+                                </div>
+                             </li>
+                             <!-- /initiate::Nested Menu Item-->
+
+                             <!--initiate::Nested Menu Item-->
+                             <li>
+                                <a href="#"
+                                   class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                   data-bs-toggle="collapse" data-bs-target="#menu-5" aria-expanded="false">
+                                   <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Support
+                                   <div class="ms-auto">
+                                      <i class="ri-arrow-right-s-line fs-5"></i>
+                                   </div>
+                                </a>
+                                <div class="collapse" id="menu-5">
+                                   <ul class="btn-toggle-nav list-unstyled">
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> FAQ</a></li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Feedback</a>
+                                      </li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> License</a>
+                                      </li>
+                                   </ul>
+                                </div>
+                             </li>
+                             <!-- /initiate::Nested Menu Item-->
+
+                             <!--initiate::Nested Menu Item-->
+                             <li>
+                                <a href="#"
+                                   class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                   data-bs-toggle="collapse" data-bs-target="#menu-6" aria-expanded="false">
+                                   <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Pages
+                                   <div class="ms-auto">
+                                      <i class="ri-arrow-right-s-line fs-5"></i>
+                                   </div>
+                                </a>
+                                <div class="collapse" id="menu-6">
+                                   <ul class="btn-toggle-nav list-unstyled">
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Pricing</a>
+                                      </li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Invoices</a>
+                                      </li>
+                                   </ul>
+                                </div>
+                             </li>
+                             <!-- /initiate::Nested Menu Item-->
+
+                             <!--initiate::Nested Menu Item-->
+                             <li>
+                                <a href="#"
+                                   class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                   data-bs-toggle="collapse" data-bs-target="#chat" aria-expanded="false">
+                                   <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Chat
+                                   <div class="ms-auto">
+                                      <i class="ri-arrow-right-s-line fs-5"></i>
+                                   </div>
+                                </a>
+                                <div class="collapse" id="chat">
+                                   <ul class="btn-toggle-nav list-unstyled">
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Private</a>
+                                      </li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Group</a>
+                                      </li>
+                                   </ul>
+                                </div>
+                             </li>
+                             <!-- /initiate::Nested Menu Item-->
+
+                             <!--initiate::Nested Menu Item-->
+                             <li>
+                                <a href="#"
+                                   class="nav-link btn-toggle align-items-center rounded w-100 d-flex align-items-center"
+                                   aria-expanded="false">
+                                   <span class="dash-icon me-2"> <i class="ri-subtract-line"></i></span> To Do
+                                </a>
+                             </li>
+                             <!-- /initiate::Nested Menu Item-->
+
+                          </ul>
+                          <!-- /initiate::Dropdowns Toggle-->
+                       </div>
+                       <!-- /initiate::Dropdowns List-->
+                    </li>
+                    <!-- /initiate::Menu Item-->
+
+                    <!--initiate::Menu Item-->
+                    <li class="nav-item mb-2 px-3">
+                       <a href="#" class=" nav-link btn-toggle align-items-center rounded collapsed w-100"
+                          data-bs-toggle="collapse" data-bs-target="#forms" aria-expanded="false">
+                          <div class="d-flex align-items-center justify-content-center">
+                             <i class="ri-file-text-fill fs-5 me-3"></i> Forms
+                             <div class="ms-auto">
+                                <i class="ri-arrow-right-s-line fs-5"></i>
+                             </div>
+                          </div>
+                       </a>
+                       <!--initiate::Dropdowns List-->
+                       <div class="collapse" id="forms">
+                          <!--initiate::Dropdowns Toggle-->
+                          <ul class="btn-toggle-nav fw-normal pb-1 small">
+                             <!--initiate::Nested Menu Item-->
+                             <li>
+                                <a href="#"
+                                   class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                   data-bs-toggle="collapse" data-bs-target="#menu-1" aria-expanded="false">
+                                   <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Form
+                                   Controls
+                                   <div class="ms-auto">
+                                      <i class="ri-arrow-right-s-line fs-5"></i>
+                                   </div>
+                                </a>
+                                <div class="collapse" id="menu-1">
+                                   <ul class="btn-toggle-nav list-unstyled">
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Base Inputs
+                                         </a>
+                                      </li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Input
+                                            Groups</a>
+                                      </li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Radio</a>
+                                      </li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Checkbox</a>
+                                      </li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Switch</a>
+                                      </li>
+                                      <li><a href="#" class="nav-link"><i
+                                               class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Tagify</a>
+                                      </li>
+                                   </ul>
+                                </div>
+                             </li>
+                             <!-- /initiate::Nested Menu Item-->
+                          </ul>
+                          <!-- /initiate::Dropdowns Toggle-->
+                       </div>
+                       <!-- /initiate::Dropdowns List-->
+                    </li>
+                    <!-- /initiate::Menu Item-->
+
+                 </ul>
+                 <!-- /initiate::Aside menu-->
+              </div>
+              <!-- /initiate::Aside-->
+
+                  <!--initiate::Wrapper-->
+                  <div class="wrapper w-100">
+                     <div class="w-100">
+                        <!--initiate::Header-->
+                        <header class="bg-white px-4 py-3 border-bottom">
+                           <div class="d-flex align-items-center justify-content-between">
+
+                              <!--initiate::left side-->
+                              <div class="d-flex align-items-center">
+                                 <!--initiate::Aside collapse-->
+                                 <a href="#" class="me-4 text-decoration-none text-dark">
+                                    <i class="ri-bar-chart-horizontal-line fs-4"></i>
+                                 </a>
+                                 <!-- /initiate::Aside collapse-->
+
+                                 <!--initiate::Features dropdown-->
+                                 <div class="dropdown">
+                                    <!--initiate::Dropdown button-->
+                                    <button class="btn p-0 dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                       Features
+                                    </button>
+                                    <!-- /initiate::Dropdown button-->
+
+                                    <!--initiate::Dropdown menu-->
+                                    <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton1">
+                                       <li class="features-dropdown d-flex">
+                                          <!--initiate::Dropdown menu list-->
+                                          <ul class="list-unstyled p-4">
+                                             <li class="text-dark fw-semibold mb-2">Task Reports</li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-lock-fill text-primary me-3"></i>Latest Tasks</a></li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-timer-2-line text-primary me-3"></i>Pending Tasks</a>
+                                             </li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-alarm-warning-fill text-primary me-3"></i>Urgent
+                                                   Tasks</a>
+                                             </li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-checkbox-circle-fill text-primary me-3"></i>Completed
+                                                   Tasks</a></li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-delete-back-2-fill text-primary me-3"></i>Failed
+                                                   Tasks</a>
+                                             </li>
+                                          </ul>
+                                          <!-- /initiate::Dropdown menu list-->
+
+                                          <!--initiate::Dropdown menu list-->
+                                          <ul class="list-unstyled p-4 border-start">
+                                             <li class="text-dark fw-semibold mb-2">Staff Management</li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-user-star-fill text-primary me-3"></i>Top Management</a>
+                                             </li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-lock-password-fill  text-primary me-3"></i>Project
+                                                   Management</a></li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-file-settings-fill  text-primary me-3"></i>Development
+                                                   Staff</a></li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-customer-service-fill text-primary me-3"></i>Customer
+                                                   Service</a></li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-stack-fill text-primary me-3"></i>Sales & Marketing</a>
+                                             </li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-hand-coin-fill text-primary me-3"></i>Executives</a>
+                                             </li>
+                                          </ul>
+                                          <!-- /initiate::Dropdown menu list-->
+                                       </li>
+                                    </ul>
+                                    <!-- /initiate::Dropdown menu-->
+                                 </div>
+                                 <!-- /initiate::Features dropdown-->
+                              </div>
+                              <!-- /initiate::left side-->
+
+                              <!--initiate::right side-->
+                              <div class="d-flex align-items-center">
+                                 <!--initiate::search bar-->
+                                 <a class="text-decoration-none me-4 text-dark fs-5" href="#">
+                                    <i class="ri-search-line fs-4"></i>
+                                 </a>
+                                 <!-- /initiate::search bar-->
+
+                                 <!--initiate::notification-->
+                                 <div class="dropdown me-4">
+                                    <!--initiate::Dropdown button-->
+                                    <button class="btn p-0 dropdown-toggle" type="button" id="dropdownMenuButton2"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                       <i class="ri-notification-3-line fs-4"></i>
+                                    </button>
+                                    <!-- /initiate::Dropdown button-->
+
+                                    <!--initiate::Dropdown menu-->
+                                    <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton2">
+                                       <li><a class="dropdown-item py-2" href="#">Notification Content</a></li>
+                                       <li><a class="dropdown-item py-2" href="#">Notification Content</a></li>
+                                    </ul>
+                                    <!-- /initiate::Dropdown menu-->
+                                 </div>
+                                 <!-- /initiate::notification-->
+
+                                 <!--initiate::My Profile-->
+                                 <div class="ms-auto">
+                                    <!--initiate::My Profile dropdown-->
+                                    <div class="dropdown">
+                                       <!--initiate::Dropdown button-->
+                                       <a class="btn dropdown-toggle p-0 border-0" href="#" role="button"
+                                          id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                          <img src="../../assets/media/avatars/150-1.jpg" alt="user" width="40"
+                                             height="40" class="rounded">
+                                       </a>
+                                       <!-- /initiate::Dropdown button-->
+
+                                       <!--initiate::Dropdown menu-->
+                                       <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuLink">
+                                          <li><a class="dropdown-item py-2 text-capitalize d-flex align-items-center"
+                                                href="../../account/profile.html"><i class="ri-user-fill me-2"></i>my
+                                                profile</a></li>
+                                          <li><a class="dropdown-item py-2 text-capitalize d-flex align-items-center"
+                                                href="#"><i class="ri-settings-3-fill me-2"></i>settings & privacy</a>
+                                          </li>
+                                          <li>
+                                             <hr class="dropdown-divider">
+                                          </li>
+                                          <li><a class="dropdown-item py-2 text-capitalize d-flex align-items-center"
+                                                href="#"><i class="ri-logout-box-r-fill me-2"></i>logout</a></li>
+                                       </ul>
+                                       <!-- /initiate::Dropdown menu-->
+                                    </div>
+                                    <!-- /initiate::My Profile dropdown-->
+                                 </div>
+                                 <!-- /initiate::My Profile-->
+                              </div>
+                              <!-- /initiate::right side-->
+                           </div>
+                        </header>
+                        <!-- /initiate::Header-->
+
+                        <!--initiate::Breadcrumbs-->
+                        <div class="px-4 py-3">
+                           <nav aria-label="breadcrumb">
+                              <ul class="breadcrumb m-0">
+                                 <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Forms</a>
+                                 </li>
+                                 <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Form Controls</a>
+                                 </li>
+                                 <li class="breadcrumb-item active" aria-current="page"> Radio </li>
+                              </ul>
+                           </nav>
+                        </div>
+                        <!-- /initiate::Breadcrumbs-->
+
+                     </div>
+
+                     <!--initiate::Container-->
+                     <div class="container p-4">
+                        <!--initiate::Row-->
+                        <div class="row">
+                           <!--initiate::Column-->
+                           <div class="col-md-6 col-12 ">
+                              <!--initiate::Card-->
+                              <div class="card shadow-sm border-0 bg-white mb-4">
+                                 <!-- /initiate::Card header-->
+
+                                 <!--initiate::Card body-->
+                                 <div class="card-body">
+                                    <!--initiate::Heading-->
+                                    <h5 class="fw-semibold mb-3">Basic Radios</h5>
+                                    <!-- /initiate::Heading-->
+
+                                    <!--initiate::Field-->
+                                    <div class="w-100 mb-3">
+                                       <label for="name" class="form-label mb-2">Default Radio</label> <br>
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" value="" id="flexRadioDefault">
+                                          <label class="form-check-label" for="flexRadioDefault">
+                                            Default 
+                                          </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" value="" id="flexRadioDefault2" disabled>
+                                          <label class="form-check-label" for="flexRadioDefault2">
+                                            Disabled
+                                          </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" value="" id="flexRadioDefault2" checked>
+                                          <label class="form-check-label" for="flexRadioDefault2">
+                                            Checked
+                                          </label>
+                                        </div>
+                                    </div>
+                                    <!-- /initiate::Field-->
+                                    
+                                    <!--initiate::Field-->
+                                    <div class="w-100 mb-3">
+                                       <label for="name" class="form-label mb-2">Inline Radio</label> <br>
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" value="" id="flexRadioDefault">
+                                          <label class="form-check-label" for="flexRadioDefault">
+                                            Option 1
+                                          </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" value="" id="flexRadioDefault2" disabled>
+                                          <label class="form-check-label" for="flexRadioDefault2">
+                                             Option 2
+                                          </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" value="" id="flexRadioDefault2" checked>
+                                          <label class="form-check-label" for="flexRadioDefault2">
+                                             Option 3
+                                          </label>
+                                        </div>
+                                    </div>
+                                    <!-- /initiate::Field-->
+                                    
+                                    <!--initiate::Field-->
+                                    <div class="w-100 mb-3">
+                                       <label for="name" class="form-label mb-2">Rounded Style</label> <br>
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input rounded-2" type="radio" value="" id="flexRadioDefault">
+                                          <label class="form-check-label" for="flexRadioDefault">
+                                            Option 1
+                                          </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input rounded-2" type="radio" value="" id="flexRadioDefault2" disabled>
+                                          <label class="form-check-label" for="flexRadioDefault2">
+                                             Option 2
+                                          </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input rounded-2" type="radio" value="" id="flexRadioDefault2" checked>
+                                          <label class="form-check-label" for="flexRadioDefault2">
+                                             Option 3
+                                          </label>
+                                        </div>
+                                    </div>
+                                    <!-- /initiate::Field-->
+
+                                 </div>
+                                 <!-- /initiate::Card body-->
+                              </div>
+                              <!-- /initiate::Card-->
+                             
+                              <!--initiate::Card-->
+                              <div class="card shadow-sm border-0 bg-white mb-4">
+                                 <!-- /initiate::Card header-->
+
+                                 <!--initiate::Card body-->
+                                 <div class="card-body">
+                                    <!--initiate::Heading-->
+                                    <h5 class="fw-semibold mb-3">Horizontal Form</h5>
+                                    <!-- /initiate::Heading-->
+
+                                    <!--initiate::Field-->
+                                    <div class="w-100 mb-3">
+                                       <div class="form-group row">
+														<label for="name" class="form-label mb-2 col-4"> Default Radio</label>
+														<div class="col-8 mb-2 col-form-label">
+															<div class="d-grid">
+																
+                                          <label class="form-check-label mb-2" for="flexRadioDefault">
+                                             <input class="form-check-input" type="radio" value="" id="flexRadioDefault">
+                                            Default
+                                          </label>
+                                          <label class="form-check-label mb-2" for="flexRadioDefault">
+                                             <input class="form-check-input" type="radio" value="" id="flexRadioDefault" Disabled>
+                                            Disabled
+                                          </label>
+                                          <label class="form-check-label mb-2" for="flexRadioDefault">
+                                             <input class="form-check-input" type="radio" value="" id="flexRadioDefault" checked>
+                                            Checked
+                                          </label>
+															</div>
+														</div>
+													</div>
+                                    </div>
+                                    <!-- /initiate::Field-->
+
+                                    <!--initiate::Field-->
+                                    <div class="w-100 mb-3">
+                                       <div class="form-group row">
+                                       <label for="name" class="form-label mb-2 col-4">Inline Radio</label>
+                                       <div class="col-8">
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" value="" id="flexRadioDefault">
+                                          <label class="form-check-label" for="flexRadioDefault">
+                                            Option 1
+                                          </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" value="" id="flexRadioDefault2" disabled>
+                                          <label class="form-check-label" for="flexRadioDefault2">
+                                             Option 2
+                                          </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" value="" id="flexRadioDefault2" checked>
+                                          <label class="form-check-label" for="flexRadioDefault2">
+                                             Option 3
+                                          </label>
+                                        </div>
+                                       </div>
+                                       </div>
+                                    </div>
+                                    <!-- /initiate::Field-->
+                                    
+                                 </div>
+                                 <!-- /initiate::Card body-->
+                              </div>
+                              <!-- /initiate::Card-->
+                           </div>
+                           <!-- /initiate::Column-->
+
+                           <!--initiate::Column-->
+                           <div class="col-md-6 col-12 ">
+                              <!--initiate::Card-->
+                              <div class="card shadow-sm border-0 bg-white mb-4">
+
+                                 <!--initiate::Card body-->
+                                 <div class="card-body">
+                                    <!--initiate::Heading-->
+                                    <h5 class="fw-semibold mb-3">Outline Type</h5>
+                                    <!-- /initiate::Heading-->
+
+                                   <!--initiate::Field-->
+                                   <div class="w-100 mb-3">
+                                    <div class="form-group row">
+                                    <label for="name" class="form-label mb-2">Outline Default</label>
+                                    <div class="col-12">
+                                    <div class="form-check form-check-inline">
+                                       <input class="form-check-input " type="radio" value="" id="flexRadioDefault">
+                                       <label class="form-check-label" for="flexRadioDefault">
+                                         Default
+                                       </label>
+                                     </div>
+                                     <div class="form-check form-check-inline">
+                                       <input class="form-check-input" type="radio" value="" id="flexRadioDefault2" disabled>
+                                       <label class="form-check-label" for="flexRadioDefault2">
+                                          Disabled
+                                       </label>
+                                     </div>
+                                     <div class="form-check form-check-inline">
+                                       <input class="form-check-input" type="radio" value="" id="flexRadioDefault2" checked>
+                                       <label class="form-check-label" for="flexRadioDefault2">
+                                         Checked
+                                       </label>
+                                     </div>
+                                    </div>
+                                    </div>
+                                 </div>
+                                 <!-- /initiate::Field-->
+                                   
+                                 <!--initiate::Field-->
+                                   <div class="w-100 mb-3">
+                                    <div class="form-group row">
+                                    <label for="name" class="form-label mb-2">Outline 2x</label>
+                                    <div class="col-12">
+                                    <div class="form-check form-check-inline">
+                                       <input class="form-check-input border-2" type="radio" value="" id="flexRadioDefault">
+                                       <label class="form-check-label" for="flexRadioDefault">
+                                         Default
+                                       </label>
+                                     </div>
+                                     <div class="form-check form-check-inline">
+                                       <input class="form-check-input border-2" type="radio" value="" id="flexRadioDefault2" disabled>
+                                       <label class="form-check-label" for="flexRadioDefault2">
+                                          Disabled
+                                       </label>
+                                     </div>
+                                     <div class="form-check form-check-inline">
+                                       <input class="form-check-input border-2" type="radio" value="" id="flexRadioDefault2" checked>
+                                       <label class="form-check-label" for="flexRadioDefault2">
+                                         Checked
+                                       </label>
+                                     </div>
+                                    </div>
+                                    </div>
+                                 </div>
+                                 <!-- /initiate::Field-->
+
+                                 </div>
+                                 <!-- /initiate::Card body-->
+                              </div>
+                              <!-- /initiate::Card-->
+                           </div>
+                           <!-- /initiate::Column-->
+
+                        </div>
+                        <!-- /initiate::Row-->
+
+
+                     </div>
+                     <!-- /initiate::Container-->
+                  </div>
+                  <!-- /initiate::Wrapper-->
+
+               </div>
+            </div>
+            <!-- /initiate::Row-->
+         </div>
+         <!-- /initiate::Container-fluid-->
+      </main>
+      <!-- /initiate::Main-->
+
+      <!--initiate::Javascript-->
+      <script src="../../assets/js/global/bootstrap.bundle.js"></script>
+      <!-- /initiate::Javascript-->
+
+   </body>
+   <!-- /initiate::Body-->
+
+</html>

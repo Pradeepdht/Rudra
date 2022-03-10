@@ -1,0 +1,1080 @@
+<!doctype html>
+<html lang="en">
+   <!--initiate::Head-->
+
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--initiate::title-->
+      <title>Add User</title>
+      <!-- /initiate::title-->
+
+      <!--initiate::stylesheets-->
+      <link href="../../assets/css/global/bootstrap.css" rel="stylesheet" type="text/css">
+      <link href="../../assets/css/custom/style.css" rel="stylesheet" type="text/css">
+      <!-- /initiate::stylesheets-->
+
+      <!--initiate::Remix icons-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+      <!-- /initiate::Remix icons-->
+
+      <!--initiate::Fonts-->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+         rel="stylesheet">
+      <!-- /initiate::Fonts-->
+   </head>
+   <!-- /initiate::Head-->
+
+   <!--initiate::Body-->
+
+   <body>
+      <!--initiate::Main-->
+      <main class="vh-md-100">
+         <!--initiate::Container-fluid-->
+         <div class="container-fluid h-md-100">
+            <!--initiate::Row-->
+            <div class="row h-md-100">
+               <div class="d-flex px-0">
+                  <!--initiate::Aside-->
+                  <div
+                     class="sidebar position-fixed d-flex flex-column flex-shrink-0 text-secondary bg-dark h-100 overflow-auto">
+                     <!--initiate::Logo-->
+                     <div class="bg-secondary text-center py-4">
+                        <a href="#" class="text-white text-decoration-none text-center w-100">
+                           <span class="fs-5 fw-bolder letter-spacing-2">HORIZON</span>
+                        </a>
+                     </div>
+                     <!-- /initiate::Logo-->
+
+                     <!--initiate::Aside menu-->
+                     <ul class="nav flex-column mb-auto py-3">
+                        <!--initiate::Menu Item-->
+                        <li class="nav-item mb-2 px-3">
+                           <a href="#" class="nav-link active d-flex align-items-center" aria-current="page">
+                              <i class="ri-home-6-fill fs-5 me-3"></i>
+                              Dashboard
+                           </a>
+                        </li>
+                        <!-- /initiate::Menu Item-->
+
+                        <!--initiate::Menu Item-->
+                        <li class="nav-item mb-2 px-3">
+                           <a href="#" class=" nav-link btn-toggle align-items-center rounded collapsed w-100"
+                              data-bs-toggle="collapse" data-bs-target="#apps" aria-expanded="false">
+                              <div class="d-flex align-items-center justify-content-center">
+                                 <i class="ri-grid-fill fs-5 me-3"></i> Applications
+                                 <div class="ms-auto">
+                                    <i class="ri-arrow-right-s-line fs-5"></i>
+                                 </div>
+                              </div>
+                           </a>
+
+                           <!--initiate::Dropdowns List-->
+                           <div class="collapse" id="apps">
+                              <!--initiate::Dropdowns Toggle-->
+                              <ul class="btn-toggle-nav fw-normal pb-1 small">
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                       data-bs-toggle="collapse" data-bs-target="#menu-1" aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Users
+                                       <div class="ms-auto">
+                                          <i class="ri-arrow-right-s-line fs-5"></i>
+                                       </div>
+                                    </a>
+                                    <div class="collapse" id="menu-1">
+                                       <ul class="btn-toggle-nav list-unstyled">
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> User Default
+                                                Views</a></li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Add User</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded w-100 d-flex align-items-center"
+                                       aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Profile
+                                    </a>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                       data-bs-toggle="collapse" data-bs-target="#menu-3" aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Contacts
+                                       <div class="ms-auto">
+                                          <i class="ri-arrow-right-s-line fs-5"></i>
+                                       </div>
+                                    </a>
+                                    <div class="collapse" id="menu-3">
+                                       <ul class="btn-toggle-nav list-unstyled">
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> View
+                                                Contact</a></li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Add
+                                                Contact</a></li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                       data-bs-toggle="collapse" data-bs-target="#menu-4" aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Projects
+                                       <div class="ms-auto">
+                                          <i class="ri-arrow-right-s-line fs-5"></i>
+                                       </div>
+                                    </a>
+                                    <div class="collapse" id="menu-4">
+                                       <ul class="btn-toggle-nav list-unstyled">
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Project
+                                                List</a></li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Add
+                                                Project</a></li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                       data-bs-toggle="collapse" data-bs-target="#menu-5" aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Support
+                                       <div class="ms-auto">
+                                          <i class="ri-arrow-right-s-line fs-5"></i>
+                                       </div>
+                                    </a>
+                                    <div class="collapse" id="menu-5">
+                                       <ul class="btn-toggle-nav list-unstyled">
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> FAQ</a></li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Feedback</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> License</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                       data-bs-toggle="collapse" data-bs-target="#menu-6" aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Pages
+                                       <div class="ms-auto">
+                                          <i class="ri-arrow-right-s-line fs-5"></i>
+                                       </div>
+                                    </a>
+                                    <div class="collapse" id="menu-6">
+                                       <ul class="btn-toggle-nav list-unstyled">
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Pricing</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Invoices</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                       data-bs-toggle="collapse" data-bs-target="#chat" aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Chat
+                                       <div class="ms-auto">
+                                          <i class="ri-arrow-right-s-line fs-5"></i>
+                                       </div>
+                                    </a>
+                                    <div class="collapse" id="chat">
+                                       <ul class="btn-toggle-nav list-unstyled">
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Private</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Group</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded w-100 d-flex align-items-center"
+                                       aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i></span> To Do
+                                    </a>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+
+                              </ul>
+                              <!-- /initiate::Dropdowns Toggle-->
+                           </div>
+                           <!-- /initiate::Dropdowns List-->
+                        </li>
+                        <!-- /initiate::Menu Item-->
+
+                        <!--initiate::Menu Item-->
+                        <li class="nav-item mb-2 px-3">
+                           <a href="#" class=" nav-link btn-toggle align-items-center rounded collapsed w-100"
+                              data-bs-toggle="collapse" data-bs-target="#forms" aria-expanded="false">
+                              <div class="d-flex align-items-center justify-content-center">
+                                 <i class="ri-file-text-fill fs-5 me-3"></i> Forms
+                                 <div class="ms-auto">
+                                    <i class="ri-arrow-right-s-line fs-5"></i>
+                                 </div>
+                              </div>
+                           </a>
+                           <!--initiate::Dropdowns List-->
+                           <div class="collapse" id="forms">
+                              <!--initiate::Dropdowns Toggle-->
+                              <ul class="btn-toggle-nav fw-normal pb-1 small">
+                                 <!--initiate::Nested Menu Item-->
+                                 <li>
+                                    <a href="#"
+                                       class="nav-link btn-toggle align-items-center rounded collapsed w-100 d-flex align-items-center"
+                                       data-bs-toggle="collapse" data-bs-target="#menu-1" aria-expanded="false">
+                                       <span class="dash-icon me-2"> <i class="ri-subtract-line"></i> </span> Form
+                                       Controls
+                                       <div class="ms-auto">
+                                          <i class="ri-arrow-right-s-line fs-5"></i>
+                                       </div>
+                                    </a>
+                                    <div class="collapse" id="menu-1">
+                                       <ul class="btn-toggle-nav list-unstyled">
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Base
+                                                Inputs</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Input
+                                                Groups</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Radio</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Checkbox</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Switch</a>
+                                          </li>
+                                          <li><a href="#" class="nav-link"><i
+                                                   class="ri-checkbox-blank-circle-fill me-2 font-8"></i> Tagify</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <!-- /initiate::Nested Menu Item-->
+                              </ul>
+                              <!-- /initiate::Dropdowns Toggle-->
+                           </div>
+                           <!-- /initiate::Dropdowns List-->
+                        </li>
+                        <!-- /initiate::Menu Item-->
+
+                     </ul>
+                     <!-- /initiate::Aside menu-->
+                  </div>
+                  <!-- /initiate::Aside-->
+
+                  <!--initiate::Wrapper-->
+                  <div class="wrapper w-100">
+                     <div class="w-100">
+                        <!--initiate::Header-->
+                        <header class="bg-white px-4 py-3 border-bottom">
+                           <div class="d-flex align-items-center justify-content-between">
+
+                              <!--initiate::left side-->
+                              <div class="d-flex align-items-center">
+                                 <!--initiate::Aside collapse-->
+                                 <a href="#" class="me-4 text-decoration-none text-dark">
+                                    <i class="ri-bar-chart-horizontal-line fs-4"></i>
+                                 </a>
+                                 <!-- /initiate::Aside collapse-->
+
+                                 <!--initiate::Features dropdown-->
+                                 <div class="dropdown">
+                                    <!--initiate::Dropdown button-->
+                                    <button class="btn p-0 dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                       Features
+                                    </button>
+                                    <!-- /initiate::Dropdown button-->
+
+                                    <!--initiate::Dropdown menu-->
+                                    <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton1">
+                                       <li class="features-dropdown d-flex">
+                                          <!--initiate::Dropdown menu list-->
+                                          <ul class="list-unstyled p-4">
+                                             <li class="text-dark fw-semibold mb-2">Task Reports</li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-lock-fill text-primary me-3"></i>Latest Tasks</a></li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-timer-2-line text-primary me-3"></i>Pending Tasks</a>
+                                             </li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-alarm-warning-fill text-primary me-3"></i>Urgent
+                                                   Tasks</a>
+                                             </li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-checkbox-circle-fill text-primary me-3"></i>Completed
+                                                   Tasks</a></li>
+                                             <li><a class="dropdown-item px-0" href="#"><i
+                                                      class="ri-delete-back-2-fill text-primary me-3"></i>Failed
+                                                   Tasks</a>
+                                             </li>
+                                          </ul>
+                                          <!-- /initiate::Dropdown menu list-->
+
+                                          <!--initiate::Dropdown menu list-->
+                                          <ul class="list-unstyled p-4 border-start">
+                                             <li class="text-dark fw-semibold mb-2">Staff Management</li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-user-star-fill text-primary me-3"></i>Top Management</a>
+                                             </li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-lock-password-fill  text-primary me-3"></i>Project
+                                                   Management</a></li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-file-settings-fill  text-primary me-3"></i>Development
+                                                   Staff</a></li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-customer-service-fill text-primary me-3"></i>Customer
+                                                   Service</a></li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-stack-fill text-primary me-3"></i>Sales & Marketing</a>
+                                             </li>
+                                             <li><a class="dropdown-item px-0 d-flex align-items-center" href="#"><i
+                                                      class="ri-hand-coin-fill text-primary me-3"></i>Executives</a>
+                                             </li>
+                                          </ul>
+                                          <!-- /initiate::Dropdown menu list-->
+                                       </li>
+                                    </ul>
+                                    <!-- /initiate::Dropdown menu-->
+                                 </div>
+                                 <!-- /initiate::Features dropdown-->
+                              </div>
+                              <!-- /initiate::left side-->
+
+                              <!--initiate::right side-->
+                              <div class="d-flex align-items-center">
+                                 <!--initiate::search bar-->
+                                 <a class="text-decoration-none me-4 text-dark fs-5" href="#">
+                                    <i class="ri-search-line fs-4"></i>
+                                 </a>
+                                 <!-- /initiate::search bar-->
+
+                                 <!--initiate::notification-->
+                                 <div class="dropdown me-4">
+                                    <!--initiate::Dropdown button-->
+                                    <button class="btn p-0 dropdown-toggle" type="button" id="dropdownMenuButton2"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                       <i class="ri-notification-3-line fs-4"></i>
+                                    </button>
+                                    <!-- /initiate::Dropdown button-->
+
+                                    <!--initiate::Dropdown menu-->
+                                    <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton2">
+                                       <li><a class="dropdown-item py-2" href="#">Notification Content</a></li>
+                                       <li><a class="dropdown-item py-2" href="#">Notification Content</a></li>
+                                    </ul>
+                                    <!-- /initiate::Dropdown menu-->
+                                 </div>
+                                 <!-- /initiate::notification-->
+
+                                 <!--initiate::My Profile-->
+                                 <div class="ms-auto">
+                                    <!--initiate::My Profile dropdown-->
+                                    <div class="dropdown">
+                                       <!--initiate::Dropdown button-->
+                                       <a class="btn dropdown-toggle p-0 border-0" href="#" role="button"
+                                          id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                          <img src="../../assets/media/avatars/150-1.jpg" alt="user" width="40"
+                                             height="40" class="rounded">
+                                       </a>
+                                       <!-- /initiate::Dropdown button-->
+
+                                       <!--initiate::Dropdown menu-->
+                                       <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuLink">
+                                          <li><a class="dropdown-item py-2 text-capitalize d-flex align-items-center"
+                                                href="../../account/profile.html"><i class="ri-user-fill me-2"></i>my
+                                                profile</a></li>
+                                          <li><a class="dropdown-item py-2 text-capitalize d-flex align-items-center"
+                                                href="#"><i class="ri-settings-3-fill me-2"></i>settings & privacy</a>
+                                          </li>
+                                          <li>
+                                             <hr class="dropdown-divider">
+                                          </li>
+                                          <li><a class="dropdown-item py-2 text-capitalize d-flex align-items-center"
+                                                href="#"><i class="ri-logout-box-r-fill me-2"></i>logout</a></li>
+                                       </ul>
+                                       <!-- /initiate::Dropdown menu-->
+                                    </div>
+                                    <!-- /initiate::My Profile dropdown-->
+                                 </div>
+                                 <!-- /initiate::My Profile-->
+                              </div>
+                              <!-- /initiate::right side-->
+                           </div>
+                        </header>
+                        <!-- /initiate::Header-->
+
+                        <!--initiate::Breadcrumbs-->
+                        <div class="px-4 py-3">
+                           <nav aria-label="breadcrumb">
+                              <ul class="breadcrumb m-0">
+                                 <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Applications</a>
+                                 </li>
+                                 <li class="breadcrumb-item"><a href="view.html" class="text-decoration-none">Users</a>
+                                 </li>
+                                 <li class="breadcrumb-item active" aria-current="page">Add</li>
+                              </ul>
+                           </nav>
+                        </div>
+                        <!-- /initiate::Breadcrumbs-->
+
+                     </div>
+
+                     <!--initiate::Container-->
+                     <div class="container p-4">
+                        <!--initiate::Row-->
+                        <div class="row">
+                           <!--initiate::Column-->
+                           <div class="col-md-12 col-12">
+                              <!--initiate::Card-->
+                              <div class="card shadow-sm border-0 bg-transparent">
+                                 <!--initiate::Card body-->
+                                 <div class="card-body p-0">
+
+                                    <!--initiate::Tabs-->
+                                    <ul class="nav nav-tabs d-flex" id="myTab" role="tablist">
+                                       <li class="nav-item flex-grow-1 me-2" role="presentation">
+                                          <button class="nav-link active w-100 fw-semibold rounded-0 py-4 border-0"
+                                             id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                                             type="button" role="tab" aria-controls="profile"
+                                             aria-selected="true">Profile<small
+                                                class="text-secondary d-inline-block w-100 fw-normal">User's Personal
+                                                Information</small></button>
+                                       </li>
+                                       <li class="nav-item flex-grow-1 me-2" role="presentation">
+                                          <button class="nav-link w-100 fw-semibold rounded-0 py-4 border-0"
+                                             id="account-tab" data-bs-toggle="tab" data-bs-target="#account"
+                                             type="button" role="tab" aria-controls="account"
+                                             aria-selected="false">Account<small
+                                                class="text-secondary d-inline-block w-100 fw-normal">User's Account &
+                                                Settings</small></button>
+                                       </li>
+                                       <li class="nav-item flex-grow-1 me-2" role="presentation">
+                                          <button class="nav-link w-100 fw-semibold rounded-0 py-4 border-0"
+                                             id="address-tab" data-bs-toggle="tab" data-bs-target="#address"
+                                             type="button" role="tab" aria-controls="address"
+                                             aria-selected="false">Address<small
+                                                class="text-secondary d-inline-block w-100 fw-normal">User's Shipping
+                                                Address</small></button>
+                                       </li>
+                                       <li class="nav-item flex-grow-1" role="presentation">
+                                          <button class="nav-link w-100 fw-semibold rounded-0 py-4 border-0"
+                                             id="submission-tab" data-bs-toggle="tab" data-bs-target="#submission"
+                                             type="button" role="tab" aria-controls="submission"
+                                             aria-selected="false">Submission<small
+                                                class="text-secondary d-inline-block w-100 fw-normal">Review and
+                                                Submit</small></button>
+                                       </li>
+                                    </ul>
+                                    <!-- /initiate::Tabs-->
+
+                                    <!--initiate::Row-->
+                                    <div class="row">
+                                       <!--initiate::Column-->
+                                       <div class="col-12">
+                                          <!--initiate::Tab Content-->
+                                          <div class="tab-content p-md-5 p-4 bg-white" id="myTabContent">
+                                             <!--initiate::Profile details-->
+                                             <div class="tab-pane fade show active" id="profile" role="tabpanel"
+                                                aria-labelledby="profile-tab">
+
+                                                <!--initiate::Row-->
+                                                <div class="row">
+                                                   <!--initiate::Column-->
+                                                   <div class="col-12">
+                                                      <div class="d-flex align-items-center mb-5">
+                                                         <div class="flex-shrink-0 me-2">
+                                                            <img src="../../assets/media/avatars/150-8.jpg"
+                                                               class="img-80 rounded-circle" alt="upload image">
+                                                         </div>
+                                                         <div class="flex-grow-1 ms-3">
+                                                            <h6 class="text-primary fw-semibold"><a href="#"
+                                                                  class="text-decoration-none">Upload New Photo</a></h6>
+                                                            <p class="m-0">Photos help your teammates recognize you in
+                                                               project</p>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-md-6 col-12">
+                                                      <div class="mb-4">
+                                                         <label for="first-name" class="form-label fw-medium mb-2">First
+                                                            Name</label>
+                                                         <input class="form-control" id="first-name" type="text"
+                                                            placeholder="Your First Name" aria-label="first name">
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-md-6 col-12">
+                                                      <div class="mb-4">
+                                                         <label for="last-name" class="form-label fw-medium mb-2">Last
+                                                            Name</label>
+                                                         <input class="form-control" id="last-name" type="text"
+                                                            placeholder="Your Last Name" aria-label="last name">
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-md-6 col-12">
+                                                      <div class="mb-3">
+                                                         <label for="email-add" class="form-label fw-medium mb-2">Email
+                                                            Address</label>
+                                                         <input class="form-control" id="email-add" type="email"
+                                                            placeholder="Your Email Address" aria-label="your email">
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-md-6 col-12">
+                                                      <div class="mb-3">
+                                                         <label for="contact-phone"
+                                                            class="form-label fw-medium mb-2">Contact Phone</label>
+                                                         <input class="form-control" id="contact-phone" type="text"
+                                                            placeholder="Your Phone Number" aria-label="your phone">
+                                                         <small class="text-muted mt-2 w-100 d-inline-block">Enter valid
+                                                            US phone number (e.g. 0123456789)</small>
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-md-6 col-12">
+                                                      <div class="mb-3">
+                                                         <label for="company-name"
+                                                            class="form-label fw-medium mb-2">Company Name</label>
+                                                         <input class="form-control" id="company-name" type="text"
+                                                            placeholder="Your Company Name" aria-label="company name">
+                                                         <small class="text-muted mt-2 w-100 d-inline-block">If you want
+                                                            your invoice addressed
+                                                            to a company. Leave blank to use your full name.</small>
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-md-6 col-12">
+                                                      <div class="mb-3">
+                                                         <label for="company-site"
+                                                            class="form-label fw-medium mb-2">Company Site</label>
+                                                         <div class="input-group">
+                                                            <input type="text" class="form-control border-end-0"
+                                                               placeholder="loop" id="company-site" aria-label="site"
+                                                               aria-describedby="company-site">
+                                                            <span class="input-group-text bg-white border-start-0"
+                                                               id="site-addon">.com</span>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <hr class="my-4" />
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-12">
+                                                      <div class="w-100 text-end">
+                                                         <a class="btn btn-primary" href="#">Next</a>
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                </div>
+                                                <!-- /initiate::Row-->
+
+                                             </div>
+                                             <!-- /initiate::Profile details-->
+
+                                             <!--initiate::Account details-->
+                                             <div class="tab-pane fade" id="account" role="tabpanel"
+                                                aria-labelledby="account-tab">
+                                                <!--initiate::Row-->
+                                                <div class="row">
+                                                   <!--initiate::Column-->
+                                                   <div class="col-12">
+                                                      <div
+                                                         class="d-md-flex justify-content-between mb-lg-5 mb-4 align-items-center">
+                                                         <h5 class="fw-semibold">User's Account & Settings</h5>
+                                                         <a class="btn btn-danger" href="#">Deactivate your account?</a>
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-md-6 col-12">
+                                                      <label for="lang"
+                                                         class="form-label fw-medium mb-2">Language</label>
+                                                      <select class="form-select" id="lang" aria-label="language">
+                                                         <option selected>English</option>
+                                                         <option value="1">French</option>
+                                                      </select>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-md-6 col-12">
+                                                      <label for="time" class="form-label fw-medium mb-2">Time
+                                                         Zone</label>
+                                                      <select class="form-select" id="time" aria-label="timezone">
+                                                         <option selected>(GMT-11:00) International Date Line
+                                                         </option>
+                                                         <option value="1">(GMT-11:00) International Date Line
+                                                         </option>
+                                                      </select>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-12">
+                                                      <div class="w-100 my-lg-5 my-4 d-md-flex align-items-center">
+                                                         <label for="time"
+                                                            class="form-label fw-medium me-lg-5 me-4 mb-0">Communication</label>
+
+                                                         <ul class="list-inline list-unstyled m-0">
+                                                            <li class="list-inline-item">
+                                                               <label class="me-lg-5 me-4">
+                                                                  <input class="form-check-input me-1" type="checkbox"
+                                                                     value="">
+                                                                  Email
+                                                               </label>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                               <label class="me-lg-5 me-4">
+                                                                  <input class="form-check-input me-1" type="checkbox"
+                                                                     value="">
+                                                                  SMS
+                                                               </label>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                               <label>
+                                                                  <input class="form-check-input me-1" type="checkbox"
+                                                                     value="">
+                                                                  Phone
+                                                               </label>
+                                                            </li>
+                                                         </ul>
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-md-3 col-12 mb-lg-5">
+                                                      <label class="form-label fw-medium">Login Verification</label>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-md-6 col-12 mb-lg-5 mb-4">
+                                                      <a href="#"
+                                                         class="px-3 py-2 btn-primary text-decoration-none rounded d-inline-block">Setup
+                                                         Login Verification</a>
+                                                      <small class="d-inline-block w-100 text-secondary mt-3">After
+                                                         you log in, you will be asked for additional information to
+                                                         confirm your identity and protect your account from being
+                                                         compromised. <a href="#" class="text-primary">Learn
+                                                            More</a>.</small>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-md-3 col-12"></div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-md-3 col-12">
+                                                      <label class="form-label fw-medium">Password Reset
+                                                         Verification</label>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-md-6 col-12">
+                                                      <label><input class="form-check-input me-1" type="checkbox"
+                                                            value="">
+                                                         Require personal information to reset your password.</label>
+                                                      <small class="d-inline-block w-100 text-secondary mt-3 mb-4">For
+                                                         extra security, this requires you to confirm your email or
+                                                         phone number when you reset your password. <a href="#"
+                                                            class="text-primary">Learn More</a>.</small>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-md-3 col-12"></div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <hr class="my-4" />
+
+                                                   <!--initiate::Buttons-->
+                                                   <div class="col-12">
+                                                      <div
+                                                         class="w-100 d-flex align-items-center justify-content-between">
+                                                         <a class="btn btn-outline-primary" href="#">Previous</a>
+                                                         <a class="btn btn-primary" href="#">Next</a>
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Buttons-->
+
+                                                </div>
+                                                <!-- /initiate::Row-->
+
+                                             </div>
+                                             <!-- /initiate::Account details-->
+
+                                             <!--initiate::Address details-->
+                                             <div class="tab-pane fade" id="address" role="tabpanel"
+                                                aria-labelledby="address-tab">
+                                                <!--initiate::Row-->
+                                                <div class="row">
+                                                   <!--initiate::Column-->
+                                                   <div class="col-12">
+                                                      <div
+                                                         class="d-md-flex justify-content-between mb-lg-5 mb-4 align-items-center">
+                                                         <h5 class="fw-semibold">Setup Your Address</h5>
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-md-6 col-12">
+                                                      <div class="mb-4">
+                                                         <label for="address-one"
+                                                            class="form-label fw-medium mb-2">Address
+                                                            Line 1</label>
+                                                         <input class="form-control" id="address-one" type="text"
+                                                            placeholder="Your Address" aria-label="address">
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-md-6 col-12">
+                                                      <div class="mb-4">
+                                                         <label for="address-two"
+                                                            class="form-label fw-medium mb-2">Address
+                                                            Line 2</label>
+                                                         <input class="form-control" id="address-two" type="text"
+                                                            placeholder="Your Address" aria-label="address">
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-md-6 col-12">
+                                                      <div class="mb-4">
+                                                         <label for="postcode"
+                                                            class="form-label fw-medium mb-2">Postcode</label>
+                                                         <input class="form-control" id="postcode" type="text"
+                                                            placeholder="1111" aria-label="code">
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-md-6 col-12">
+                                                      <div class="mb-4">
+                                                         <label for="city"
+                                                            class="form-label fw-medium mb-2">City</label>
+                                                         <input class="form-control" id="city" type="text"
+                                                            placeholder="Melbourne" aria-label="city">
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-md-6 col-12">
+                                                      <div class="mb-4">
+                                                         <label for="state"
+                                                            class="form-label fw-medium mb-2">State</label>
+                                                         <input class="form-control" id="state" type="text"
+                                                            placeholder="VIC" aria-label="state">
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-md-6 col-12">
+                                                      <div class="mb-4">
+                                                         <label for="country"
+                                                            class="form-label fw-medium mb-2">Country</label>
+                                                         <select class="form-select" id="country"
+                                                            aria-label="set country">
+                                                            <option selected="">Australia</option>
+                                                            <option value="1">Australia</option>
+                                                            <option value="2">Australia</option>
+                                                         </select>
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <hr class="my-4" />
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-12">
+                                                      <div
+                                                         class="w-100 d-flex align-items-center justify-content-between">
+                                                         <a class="btn btn-outline-primary" href="#">Previous</a>
+                                                         <a class="btn btn-primary" href="#">Next</a>
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                </div>
+                                                <!-- /initiate::Row-->
+
+                                             </div>
+                                             <!-- /initiate::Address details-->
+
+                                             <!--initiate::Submission details-->
+                                             <div class="tab-pane fade" id="submission" role="tabpanel"
+                                                aria-labelledby="submission-tab">
+                                                <!--initiate::Row-->
+                                                <div class="row">
+                                                   <!--initiate::Column-->
+                                                   <div class="col-12">
+                                                      <div
+                                                         class="d-md-flex justify-content-between mb-lg-5 mb-4 align-items-center">
+                                                         <h5 class="fw-semibold">Review Your Details and Submit</h5>
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-md-7 col-12">
+                                                      <div class="content-left">
+                                                         <!--initiate::Row-->
+                                                         <div class="row">
+                                                            <!--initiate::Column-->
+                                                            <div class="col-12">
+                                                               <h6 class="fw-semibold mb-4">Your Account Details</h6>
+                                                            </div>
+                                                            <!-- /initiate::Column-->
+
+                                                            <!--initiate::Column-->
+                                                            <div class="col-md-6 col-12">
+                                                               <div class="d-flex align-items-center">
+                                                                  <div class="flex-shrink-0">
+                                                                     <p style="height: 45px; width: 45px;"
+                                                                        class="rounded-circle d-flex align-items-center justify-content-center list-group-item-info mx-auto mb-0">
+                                                                        <i class="ri-user-fill"></i>
+                                                                     </p>
+                                                                  </div>
+                                                                  <div class="flex-grow-1 ms-md-4 ms-3">
+                                                                     <p class="mb-1">Account Holder Name</p>
+                                                                     <h6 class="fs-5 m-0">John Wick</h6>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                            <!-- /initiate::Column-->
+
+                                                            <!--initiate::Column-->
+                                                            <div class="col-md-6 col-12">
+                                                               <div class="d-flex align-items-center">
+                                                                  <div class="flex-shrink-0">
+                                                                     <p style="height: 45px; width: 45px;"
+                                                                        class="rounded-circle d-flex align-items-center justify-content-center list-group-item-success mx-auto mb-0">
+                                                                        <i class="ri-phone-fill"></i>
+                                                                     </p>
+                                                                  </div>
+                                                                  <div class="flex-grow-1 ms-md-4 ms-3">
+                                                                     <p class="mb-1">Phone</p>
+                                                                     <h6 class="fs-5 m-0">202-555-0158</h6>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                            <!-- /initiate::Column-->
+
+                                                            <!--initiate::Column-->
+                                                            <div class="col-md-6 col-12">
+                                                               <div class="d-flex mt-4 align-items-center">
+                                                                  <div class="flex-shrink-0">
+                                                                     <p style="height: 45px; width: 45px;"
+                                                                        class="rounded-circle d-flex align-items-center justify-content-center mx-auto list-group-item-warning mb-0">
+                                                                        <i class="ri-mail-fill"></i>
+                                                                     </p>
+                                                                  </div>
+                                                                  <div class="flex-grow-1 ms-md-4 ms-3">
+                                                                     <p class="mb-1">Email</p>
+                                                                     <h6 class="fs-5 m-0">johnwick@yahoo.com</h6>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                            <!-- /initiate::Column-->
+
+                                                            <!--initiate::Column-->
+                                                            <div class="col-12 mb-lg-4 mb-3">
+                                                               <h6 class="fw-semibold mb-4 mt-lg-5 mt-4">Your Address
+                                                                  Details</h6>
+
+                                                               <div class="address-lines mb-3">
+                                                                  <small>Address Line 1</small>
+                                                                  <p class="m-0 fw-medium">Ut enim ad minima veniam quis
+                                                                     nostrum exercitationem ullam.</p>
+                                                               </div>
+
+                                                               <div class="address-lines">
+                                                                  <small>Address Line 2</small>
+                                                                  <p class="m-0 fw-medium">Quis autem vel eum iure
+                                                                     reprehenderit qui in ea voluptate.</p>
+                                                               </div>
+
+                                                            </div>
+                                                            <!-- /initiate::Column-->
+
+                                                            <!--initiate::Column-->
+                                                            <div class="col-md-3 col-12">
+                                                               <small>City</small>
+                                                               <p class="m-0 fw-medium">Melbourne</p>
+                                                            </div>
+                                                            <!-- /initiate::Column-->
+
+                                                            <!--initiate::Column-->
+                                                            <div class="col-md-3 col-12">
+                                                               <small>State</small>
+                                                               <p class="m-0 fw-medium">VIC</p>
+                                                            </div>
+                                                            <!-- /initiate::Column-->
+
+                                                            <!--initiate::Column-->
+                                                            <div class="col-md-3 col-12">
+                                                               <small>Country</small>
+                                                               <p class="m-0 fw-medium">Australia</p>
+                                                            </div>
+                                                            <!-- /initiate::Column-->
+
+                                                            <!--initiate::Column-->
+                                                            <div class="col-md-3 col-12"></div>
+                                                            <!-- /initiate::Column-->
+
+                                                         </div>
+                                                         <!-- /initiate::Row-->
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-md-5 col-12">
+                                                      <div class="list-group-item-info p-4 rounded-3">
+                                                         <h6 class="fw-semibold">Payment Details</h6>
+
+                                                         <div
+                                                            class="card-details d-flex align-items-center justify-content-between my-4">
+                                                            <div>
+                                                               <small>Card Number</small>
+                                                               <p class="m-0 fw-medium fs-5">xxxx xxxx xxxx 1111</p>
+                                                            </div>
+
+                                                            <div>
+                                                               <small>Card Expiry</small>
+                                                               <p class="m-0 fw-medium fs-5">01/21</p>
+                                                            </div>
+                                                         </div>
+
+                                                         <div class="w-50">
+                                                            <small>Name</small>
+                                                            <p class="m-0 fw-medium fs-5">John Wick</p>
+                                                         </div>
+
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                   <hr class="my-4" />
+
+                                                   <!--initiate::Column-->
+                                                   <div class="col-12">
+                                                      <div
+                                                         class="w-100 d-flex align-items-center justify-content-between">
+                                                         <a class="btn btn-outline-primary" href="#">Previous</a>
+                                                         <a class="btn btn-primary" href="#">Submit</a>
+                                                      </div>
+                                                   </div>
+                                                   <!-- /initiate::Column-->
+
+                                                </div>
+                                                <!-- /initiate::Row-->
+                                             </div>
+                                             <!-- /initiate::Submission details-->
+
+                                          </div>
+                                          <!-- /initiate::Tab Content-->
+                                       </div>
+
+                                    </div>
+                                    <!-- /initiate::Row-->
+                                 </div>
+                                 <!-- /initiate::Card body-->
+                              </div>
+                              <!-- /initiate::Card-->
+                           </div>
+                           <!-- /initiate::Column-->
+                        </div>
+                        <!-- /initiate::Row-->
+                     </div>
+                     <!-- /initiate::Container-->
+                  </div>
+                  <!-- /initiate::Wrapper-->
+               </div>
+
+            </div>
+            <!-- /initiate::Row-->
+         </div>
+         <!-- /initiate::Container-fluid-->
+      </main>
+      <!-- /initiate::Main-->
+
+      <!--initiate::Javascript-->
+      <script src="../../assets/js/global/bootstrap.bundle.js"></script>
+      <!-- /initiate::Javascript-->
+
+   </body>
+   <!-- /initiate::Body-->
+
+</html>
