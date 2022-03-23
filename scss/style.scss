@@ -1,0 +1,96 @@
+/*calling varibales from external file*/
+@import "variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*--Nested css for navigation--*/
+
+.navbar {
+  & .container-fluid button .navbar-toggler-icon {
+    background-image: url("../img/toggle.png");
+  }
+
+  & .container-fluid button {
+    color: $whitecolor;
+    border-color: $whitecolor;
+  }
+
+  .container-fluid .navbar-collapse {
+    a.nav-link {
+      color: $whitecolor;
+    }
+
+    a.nav-link:hover {
+      color: $whitecolor
+    }
+  }
+}
+
+
+/*--use of @mixin--*/
+
+@mixin important-text {
+  color: #d62929;
+  background-color: $whitecolor;
+  padding: 5px;
+}
+
+.danger {
+  @include important-text;
+}
+
+/*-use of @extended-*/
+
+.button-basic {
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 100px;
+  background-color: #cccccc;
+  margin-top: 15px;
+  color: $whitecolor
+}
+.button-report {
+  @extend .button-basic;
+  background-color: $dangercolor;
+}
+.button-submit {
+  @extend .button-basic;
+  background-color: $successcolor;
+  color: $whitecolor;
+}
+
+/*-custom-nav-tabs-*/
+.custom-nav-tabs{
+& li button.active{
+  border-bottom: 2px solid #eb3b59!important;
+  border:0px;
+}
+& li button.active{
+  border-bottom: 2px solid #eb3b59!important;
+  border-top:0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+}
+
+/*-footer-*/
+
+.footer {
+  & div ul {
+    padding-left: 20px;
+  }
+  & div ul li {
+    line-height: 1.7;
+  }
+  & div ul li a {
+    text-decoration: none;
+    color: $whitecolor;
+  }
+}
