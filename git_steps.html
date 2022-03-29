@@ -1,0 +1,583 @@
+pradeep@rudrainnovative.in
+OZPradeeP@123TYUBH
+
+
+/////////////// Local Setup:
+
+$ mkdir Theme
+
+Create Local Directory has Name Theme
+
+$ cd Theme
+
+Change your terminal to the Theme directory
+
+$ git init
+
+tell your computer that Theme is a directory managed by the Git program
+
+& git add <file_name>
+
+tell the Git program you care about this file and want to track any changes from this point forward
+
+git commit -m "first commit"
+
+So far you've created a file and told Git about it, and now it's time to create a commit. Commit can be thought of as a milestone. Every time you accomplish some work, you can write a Git commit to store that version of your file, so you can go back later and see what it looked like at that point in time. Whenever you make a change to your file, you create a new version of that file, different from the previous one.
+
+$ git remote add origin https://github.com/Pradeepdht/Rudra.git
+
+Now we have connected our local copy of the Demo repository to its remote counterpart on GitHub.com
+
+
+
+
+$ git branch -M main
+
+$ git push -u origin main
+
+this command push your code to remote directory in main branch
+
+
+
+
+
+/////// creating new branch
+
+Use of branch:  These new branches can then be used to test changes to code without affecting the main project code.  If the changes work, the branch can be merged back with the main branch.
+
+$ git branch Theme
+
+this creates a new branch named Theme
+
+$ git branch
+
+shows you number of branches in your Repository
+
+$ git checkout Theme
+
+Shifting to your newly created branch Theme
+
+$ git merge Theme
+
+branch added into `master` branch
+
+git push origin --delete <branchname>
+
+delete git branch remotly
+
+
+
+
+
+
+
+
+
+$ mkdir taniya
+
+$ cd taniya
+
+$ git init
+
+$ git commit -m "first commit"
+
+$ git add .
+
+$ git remote add origin https://github.com/Pradeepdht/Rudra.git
+
+$ git branch
+
+$ git branch taniya
+
+$ git checkout taniya
+
+$ git push origin taniya
+
+
+to update clone remote directory to local:
+
+$ git fetch origin master
+
+$ git reset --hard origin/master
+
+
+in case you do not have local branch "taniya" and want to pull remote branch "taniya"
+
+mkdir taniya
+
+cd taniya
+
+ git pull <remote> <branch>        (remote is the url or your respo and brancha name is "taniya")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+priyanka@RI-20 MINGW64 ~/bs5 (main)
+$ git init
+Reinitialized existing Git repository in C:/Users/priyanka/bs5/.git/
+
+priyanka@RI-20 MINGW64 ~/bs5 (main)
+$ git pull origin
+remote: Enumerating objects: 25, done.
+remote: Counting objects: 100% (25/25), done.
+remote: Compressing objects: 100% (22/22), done.
+remote: Total 25 (delta 2), reused 25 (delta 2), pack-reused 0
+Unpacking objects: 100% (25/25), done.
+From https://github.com/Pradeepdht/Rudra
+ * [new branch]      NewBranch  -> origin/NewBranch
+You asked to pull from the remote 'origin', but did not specify
+a branch. Because this is not the default configured remote
+for your current branch, you must specify a branch on the command line.
+
+priyanka@RI-20 MINGW64 ~/bs5 (main)
+$ git pull origin/Newbranch
+fatal: 'origin/Newbranch' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+priyanka@RI-20 MINGW64 ~/bs5 (main)
+$ git pull origin Newbranch
+fatal: Couldn't find remote ref Newbranch
+
+priyanka@RI-20 MINGW64 ~/bs5 (main)
+$ git pull origin NewBranch
+From https://github.com/Pradeepdht/Rudra
+ * branch            NewBranch  -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+priyanka@RI-20 MINGW64 ~/bs5 (main)
+$ git branch
+  NewBranch
+  delete
+* main
+
+priyanka@RI-20 MINGW64 ~/bs5 (main)
+$ git checkout NewBranch
+Switched to branch 'NewBranch'
+
+priyanka@RI-20 MINGW64 ~/bs5 (NewBranch)
+$ git pull origin NewBranch
+From https://github.com/Pradeepdht/Rudra
+ * branch            NewBranch  -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+priyanka@RI-20 MINGW64 ~/bs5 (NewBranch)
+$ ls -l
+total 5
+drwxr-xr-x 1 priyanka 197121    0 Feb 24 18:34 comments/
+drwxr-xr-x 1 priyanka 197121    0 Feb 23 18:03 css/
+drwxr-xr-x 1 priyanka 197121    0 Feb 24 18:15 images/
+-rw-r--r-- 1 priyanka 197121 3723 Feb 21 18:47 index.html
+drwxr-xr-x 1 priyanka 197121    0 Feb 23 18:03 js/
+-rw-r--r-- 1 priyanka 197121   13 Feb 25 09:59 README.md
+
+priyanka@RI-20 MINGW64 ~/bs5 (NewBranch)
+$ cd ..
+
+priyanka@RI-20 MINGW64 ~
+$ ls -l
+total 62509
+drwxr-xr-x 1 priyanka 197121        0 Jan 28  2017  AppData/
+lrwxrwxrwx 1 priyanka 197121       33 Jan 28  2017 'Application Data' -> /c/Users/priyanka/AppData/Roaming/
+-rw-r--r-- 1 priyanka 197121  1550446 Dec  8 10:05  b290beb7593515b8f9a25102da1c461f.css
+-rw-r--r-- 1 priyanka 197121  8388608 Feb  9  2017  Blogging.mdf
+-rw-r--r-- 1 priyanka 197121  8388608 Feb  9  2017  Blogging_log.ldf
+drwxr-xr-x 1 priyanka 197121        0 Feb 25 09:59  bs5/
+-rw-r--r-- 1 priyanka 197121     2754 Feb 11  2017  coffeelint.json
+drwxr-xr-x 1 priyanka 197121        0 Jan 10  2018  Contacts/
+lrwxrwxrwx 1 priyanka 197121       61 Jan 28  2017  Cookies -> /c/Users/priyanka/AppData/Local/Microsoft/Windows/INetCookies/
+drwxr-xr-x 1 priyanka 197121        0 Feb  1 12:17 'Creative Cloud Files'/
+drwxr-xr-x 1 priyanka 197121        0 Feb 24 11:11  Desktop/
+drwxr-xr-x 1 priyanka 197121        0 Jan 29  2021  Documents/
+drwxr-xr-x 1 priyanka 197121        0 Feb 25 09:51  Downloads/
+drwxr-xr-x 1 priyanka 197121        0 Aug  5  2021  Dropbox/
+drwxr-xr-x 1 priyanka 197121        0 Nov 15  2019  eclipse/
+drwxr-xr-x 1 priyanka 197121        0 Nov 15  2019  eclipse-workspace/
+drwxr-xr-x 1 priyanka 197121        0 Jan 10  2018  Favorites/
+drwxr-xr-x 1 priyanka 197121        0 Feb 25 09:50  IntelGraphicsProfiles/
+drwxr-xr-x 1 priyanka 197121        0 Feb 25 09:50  Links/
+lrwxrwxrwx 1 priyanka 197121       31 Jan 28  2017 'Local Settings' -> /c/Users/priyanka/AppData/Local/
+drwxr-xr-x 1 priyanka 197121        0 Jan 10  2018  Music/
+lrwxrwxrwx 1 priyanka 197121       27 Jan 28  2017 'My Documents' -> /c/Users/priyanka/Documents/
+drwxr-xr-x 1 priyanka 197121        0 Mar  6  2019 'navneel@rudrainnovatives.com Creative Cloud Files'/
+drwxr-xr-x 1 priyanka 197121        0 Mar 22  2018 'navneel21@gmail.com Creative Cloud Files'/
+lrwxrwxrwx 1 priyanka 197121       69 Jan 28  2017  NetHood -> '/c/Users/priyanka/AppData/Roaming/Microsoft/Windows/Network Shortcuts'/
+-rw-r--r-- 1 priyanka 197121 22282240 Feb 24 19:28  NTUSER.DAT
+-rw-r--r-- 1 priyanka 197121 19337216 Jan 28  2017  ntuser.dat.LOG1
+-rw-r--r-- 1 priyanka 197121   974848 Jan 28  2017  ntuser.dat.LOG2
+-rw-r--r-- 1 priyanka 197121    65536 Jul 27  2017  NTUSER.DAT{bbed3e3b-0b41-11e3-8249-d6927d06400b}.TM.blf
+-rw-r--r-- 1 priyanka 197121   524288 Jul 27  2017  NTUSER.DAT{bbed3e3b-0b41-11e3-8249-d6927d06400b}.TMContainer00000000000000000001.regtrans-ms
+-rw-r--r-- 1 priyanka 197121   524288 Jan 28  2017  NTUSER.DAT{bbed3e3b-0b41-11e3-8249-d6927d06400b}.TMContainer00000000000000000002.regtrans-ms
+-rw-r--r-- 1 priyanka 197121       20 Jan 28  2017  ntuser.ini
+drwxr-xr-x 1 priyanka 197121        0 Oct 23  2019  Pictures/
+lrwxrwxrwx 1 priyanka 197121       69 Jan 28  2017  PrintHood -> '/c/Users/priyanka/AppData/Roaming/Microsoft/Windows/Printer Shortcuts'/
+lrwxrwxrwx 1 priyanka 197121       58 Jan 28  2017  Recent -> /c/Users/priyanka/AppData/Roaming/Microsoft/Windows/Recent/
+drwxr-xr-x 1 priyanka 197121        0 Feb 23 16:58  repos/
+drwxr-xr-x 1 priyanka 197121        0 Jan 10  2018 'Saved Games'/
+drwxr-xr-x 1 priyanka 197121        0 Jan 10  2018  Searches/
+lrwxrwxrwx 1 priyanka 197121       58 Jan 28  2017  SendTo -> /c/Users/priyanka/AppData/Roaming/Microsoft/Windows/SendTo/
+lrwxrwxrwx 1 priyanka 197121       62 Jan 28  2017 'Start Menu' -> '/c/Users/priyanka/AppData/Roaming/Microsoft/Windows/Start Menu'/
+-rw-r--r-- 1 priyanka 197121  1280418 Jan 21 13:38  style.bundle.css
+lrwxrwxrwx 1 priyanka 197121       61 Jan 28  2017  Templates -> /c/Users/priyanka/AppData/Roaming/Microsoft/Windows/Templates/
+drwxr-xr-x 1 priyanka 197121        0 Feb  9  2017  Tracing/
+-rw-r--r-- 1 priyanka 197121     1803 Feb 11  2017  tslint.json
+drwxr-xr-x 1 priyanka 197121        0 Jun 18  2019  Videos/
+drwxr-xr-x 1 priyanka 197121        0 May 13  2019 'VirtualBox VMs'/
+
+priyanka@RI-20 MINGW64 ~
+$ mkdir newbs6
+
+priyanka@RI-20 MINGW64 ~
+$ ls -l
+total 62509
+drwxr-xr-x 1 priyanka 197121        0 Jan 28  2017  AppData/
+lrwxrwxrwx 1 priyanka 197121       33 Jan 28  2017 'Application Data' -> /c/Users/priyanka/AppData/Roaming/
+-rw-r--r-- 1 priyanka 197121  1550446 Dec  8 10:05  b290beb7593515b8f9a25102da1c461f.css
+-rw-r--r-- 1 priyanka 197121  8388608 Feb  9  2017  Blogging.mdf
+-rw-r--r-- 1 priyanka 197121  8388608 Feb  9  2017  Blogging_log.ldf
+drwxr-xr-x 1 priyanka 197121        0 Feb 25 09:59  bs5/
+-rw-r--r-- 1 priyanka 197121     2754 Feb 11  2017  coffeelint.json
+drwxr-xr-x 1 priyanka 197121        0 Jan 10  2018  Contacts/
+lrwxrwxrwx 1 priyanka 197121       61 Jan 28  2017  Cookies -> /c/Users/priyanka/AppData/Local/Microsoft/Windows/INetCookies/
+drwxr-xr-x 1 priyanka 197121        0 Feb  1 12:17 'Creative Cloud Files'/
+drwxr-xr-x 1 priyanka 197121        0 Feb 24 11:11  Desktop/
+drwxr-xr-x 1 priyanka 197121        0 Jan 29  2021  Documents/
+drwxr-xr-x 1 priyanka 197121        0 Feb 25 09:51  Downloads/
+drwxr-xr-x 1 priyanka 197121        0 Aug  5  2021  Dropbox/
+drwxr-xr-x 1 priyanka 197121        0 Nov 15  2019  eclipse/
+drwxr-xr-x 1 priyanka 197121        0 Nov 15  2019  eclipse-workspace/
+drwxr-xr-x 1 priyanka 197121        0 Jan 10  2018  Favorites/
+drwxr-xr-x 1 priyanka 197121        0 Feb 25 09:50  IntelGraphicsProfiles/
+drwxr-xr-x 1 priyanka 197121        0 Feb 25 09:50  Links/
+lrwxrwxrwx 1 priyanka 197121       31 Jan 28  2017 'Local Settings' -> /c/Users/priyanka/AppData/Local/
+drwxr-xr-x 1 priyanka 197121        0 Jan 10  2018  Music/
+lrwxrwxrwx 1 priyanka 197121       27 Jan 28  2017 'My Documents' -> /c/Users/priyanka/Documents/
+drwxr-xr-x 1 priyanka 197121        0 Mar  6  2019 'navneel@rudrainnovatives.com Creative Cloud Files'/
+drwxr-xr-x 1 priyanka 197121        0 Mar 22  2018 'navneel21@gmail.com Creative Cloud Files'/
+lrwxrwxrwx 1 priyanka 197121       69 Jan 28  2017  NetHood -> '/c/Users/priyanka/AppData/Roaming/Microsoft/Windows/Network Shortcuts'/
+drwxr-xr-x 1 priyanka 197121        0 Feb 25 10:06  newbs6/
+-rw-r--r-- 1 priyanka 197121 22282240 Feb 24 19:28  NTUSER.DAT
+-rw-r--r-- 1 priyanka 197121 19337216 Jan 28  2017  ntuser.dat.LOG1
+-rw-r--r-- 1 priyanka 197121   999424 Jan 28  2017  ntuser.dat.LOG2
+-rw-r--r-- 1 priyanka 197121    65536 Jul 27  2017  NTUSER.DAT{bbed3e3b-0b41-11e3-8249-d6927d06400b}.TM.blf
+-rw-r--r-- 1 priyanka 197121   524288 Jul 27  2017  NTUSER.DAT{bbed3e3b-0b41-11e3-8249-d6927d06400b}.TMContainer00000000000000000001.regtrans-ms
+-rw-r--r-- 1 priyanka 197121   524288 Jan 28  2017  NTUSER.DAT{bbed3e3b-0b41-11e3-8249-d6927d06400b}.TMContainer00000000000000000002.regtrans-ms
+-rw-r--r-- 1 priyanka 197121       20 Jan 28  2017  ntuser.ini
+drwxr-xr-x 1 priyanka 197121        0 Oct 23  2019  Pictures/
+lrwxrwxrwx 1 priyanka 197121       69 Jan 28  2017  PrintHood -> '/c/Users/priyanka/AppData/Roaming/Microsoft/Windows/Printer Shortcuts'/
+lrwxrwxrwx 1 priyanka 197121       58 Jan 28  2017  Recent -> /c/Users/priyanka/AppData/Roaming/Microsoft/Windows/Recent/
+drwxr-xr-x 1 priyanka 197121        0 Feb 23 16:58  repos/
+drwxr-xr-x 1 priyanka 197121        0 Jan 10  2018 'Saved Games'/
+drwxr-xr-x 1 priyanka 197121        0 Jan 10  2018  Searches/
+lrwxrwxrwx 1 priyanka 197121       58 Jan 28  2017  SendTo -> /c/Users/priyanka/AppData/Roaming/Microsoft/Windows/SendTo/
+lrwxrwxrwx 1 priyanka 197121       62 Jan 28  2017 'Start Menu' -> '/c/Users/priyanka/AppData/Roaming/Microsoft/Windows/Start Menu'/
+-rw-r--r-- 1 priyanka 197121  1280418 Jan 21 13:38  style.bundle.css
+lrwxrwxrwx 1 priyanka 197121       61 Jan 28  2017  Templates -> /c/Users/priyanka/AppData/Roaming/Microsoft/Windows/Templates/
+drwxr-xr-x 1 priyanka 197121        0 Feb  9  2017  Tracing/
+-rw-r--r-- 1 priyanka 197121     1803 Feb 11  2017  tslint.json
+drwxr-xr-x 1 priyanka 197121        0 Jun 18  2019  Videos/
+drwxr-xr-x 1 priyanka 197121        0 May 13  2019 'VirtualBox VMs'/
+
+priyanka@RI-20 MINGW64 ~
+$ cd newbs6
+
+priyanka@RI-20 MINGW64 ~/newbs6
+$ ls -l
+total 0
+
+priyanka@RI-20 MINGW64 ~/newbs6
+$ git clone https://github.com/Pradeepdht/Rudra.git
+Cloning into 'Rudra'...
+remote: Enumerating objects: 28, done.
+remote: Counting objects: 100% (28/28), done.
+remote: Compressing objects: 100% (23/23), done.
+remote: Total 28 (delta 2), reused 28 (delta 2), pack-reused 0
+Unpacking objects: 100% (28/28), done.
+
+priyanka@RI-20 MINGW64 ~/newbs6
+$ git checkout NewBranch
+fatal: Not a git repository (or any of the parent directories): .git
+
+priyanka@RI-20 MINGW64 ~/newbs6
+$ git branch -a
+fatal: Not a git repository (or any of the parent directories): .git
+
+priyanka@RI-20 MINGW64 ~/newbs6
+$ git branch
+fatal: Not a git repository (or any of the parent directories): .git
+
+priyanka@RI-20 MINGW64 ~/newbs6
+$ cd ..
+
+priyanka@RI-20 MINGW64 ~
+$ git checkout -b NewBranch origin/NewBranch
+fatal: Not a git repository (or any of the parent directories): .git
+
+priyanka@RI-20 MINGW64 ~
+$ git clone https://github.com/Pradeepdht/Rudra.git
+Cloning into 'Rudra'...
+remote: Enumerating objects: 28, done.
+remote: Counting objects: 100% (28/28), done.
+remote: Compressing objects: 100% (23/23), done.
+remote: Total 28 (delta 2), reused 28 (delta 2), pack-reused 0
+Unpacking objects: 100% (28/28), done.
+
+priyanka@RI-20 MINGW64 ~
+$ git remote url
+fatal: Not a git repository (or any of the parent directories): .git
+
+priyanka@RI-20 MINGW64 ~
+$ git checkout NewBanch
+fatal: Not a git repository (or any of the parent directories): .git
+
+priyanka@RI-20 MINGW64 ~
+$ git checkout NewBranch
+fatal: Not a git repository (or any of the parent directories): .git
+
+priyanka@RI-20 MINGW64 ~
+$ mkdir newbs6
+mkdir: cannot create directory ‘newbs6’: File exists
+
+priyanka@RI-20 MINGW64 ~
+$ cd newbs6
+
+priyanka@RI-20 MINGW64 ~/newbs6
+$ git pull https://github.com/Pradeepdht/Rudra.git
+fatal: Not a git repository (or any of the parent directories): .git
+
+priyanka@RI-20 MINGW64 ~/newbs6
+$ git clone https://github.com/Pradeepdht/Rudra.git
+Cloning into 'Rudra'...
+remote: Enumerating objects: 28, done.
+remote: Counting objects: 100% (28/28), done.
+remote: Compressing objects: 100% (23/23), done.
+remote: Total 28 (delta 2), reused 28 (delta 2), pack-reused 0
+Unpacking objects: 100% (28/28), done.
+
+priyanka@RI-20 MINGW64 ~/newbs6
+$ ls -l
+total 0
+drwxr-xr-x 1 priyanka 197121 0 Feb 25 10:16 Rudra/
+
+priyanka@RI-20 MINGW64 ~/newbs6
+$ cd Rudra
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra (main)
+$ ls -l
+total 1
+-rw-r--r-- 1 priyanka 197121 5 Feb 25 10:16 README.md
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra (main)
+$ git remote url
+error: Unknown subcommand: url
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra (main)
+$ git remote get-url
+usage: git remote get-url [--push] [--all] <name>
+
+    --push                query push URLs rather than fetch URLs
+    --all                 return all URLs
+
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra (main)
+$ git branch
+* main
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra (main)
+$ git checkout origin/NewBranch
+Note: checking out 'origin/NewBranch'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 4e102ca... first commits
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra ((4e102ca...))
+$ ls -l
+total 20
+drwxr-xr-x 1 priyanka 197121     0 Feb 25 10:19 css/
+drwxr-xr-x 1 priyanka 197121     0 Feb 25 10:19 img/
+-rw-r--r-- 1 priyanka 197121 12404 Feb 25 10:19 index.html
+drwxr-xr-x 1 priyanka 197121     0 Feb 25 10:19 js/
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra ((4e102ca...))
+$ git branch
+* (HEAD detached at origin/NewBranch)
+  main
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra ((4e102ca...))
+$ git status
+HEAD detached at origin/NewBranch
+nothing to commit, working tree clean
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra ((4e102ca...))
+$ git status
+HEAD detached at origin/NewBranch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra ((4e102ca...))
+$ git add .
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra ((4e102ca...))
+$ git commit -m "Updated Template"
+[detached HEAD 1d47648] Updated Template
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra ((1d47648...))
+$ git push origin NewBranch
+error: src refspec NewBranch does not match any.
+error: failed to push some refs to 'https://github.com/Pradeepdht/Rudra.git'
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra ((1d47648...))
+$ git push
+fatal: You are not currently on a branch.
+To push the history leading to the current (detached HEAD)
+state now, use
+
+    git push origin HEAD:<name-of-remote-branch>
+
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra ((1d47648...))
+$ git push origin HEAD:NewBranch
+fatal: AggregateException encountered.
+   One or more errors occurred.
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 375 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Pradeepdht/Rudra.git
+   4e102ca..1d47648  HEAD -> NewBranch
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra ((1d47648...))
+$ git branch -r
+  origin/HEAD -> origin/main
+  origin/NewBranch
+  origin/main
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra ((1d47648...))
+$ git checkout main
+Previous HEAD position was 1d47648... Updated Template
+Switched to branch 'main'
+Your branch is up-to-date with 'origin/main'.
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra (main)
+$ ls -l
+total 1
+-rw-r--r-- 1 priyanka 197121 5 Feb 25 10:26 README.md
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra (main)
+$ git checkout origin/Newbranch
+Note: checking out 'origin/Newbranch'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 1d47648... Updated Template
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra ((1d47648...))
+$ git checkout main
+Previous HEAD position was 1d47648... Updated Template
+Switched to branch 'main'
+Your branch is up-to-date with 'origin/main'.
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra (main)
+$ git checkout -b NewBranch
+Switched to a new branch 'NewBranch'
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra (NewBranch)
+$ ls -l
+total 1
+-rw-r--r-- 1 priyanka 197121 5 Feb 25 10:27 README.md
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra (NewBranch)
+$ git push origin HEAD:NewBranch
+fatal: AggregateException encountered.
+   One or more errors occurred.
+To https://github.com/Pradeepdht/Rudra.git
+ ! [rejected]        HEAD -> NewBranch (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Pradeepdht/Rudra.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra (NewBranch)
+$ git checkout origin/NewBranch
+Note: checking out 'origin/NewBranch'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 1d47648... Updated Template
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra ((1d47648...))
+$ ls -l
+total 20
+drwxr-xr-x 1 priyanka 197121     0 Feb 25 10:29 css/
+drwxr-xr-x 1 priyanka 197121     0 Feb 25 10:29 img/
+-rw-r--r-- 1 priyanka 197121 12410 Feb 25 10:29 index.html
+drwxr-xr-x 1 priyanka 197121     0 Feb 25 10:29 js/
+
+priyanka@RI-20 MINGW64 ~/newbs6/Rudra ((1d47648...))
+$
